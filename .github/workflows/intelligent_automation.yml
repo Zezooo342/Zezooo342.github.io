@@ -1,0 +1,61 @@
+name: Intelligent Content & Social Automation
+
+on:
+  schedule:
+    # كل 4 ساعات لتوليد المحتوى
+    - cron: '0 */4 * * *'
+    # يومياً في الأوقات المثلى للنشر
+    - cron: '0 8,12,18,21 * * *'
+  workflow_dispatch:
+
+jobs:
+  intelligent_growth:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Setup Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.9'
+      
+      - name: Install dependencies
+        run: |
+          pip install requests tweepy python-telegram-bot feedparser textblob schedule
+      
+      - name: Generate Intelligent Content
+        env:
+          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
+          TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
+          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_SECRET: ${{ secrets.TWITTER_ACCESS_SECRET }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+        run: |
+          python ai_growth_system.py
+          python automation_master.py
+      
+      - name: Deploy to GitHub Pages
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "🤖 Automated content update $(date)" || exit 0
+          git push
+
+  viral_engagement:
+    runs-on: ubuntu-latest
+    needs: intelligent_growth
+    
+    steps:
+      - name: Auto Engage with Trending
+        run: python viral_engagement.py
+      
+      - name: Monitor Performance
+        run: python performance_monitor.py
+      
+      - name: Self-Optimization
+        run: python self_optimization.py
