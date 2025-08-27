@@ -1,0 +1,16 @@
+name: Daily Content
+on:
+  schedule:
+    - cron: '0 5 * * *' # 8:00 EEST
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with: python-version: '3.x'
+      - name: Install deps
+        run: pip install requests python-dotenv
+      - name: Generate & Deploy
+        run: python content_generator_pro.py
