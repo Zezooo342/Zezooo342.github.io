@@ -1,16 +1,25 @@
 name: Daily Content
+
 on:
   schedule:
-    - cron: '0 5 * * *' # 8:00 EEST
+    - cron: '0 5 * * *'  # كل يوم الساعة 5:00 UTC (8:00 EEST)
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Python
         uses: actions/setup-python@v2
-        with: python-version: '3.x'
-      - name: Install deps
-        run: pip install requests python-dotenv
-      - name: Generate & Deploy
-        run: python content_generator_pro.py
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install requests python-dotenv
+
+      - name: Run Daily Automation
+        run: python daily_automation
