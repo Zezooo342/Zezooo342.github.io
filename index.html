@@ -5,21 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>💰 دليل المال العربي - استثمر واربح يومياً</title>
   <meta name="description" content="اكتشف أسرار الثراء من الاستثمار والتداول في الخليج. نصائح مجربة وأرباح مضمونة يومياً.">
-  <meta name="keywords" content="استثمار, تداول, أسهم, بيتكوين, فوركس, أرباح يومية, السعودية, الإمارات">
-  
-  <!-- AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9892132994837464" crossorigin="anonymous"></script>
-  
-  <!-- Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-  
-  <!-- List.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
   
   <style>
@@ -63,7 +49,6 @@
       font-weight: bold;
       transition: transform 0.3s;
     }
-    
     .cta-header:hover { transform: scale(1.05); }
     
     .hero {
@@ -138,7 +123,12 @@
     .article-image {
       width: 100%;
       height: 200px;
-      object-fit: cover;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: white;
     }
     
     .article-content {
@@ -159,6 +149,7 @@
       margin-bottom: 1rem;
       font-size: 0.9rem;
       color: #6c757d;
+      flex-wrap: wrap;
     }
     
     .article-excerpt {
@@ -215,13 +206,6 @@
       border-radius: 10px;
     }
     
-    .no-results {
-      text-align: center;
-      padding: 3rem;
-      color: #6c757d;
-      font-size: 1.2rem;
-    }
-    
     @media (max-width: 768px) {
       .hero h1 { font-size: 2rem; }
       .controls { grid-template-columns: 1fr; }
@@ -247,17 +231,17 @@
     <p class="hero-subtitle">اكتشف أسرار الاستثمار الناجح في الخليج - نصائح حصرية من الخبراء</p>
   </div>
 
-  <div class="container">
+  <div class="container" id="articles-container">
     <div class="controls">
-      <input class="search search-input" placeholder="🔍 ابحث في المقالات والاستراتيجيات..." />
-      <select class="country-filter filter-select">
+      <input class="search" placeholder="🔍 ابحث في المقالات والاستراتيجيات..." />
+      <select class="country-filter">
         <option value="">🌍 كل الدول</option>
         <option value="السعودية">السعودية</option>
         <option value="الإمارات">الإمارات</option>
         <option value="الكويت">الكويت</option>
         <option value="قطر">قطر</option>
       </select>
-      <select class="keyword-filter filter-select">
+      <select class="keyword-filter">
         <option value="">📊 كل المواضيع</option>
         <option value="استثمار أسهم">استثمار أسهم</option>
         <option value="تداول بيتكوين">تداول بيتكوين</option>
@@ -276,100 +260,131 @@
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
-    <div class="list articles-grid">
-      <div class="article-card" style="display: none;">
-        <img class="article-image image" alt="صورة المقال" />
-        <div class="article-content">
-          <h2 class="article-title title"></h2>
-          <div class="article-meta">
-            <span class="date">📅 </span>
-            <span class="read-time">⏱️ </span>
-            <span class="country">🌍 </span>
-          </div>
-          <p class="article-excerpt excerpt"></p>
-          <div class="article-actions">
-            <a class="read-btn url">📖 اقرأ المقال</a>
-            <a class="affiliate-btn affiliate-url" target="_blank" rel="nofollow sponsored">💰 استثمر الآن</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="no-results" style="display: none;">
-      😔 لم نجد مقالات مطابقة لبحثك. جرب كلمات أخرى.
+    <div class="list articles-grid" id="articles-list">
+      <!-- المقالات ستظهر هنا -->
     </div>
   </div>
 
   <script>
-    fetch('articles.json')
-      .then(response => response.json())
-      .then(data => {
-        const options = {
-          valueNames: [
-            'title', 'excerpt', 'country', 'keyword', 'date', 'read-time',
-            { name: 'image', attr: 'src' },
-            { name: 'url', attr: 'href' },
-            { name: 'affiliate-url', attr: 'href' }
-          ],
-          item: '<div class="article-card"><img class="article-image image" alt="صورة المقال" /><div class="article-content"><h2 class="article-title title"></h2><div class="article-meta"><span class="date">📅 </span><span class="read-time">⏱️ </span><span class="country">🌍 </span></div><p class="article-excerpt excerpt"></p><div class="article-actions"><a class="read-btn url">📖 اقرأ المقال</a><a class="affiliate-btn affiliate-url" target="_blank" rel="nofollow sponsored">💰 استثمر الآن</a></div></div></div>'
-        };
+    // البيانات مدمجة مباشرة
+    const articlesData = [
+      {
+        title: "🔥 أفضل طرق الاستثمار في الأسهم السعودية 2025",
+        url: "008_الأسهم_البحرين.html",
+        country: "السعودية", 
+        keyword: "استثمار أسهم",
+        date: "2025-08-27",
+        readTime: "8 دقائق",
+        icon: "💎",
+        excerpt: "اكتشف استراتيجيات مضمونة لتحقيق أرباح 300% من الأسهم السعودية. نصائح حصرية من خبراء التداول.",
+        affiliateUrl: "https://www.binance.com/referral/earn-together/refer-in-hotsummer/claim?hl=en&ref=GRO_20338_D3ELK&utm_source=saudi_stocks"
+      },
+      {
+        title: "💰 تداول البيتكوين في الإمارات: دليل المبتدئين الشامل",
+        url: "004_العملات_الرقمية_العراق.html", 
+        country: "الإمارات",
+        keyword: "تداول بيتكوين",
+        date: "2025-08-27",
+        readTime: "10 دقائق",
+        icon: "₿",
+        excerpt: "كيف تبدأ تداول البيتكوين في الإمارات بأمان. فرص ذهبية وأرباح يومية مضمونة.",
+        affiliateUrl: "https://www.binance.com/referral/earn-together/refer-in-hotsummer/claim?hl=en&ref=GRO_20338_D3ELK&utm_source=uae_bitcoin"
+      },
+      {
+        title: "🚀 استثمار 1000 ريال في الكويت: 5 طرق مضمونة للربح",
+        url: "002_التوفير_الكويت.html",
+        country: "الكويت",
+        keyword: "استثمار صغير", 
+        date: "2025-08-26",
+        readTime: "6 دقائق",
+        icon: "💰",
+        excerpt: "حوّل 1000 ريال إلى دخل شهري ثابت. استراتيجيات مجربة وناجحة 100%.",
+        affiliateUrl: "https://www.binance.com/referral/earn-together/refer-in-hotsummer/claim?hl=en&ref=GRO_20338_D3ELK&utm_source=kuwait_investment"
+      },
+      {
+        title: "⚡ تداول الفوركس في قطر: أرباح يومية 500 ريال",
+        url: "009_الأسهم_السعودية.html",
+        country: "قطر", 
+        keyword: "تداول فوركس",
+        date: "2025-08-26",
+        readTime: "9 دقائق",
+        icon: "📈",
+        excerpt: "تعلم كيف تحقق 500 ريال يومياً من تداول العملات. استراتيجية مكشوفة لأول مرة.",
+        affiliateUrl: "https://www.binance.com/referral/earn-together/refer-in-hotsummer/claim?hl=en&ref=GRO_20338_D3ELK&utm_source=qatar_forex"
+      },
+      {
+        title: "💎 الاستثمار العقاري في دبي: فرص لا تُفوّت 2025",
+        url: "006_العقارات_لبنان.html",
+        country: "الإمارات",
+        keyword: "استثمار عقاري",
+        date: "2025-08-25", 
+        readTime: "12 دقيقة",
+        icon: "🏢",
+        excerpt: "اكتشف أفضل المناطق للاستثمار العقاري في دبي. عوائد 15% سنوياً مضمونة.",
+        affiliateUrl: "https://www.binance.com/referral/earn-together/refer-in-hotsummer/claim?hl=en&ref=GRO_20338_D3ELK&utm_source=dubai_realestate"
+      }
+    ];
 
-        const articlesList = new List('container', options, data.map(article => ({
-          ...article,
-          'read-time': article.readTime + ' دقائق',
-          'affiliate-url': article.affiliateUrl
-        })));
+    // إنشاء HTML للمقالات
+    function createArticleHTML(article) {
+      return `
+        <div class="article-card">
+          <div class="article-image">${article.icon}</div>
+          <div class="article-content">
+            <h2 class="article-title title">${article.title}</h2>
+            <div class="article-meta">
+              <span class="date">📅 ${article.date}</span>
+              <span class="read-time">⏱️ ${article.readTime}</span>
+              <span class="country">🌍 ${article.country}</span>
+            </div>
+            <p class="article-excerpt excerpt">${article.excerpt}</p>
+            <div class="article-actions">
+              <a href="${article.url}" class="read-btn">📖 اقرأ المقال</a>
+              <a href="${article.affiliateUrl}" class="affiliate-btn" target="_blank" rel="nofollow sponsored">💰 استثمر الآن</a>
+            </div>
+          </div>
+        </div>
+      `;
+    }
 
-        // فلاتر مخصصة
-        document.querySelector('.country-filter').addEventListener('change', function() {
-          const value = this.value;
-          if (value) {
-            articlesList.filter(item => item.values().country === value);
-          } else {
-            articlesList.filter();
-          }
-          updateNoResults();
-        });
+    // عرض المقالات
+    function displayArticles(articles) {
+      const articlesGrid = document.getElementById('articles-list');
+      articlesGrid.innerHTML = articles.map(createArticleHTML).join('');
+    }
 
-        document.querySelector('.keyword-filter').addEventListener('change', function() {
-          const value = this.value;
-          if (value) {
-            articlesList.filter(item => item.values().keyword === value);
-          } else {
-            articlesList.filter();
-          }
-          updateNoResults();
-        });
+    // فلترة المقالات
+    function filterArticles() {
+      const searchTerm = document.querySelector('.search').value.toLowerCase();
+      const countryFilter = document.querySelector('.country-filter').value;
+      const keywordFilter = document.querySelector('.keyword-filter').value;
 
-        // تتبع البحث
-        document.querySelector('.search').addEventListener('input', function() {
-          setTimeout(updateNoResults, 100);
-          if (typeof gtag !== 'undefined') {
-            gtag('event', 'search', {
-              'event_category': 'engagement',
-              'search_term': this.value
-            });
-          }
-        });
-
-        function updateNoResults() {
-          const noResults = document.querySelector('.no-results');
-          const hasResults = document.querySelectorAll('.article-card:not([style*="display: none"])').length > 0;
-          noResults.style.display = hasResults ? 'none' : 'block';
-        }
-
-        // تتبع النقرات
-        document.addEventListener('click', function(e) {
-          if (e.target.classList.contains('affiliate-btn')) {
-            if (typeof gtag !== 'undefined') {
-              gtag('event', 'click', {
-                'event_category': 'affiliate',
-                'event_label': 'binance_referral'
-              });
-            }
-          }
-        });
+      let filteredArticles = articlesData.filter(article => {
+        const matchesSearch = article.title.toLowerCase().includes(searchTerm) || 
+                             article.excerpt.toLowerCase().includes(searchTerm);
+        const matchesCountry = !countryFilter || article.country === countryFilter;
+        const matchesKeyword = !keywordFilter || article.keyword === keywordFilter;
+        
+        return matchesSearch && matchesCountry && matchesKeyword;
       });
+
+      displayArticles(filteredArticles);
+    }
+
+    // إعداد أحداث البحث والفلاتر
+    document.querySelector('.search').addEventListener('input', filterArticles);
+    document.querySelector('.country-filter').addEventListener('change', filterArticles);
+    document.querySelector('.keyword-filter').addEventListener('change', filterArticles);
+
+    // عرض جميع المقالات في البداية
+    displayArticles(articlesData);
+
+    // تتبع النقرات
+    document.addEventListener('click', function(e) {
+      if (e.target.classList.contains('affiliate-btn')) {
+        console.log('Binance referral clicked');
+      }
+    });
   </script>
 
 </body>
