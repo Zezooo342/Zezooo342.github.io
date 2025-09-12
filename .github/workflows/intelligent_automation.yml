@@ -1,4 +1,5 @@
 name: Smart Content Automation
+permissions: read-all
 
 on:
   schedule:
@@ -7,6 +8,8 @@ on:
 
 jobs:
   intelligent_automation:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     
     steps:
@@ -63,6 +66,7 @@ jobs:
           fi
 
   performance_monitoring:
+    permissions: {}
     runs-on: ubuntu-latest
     needs: intelligent_automation
     
