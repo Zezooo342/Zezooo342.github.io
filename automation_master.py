@@ -1,191 +1,87 @@
-import requests
-import json
-import schedule
-import time
-from datetime import datetime
-import os
 import random
+from datetime import datetime
 
 class AutoContentGenerator:
     def __init__(self):
-        self.articles_data = []
-        
-    def generate_viral_titles(self):
-        """توليد عناوين فيروسية"""
-        viral_templates = [
-            "🔥 {topic}: السر الذي يخفيه الخبراء عنك",
-            "💰 كيف تربح ${amount} من {topic} في {timeframe}",
-            "⚠️ تحذير عاجل: {topic} سيغير حياتك خلال {timeframe}",
-            "🚀 اكتشاف مذهل: {topic} يحقق أرباحاً خيالية"
+        self.topics = [
+            "الاستثمار في مصر",
+            "الربح من الانترنت",
+            "العملات الرقمية",
+            "سوق الأسهم السعودية",
+            "مشاريع صغيرة في 2025",
+            "التسويق بالعمولة"
         ]
-        
-        topics = [
-            "البيتكوين", "الأسهم السعودية", "تداول الفوركس", 
-            "الاستثمار العقاري", "العملات الرقمية", "الأسهم الأمريكية"
+        self.viral_templates = [
+            "دليل شامل: كيف تبدأ في {topic} وتحقق أرباحًا حقيقة في 2025",
+            "أفضل أسرار الخبراء في {topic} لن يخبرك بها أحد!",
+            "خطوة بخطوة: كيف ربحت {amount}$ من {topic} خلال {timeframe}",
+            "تحقيق الأمان المالي عبر {topic}: الخطة الشاملة",
+            "كيف تتجنب أخطاء المبتدئين في {topic} وتتفوق بسرعة؟",
+            "أسهل طرق النجاح في {topic} للعرب"
         ]
-        
-        amounts = ['500', '1000', '5000', '10000']
-        timeframes = ['24 ساعة', 'أسبوع', 'شهر', '3 أشهر']
-        
+        self.amounts = ['500', '2000', '10000', '15000']
+        self.timeframes = ['أسبوع', 'شهر', '3 أشهر', 'سنة']
+
+    def generate_viral_titles(self, n=5):
         titles = []
-        for _ in range(5):
-            template = random.choice(viral_templates)
-            topic = random.choice(topics)
-            amount = random.choice(amounts)
-            timeframe = random.choice(timeframes)
-            
-            title = template.format(
-                topic=topic,
-                amount=amount,
-                timeframe=timeframe
-            )
+        for _ in range(n):
+            topic = random.choice(self.topics)
+            template = random.choice(self.viral_templates)
+            amount = random.choice(self.amounts)
+            timeframe = random.choice(self.timeframes)
+            title = template.format(topic=topic, amount=amount, timeframe=timeframe)
             titles.append(title)
-        
         return titles
-    
-    def create_article_data(self):
-        """إنشاء بيانات المقالات"""
-        titles = self.generate_viral_titles()
-        countries = ["السعودية", "الإمارات", "الكويت", "قطر", "البحرين"]
-        keywords = ["استثمار أسهم", "تداول بيتكوين", "تداول فوركس", "استثمار عقاري"]
-        icons = ["💎", "₿", "📊", "🏢", "💰", "⚡", "🚀", "⭐"]
-        
-        articles = []
-        for i, title in enumerate(titles):
-            article = {
-                "title": title,
-                "url": "article.html",
-                "country": random.choice(countries),
-                "keyword": random.choice(keywords),
-                "date": "2025-08-28",
-                "readTime": f"{random.randint(5, 15)} دقائق",
-                "icon": random.choice(icons),
-                "views": f"{random.randint(10000, 100000):,}",
-                "trending": i < 2,  # أول مقالتين رائجتين
-                "excerpt": f"دليل شامل ومفصل حول {title.split(':')[0]}. استراتيجيات مجربة وأرباح مضمونة.",
-                "affiliateUrl": "https://www.binance.com/referral/earn-together/refer-in-hotsummer/claim?hl=en&ref=GRO_20338_D3ELK&utm_source=auto_content"
-            }
-            articles.append(article)
-        
-        return articles
 
-class SocialMediaAutomation:
-    def __init__(self):
-        self.telegram_token = os.getenv('TELEGRAM_BOT_TOKEN')
-        self.telegram_channel = os.getenv('TELEGRAM_CHANNEL_ID')
-        
-    def post_to_telegram(self, message):
-        """نشر على تليجرام"""
-        if not self.telegram_token or not self.telegram_channel:
-            print("⚠️ معلومات Telegram غير متوفرة")
-            return False
-            
-        try:
-            url = f"https://api.telegram.org/bot{self.telegram_token}/sendMessage"
-            payload = {
-                'chat_id': self.telegram_channel,
-                'text': message,
-                'parse_mode': 'Markdown'
-            }
-            
-            response = requests.post(url, json=payload, timeout=10)
-            if response.status_code == 200:
-                print("✅ تم النشر على Telegram بنجاح")
-                return True
-            else:
-                print(f"❌ خطأ في النشر على Telegram: {response.status_code}")
-                return False
-                
-        except Exception as e:
-            print(f"❌ خطأ في الاتصال بـ Telegram: {e}")
-            return False
-    
-    def create_social_posts(self, articles):
-        """إنشاء منشورات وسائل التواصل"""
-        posts = []
-        
-        for article in articles[:3]:  # أفضل 3 مقالات
-            post = f"""
-🔥 *{article['title']}*
+    def generate_article_outline(self, topic):
+        return [
+            f"مقدمة عن {topic}",
+            f"أهم النصائح للنجاح في {topic}",
+            f"أخطاء شائعة يجب تجنبها",
+            f"تجارب حقيقية من السوق",
+            "أسئلة شائعة وإجابات مفصّلة",
+            f"خلاصة واستنتاجات نهائية عن {topic}"
+        ]
 
-📊 المشاهدات: {article['views']}
-⏱️ وقت القراءة: {article['readTime']}
-🌍 الدولة: {article['country']}
+    def suggest_keywords(self, topic):
+        base_keywords = [
+            "استثمار", "ربح", "مال", "مبتدئين", "شرح", "2025", "أسرار", "شرح عملي"
+        ]
+        return list(set([topic] + base_keywords))
 
-{article['excerpt'][:100]}...
+    def generate_faq(self, topic):
+        return [
+            f"كيف أبدأ في {topic} من الصفر؟",
+            f"ما أفضل طرق تحقيق ربح سريع من {topic}؟",
+            f"ما هي المخاطر في {topic}؟ وكيف أتجنبها؟",
+            f"هل {topic} مناسب لكل الأعمار؟"
+        ]
 
-🔗 اقرأ المقال كاملاً: https://zezooo342.github.io/{article['url']}
+    def render_article(self, title, topic):
+        outline = self.generate_article_outline(topic)
+        keywords = self.suggest_keywords(topic)
+        faq = self.generate_faq(topic)
+        html = f"<h1>{title}</h1>\n"
+        html += f"<p>مقال حصري عن {topic}. أحدث المعلومات والتجارب العملية لتسهيل نجاحك في هذا المجال في 2025.</p>\n"
+        for section in outline:
+            html += f"<h2>{section}</h2>\n<p>.... (ضع هنا فقرة أصلية).</p>\n"
+        html += "<h3>الأسئلة الشائعة</h3>\n<ul>\n"
+        for q in faq:
+            html += f"  <li>{q}</li>\n"
+        html += "</ul>\n"
+        html += "<!-- كلمات مفتاحية: " + ", ".join(keywords) + " -->\n"
+        html += "<hr><small>تاريخ النشر: {}</small>\n".format(datetime.today().strftime("%Y-%m-%d"))
+        return html
 
-💰 ابدأ الاستثمار الآن: {article['affiliateUrl']}
-
-#استثمار #تداول #{article['country']} #أرباح
-            """
-            posts.append(post)
-        
-        return posts
-
-class FileManager:
-    @staticmethod
-    def update_articles_data(articles):
-        """تحديث بيانات المقالات في الموقع"""
-        try:
-            # قراءة ملف index.html الحالي
-            with open('index.html', 'r', encoding='utf-8') as f:
-                content = f.read()
-            
-            # إنشاء JavaScript للمقالات الجديدة
-            js_articles = "const articlesData = [\n"
-            for article in articles:
-                js_articles += f"""  {{
-    title: "{article['title']}",
-    url: "{article['url']}",
-    country: "{article['country']}",
-    keyword: "{article['keyword']}",
-    date: "{article['date']}",
-    readTime: "{article['readTime']}",
-    icon: "{article['icon']}",
-    views: "{article['views']}",
-    trending: {str(article['trending']).lower()},
-    excerpt: "{article['excerpt']}",
-    affiliateUrl: "{article['affiliateUrl']}"
-  }},\n"""
-            js_articles += "];"
-            
-            print("✅ تم تحديث بيانات المقالات")
-            return True
-            
-        except Exception as e:
-            print(f"❌ خطأ في تحديث الملفات: {e}")
-            return False
-
-def main():
-    """الدالة الرئيسية للتشغيل"""
-    print("🚀 بدء نظام الأتمتة الذكي...")
-    
-    # إنشاء المولدات
-    content_gen = AutoContentGenerator()
-    social_media = SocialMediaAutomation()
-    
-    # توليد محتوى جديد
-    print("📝 توليد محتوى جديد...")
-    articles = content_gen.create_article_data()
-    print(f"✅ تم إنشاء {len(articles)} مقال جديد")
-    
-    # تحديث الموقع
-    print("🔄 تحديث الموقع...")
-    FileManager.update_articles_data(articles)
-    
-    # إنشاء منشورات وسائل التواصل
-    print("📱 إنشاء منشورات وسائل التواصل...")
-    posts = social_media.create_social_posts(articles)
-    
-    # نشر على تليجرام
-    for i, post in enumerate(posts):
-        print(f"📤 نشر المقال {i+1} على Telegram...")
-        social_media.post_to_telegram(post)
-        time.sleep(2)  # انتظار ثانيتين بين المنشورات
-    
-    print("✅ تم الانتهاء من دورة الأتمتة بنجاح!")
-
+# مثال على توليد عناوين ومقال كامل:
 if __name__ == "__main__":
-    main()
+    acg = AutoContentGenerator()
+    print("عناوين مقترحة:")
+    for t in acg.generate_viral_titles(3):
+        print("- " + t)
+    print("\nمثال ملف HTML لمقال:")
+    title = acg.generate_viral_titles(1)[0]
+    html = acg.render_article(title, "الربح من الانترنت")
+    with open("make-money-online.html", "w", encoding="utf-8") as f:
+        f.write(html)
+    print("تم توليد الملف make-money-online.html بنجاح.")
