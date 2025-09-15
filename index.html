@@ -3,94 +3,120 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="موقع مقالات أصلية وحلول تقنية وأدلة عملية للمهتمين بالتقنية والعمل عبر الإنترنت، كل المعلومات هنا حصرية وشروحات خطوة بخطوة.">
+  <meta name="description" content="مقالات أصلية، حلول تقنية، أدلة عملية في العمل عبر الإنترنت. شرح خطوات حصري وأفكار تقنية متجددة بالعربية.">
   <title>سمارت كونتنت | منصتك للمحتوى الأصلي والتقني</title>
   <link rel="icon" type="image/png" href="favicon.png">
+  <!-- كود أدسنس للصفحة -->
   <meta name="google-adsense-account" content="ca-pub-9892132994837464">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9892132994837464"
      crossorigin="anonymous"></script>
-    body {font-family: 'Cairo', Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; color:#222;}
+  <style>
+    body {font-family:'Cairo', Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; color:#222;}
     header {background:#082032; color:#fff; padding:24px 0; text-align:center;}
     nav {background:#334756; color:#fff; padding:12px 0; text-align:center;}
-    nav a {color:#fff; text-decoration:none; margin:0 15px; font-size:17px;}
+    nav a {color:#fff; text-decoration:none; margin:0 16px; font-size:18px;}
     nav a:hover {text-decoration:underline;}
-    .container {max-width:975px; margin:36px auto; background:#fff; padding:38px; border-radius:12px; box-shadow:0 3px 7px rgba(0,0,0,.08);}
+    .container {max-width:980px; margin:36px auto; background:#fff; padding:32px; border-radius:14px; box-shadow:0 3px 9px rgba(0,0,0,.08);}
     h1, h2, h3 {color:#082032;}
-    footer {background:#334756; color:#fff; text-align:center; padding:16px 0; margin-top:30px;}
-    .article {margin-bottom:42px;}
+    .article {margin-bottom:36px;}
     .meta {color:#888; font-size:15px;}
-    .btn {display:inline-block; padding:9px 22px; background:#3bb273; color:#fff; border-radius:6px; text-decoration:none; margin-top:11px;}
+    .btn {display:inline-block; padding:10px 24px; background:#3bb273; color:#fff; border-radius:6px; text-decoration:none; margin-top:13px;}
     .btn:hover {background:#28654c;}
-    .adsense {margin:32px auto; text-align:center;}
+    .adsense, .affiliate {margin:28px auto; text-align:center;}
+    .row {display: flex; flex-wrap:wrap; gap:22px;}
+    .card {background:#f6f8fa; border-radius:11px; padding:22px 18px; margin-bottom:20px; width: 300px; box-shadow:0 2px 4px rgba(60,24,6,.07);}
+    .card h3 {margin-top:0;}
     @media (max-width: 600px) {
-      .container {padding:15px;}
+      .container {padding:12px;}
+      .row {flex-direction: column; gap:10px;}
+      .card {width: 100%;}
     }
   </style>
 </head>
 <body>
 <header>
   <h1>سمارت كونتنت</h1>
-  <p>كل ما تحتاجه من شروحات أصلية وحلول عملية في التقنية والعمل الحر</p>
+  <p>كل ما تحتاجه من شروحات أصلية، أفكار تقنية، حلول عملية للعمل عبر الإنترنت</p>
 </header>
 <nav>
   <a href="index.html">الرئيسية</a>
-  <a href="about.html">من نحن</a>
+  <a href="guide.html">دليل البــدء</a>
+  <a href="tricks.html">أسرار وتقنيات</a>
+  <a href="earn.html">طرق ربح المال</a>
   <a href="contact.html">تواصل معنا</a>
-  <a href="privacy.html">سياسة الخصوصية</a>
 </nav>
-
-<!-- وحدة إعلانات أدسنس -->
-<div class="adsense">
-  <!-- انسخ هنا وحدة AdSense display من حسابك (يفضل وضع النوع responsive) -->
-  <!-- مثال لأنواع الإعلانات فقط، غيّر data-ad-client و data-ad-slot ببياناتك -->
-  <ins class="adsbygoogle"
-      style="display:block"
-      data-ad-client="ca-pub-XXXXXXXXXXXX"
-      data-ad-slot="1234567890"
-      data-ad-format="auto"
-      data-full-width-responsive="true"></ins>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-</div>
-
 <div class="container">
-  <section>
-    <h2>مقالات أصلية حديثة</h2>
+  <!-- إعلان أدسنس -->
+  <div class="adsense">
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-9892132994837464"
+        data-ad-slot="3449460952"
+        data-ad-format="auto"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
 
-    <article class="article">
-      <h3>خوارزميات الذكاء الاصطناعي وطرق الاستفادة منها</h3>
-      <div class="meta">14 سبتمبر 2025</div>
-      <p>
-        تعرف في هذه المقالة على أحدث حلول الذكاء الاصطناعي وكيفية تنفيذها عمليًا، مع تطبيقات حقيقية وأمثلة تهم كل صانع محتوى ومبرمج.
-      </p>
-      <a class="btn" href="ai-tools.html">اقرأ المزيد</a>
-    </article>
+  <!-- مقالات متنوعة بعناوين جذّابة -->
+  <div class="row">
+    <div class="card article">
+      <h3><a href="guide.html">الدليل الشامل للبـدء في العمل الحر 2025</a></h3>
+      <p class="meta">20 دقيقة قراءة | <a href="guide.html">اكمل القراءة →</a></p>
+      <p>خطوات عملية لتبدأ مسيرتك في العمل عن بعد وتحقق أول دخل عبر الإنترنت مهما كان تخصـصك.</p>
+    </div>
+    <div class="card article">
+      <h3><a href="tricks.html">7 أسرار تقنية لزيادة الإنتاجية وجني المال</a></h3>
+      <p class="meta">15 دقيقة قراءة | <a href="tricks.html">اكمل القراءة →</a></p>
+      <p>طرق ووسائل وادوات مجربة لتسريع تحقيق دخل ثابت عبر الإنترنت ورفع إنتاجيتك الرقمية.</p>
+    </div>
+    <div class="card article">
+      <h3><a href="earn.html">كيف تربح من البرمجة حتى بدون خبرة؟</a></h3>
+      <p class="meta">12 دقيقة قراءة | <a href="earn.html">اكمل القراءة →</a></p>
+      <p>دليل لأهم الأدوات والمنصات للمبتدئين الراغبين في تحقيق أرباح باستخدام مهارات بسيطة أو بدون خبرة مسبقة.</p>
+    </div>
+  </div>
 
-    <article class="article">
-      <h3>طرق مضمونة لزيادة أرباحك من الإنترنت</h3>
-      <div class="meta">11 سبتمبر 2025</div>
-      <p>
-        دليل كامل للخطوات المجربة والحلول التي تساعد في النمو المالي عبر الإنترنت بأسلوب عملي وبدون نسخ أو تكرار.
-      </p>
-      <a class="btn" href="make-money.html">تعرف على الطرق</a>
-    </article>
+  <!-- مقطع أفلييت بين المواضيع -->
+  <div class="affiliate">
+    <a href="https://your-affiliate-network.com/aff_id=xxxx" target="_blank" rel="nofollow">
+      <img src="https://your-affiliate-network.com/banner.jpg" alt="عرض حصري لزوار سمارت كونتنت" style="max-width:98%; border-radius:8px;">
+      <br>احصل على عرض حصري لأدوات العمل عن بعد الآن!
+    </a>
+  </div>
 
-    <article class="article">
-      <h3>نصائح لحماية حساباتك الرقمية 2025</h3>
-      <div class="meta">5 سبتمبر 2025</div>
-      <p>
-        نصائح وخطوات موثوقة لتعزيز حماية بياناتك الرقمية من أي تهديدات أو اختراقات، مع شرح عملي لأفضل أدوات الأمان.
-      </p>
-      <a class="btn" href="security.html">ابدأ الحماية الآن</a>
-    </article>
+  <div class="row">
+    <div class="card article">
+      <h3><a href="tools.html">أفضل الأدوات المجانية لصناع المحتوى</a></h3>
+      <p class="meta">8 دقيقة قراءة | <a href="tools.html">اكمل القراءة →</a></p>
+      <p>قائمة بأحدث الأدوات التي ستوفر وقتك وجهدك وتزيد من جودة أعمالك على الإنترنت.</p>
+    </div>
+    <div class="card article">
+      <h3><a href="ai.html">دليلك الذكي لاستغلال الذكاء الاصطناعي في الربح</a></h3>
+      <p class="meta">14 دقيقة قراءة | <a href="ai.html">اكمل القراءة →</a></p>
+      <p>كيف تستغل منصات الذكاء الاصطناعي الجديدة لصناعة المحتوى، التعلم، وزيادة الدخل الشهري بدون استثمار كبير؟</p>
+    </div>
+  </div>
 
-    <!-- يمكنك إضافة المزيد من المقالات حسب الحاجة -->
-  </section>
+  <!-- إعلان أدسنس إضافي لمنتصف الصفحة -->
+  <div class="adsense">
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-9892132994837464"
+        data-ad-slot="3449460952"
+        data-ad-format="auto"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <!-- أفلييت منتج رقمي -->
+  <div class="affiliate">
+    <a href="https://amazon.com/dp/B01N5IB20Q?tag=yourtag-21" target="_blank" rel="nofollow">
+      <img src="https://images.amazon.com/images/I/81eOyYpL0mL.jpg" alt="أفضل أدوات العمل الرقمي" style="width:220px; border-radius:7px;">
+      <br>اشترِ المنتج الرقمي الأكثر مبيعًا لمنصتك الآن!
+    </a>
+  </div>
 </div>
 
 <footer>
-  جميع الحقوق محفوظة &copy; سمارت كونتنت 2025
+  جميع الحقوق محفوظة © 2025 سمارت كونتنت | منصة تكنولوجية رائدة
 </footer>
 </body>
 </html>
