@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+"""
+Content Generator Pro for Arabic Financial Content
+مولد المحتوى المحترف للمحتوى المالي العربي
+"""
+
 from datetime import datetime
 import random
 
@@ -101,3 +107,6 @@ if __name__ == "__main__":
     improvements = optimizer.analyze_and_improve(traffic, social, conversion, revenue)
     # توليد مقالات مقترحة طبقًا للتطوير
     generate_articles(n=3, year="2025", improvement_dict=improvements)
+
+if __name__ == "__main__":
+    main()

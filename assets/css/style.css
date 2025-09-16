@@ -1,0 +1,261 @@
+/* دليل المال العربي - Unified Stylesheet */
+/* اتجاه الكتابة من اليمين إلى اليسار للعربية */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Tajawal', 'Cairo', Arial, sans-serif;
+  background: #f6fcfa;
+  margin: 0;
+  padding: 0;
+  color: #2c3e50;
+  line-height: 1.6;
+  direction: rtl;
+  text-align: right;
+}
+
+/* Header Styles */
+header {
+  background: #076e4d;
+  color: #fff;
+  padding: 1.5em 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2em;
+  font-weight: 700;
+}
+
+header p {
+  margin: 0.5em 0 0 0;
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+/* Navigation Styles */
+nav {
+  background: #0a5d42;
+  padding: 0.8em 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: rgba(255,255,255,0.1);
+  text-decoration: none;
+}
+
+/* Main Content Styles */
+.main {
+  background: #fff;
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 2.5em 2em;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(7, 110, 77, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2em auto;
+  padding: 0 1em;
+}
+
+/* Typography */
+h1 {
+  color: #076e4d;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+}
+
+h2 {
+  color: #0a5d42;
+  font-size: 2em;
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+  font-weight: 600;
+}
+
+h3 {
+  color: #0c7954;
+  font-size: 1.6em;
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 1.2em;
+  font-size: 1.1em;
+}
+
+/* Links */
+a {
+  color: #076e4d;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #0a5d42;
+  text-decoration: underline;
+}
+
+/* Lists */
+ul, ol {
+  margin: 1.3em 0;
+  padding-right: 2em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* Cards and Boxes */
+.card, .box {
+  background: #fff;
+  padding: 1.5em;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  margin-bottom: 1.5em;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  margin: 2em 0;
+}
+
+.card {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* Meta Information */
+.meta {
+  color: #777;
+  font-size: 0.95em;
+  margin-bottom: 1em;
+}
+
+.meta a {
+  color: #076e4d;
+  font-weight: 600;
+}
+
+/* Ad Spaces */
+.ad, .adsense {
+  margin: 2em auto;
+  text-align: center;
+  padding: 1em;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px dashed #ddd;
+}
+
+/* Footer Styles */
+footer {
+  background: #076e4d;
+  color: #fff;
+  padding: 2em 0;
+  margin-top: 3em;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin: 0 0 1em 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover {
+  color: #a8d5c4;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main {
+    margin: 1em;
+    padding: 1.5em 1em;
+  }
+  
+  nav ul {
+    gap: 1em;
+    padding: 0 1em;
+  }
+  
+  nav a {
+    font-size: 1em;
+    padding: 0.4em 0.8em;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  h2 {
+    font-size: 1.6em;
+  }
+  
+  .row {
+    flex-direction: column;
+  }
+  
+  footer ul {
+    flex-direction: column;
+    gap: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 1em;
+  }
+  
+  h1 {
+    font-size: 1.8em;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+}

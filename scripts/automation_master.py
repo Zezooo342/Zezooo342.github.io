@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+"""
+Automation Master for Arabic Financial Content
+نظام الأتمتة الرئيسي للمحتوى المالي العربي
+"""
+
 from datetime import datetime
 from self_optimization import SelfOptimizationEngine
 

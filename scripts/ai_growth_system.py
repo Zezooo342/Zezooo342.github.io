@@ -1,20 +1,57 @@
+#!/usr/bin/env python3
+"""
+AI Growth System for Arabic Financial Content
+نظام نمو ذكي لتوليد المحتوى المالي العربي
+"""
+
 import requests
+import feedparser
+import random
 from googletrans import Translator
-    
-for url in RSS_FEEDS:
-        d = feedparser.parse(url)
-        translator = Translator()
-        for entry in d.entries[:3]:
-            text = entry.title + " " + getattr(entry, "summary", "")
-            if len(text) > 30:
-                articles.append({
-                    "title": entry.title,
-                    "summary": translator.translate(text, dest='ar').text if entry.title else "",
-                    "link": entry.link
-                })
+
+# RSS feeds للحصول على الاتجاهات
+RSS_FEEDS = [
+    "https://feeds.feedburner.com/oreilly/radar",
+    "https://techcrunch.com/feed/"
+]
+
+# قوالب عناوين SEO
+SEO_TITLES = [
+    "دليل {} الشامل لعام {}",
+    "أسرار {} المربحة في {}",
+    "كيفية تحقيق النجاح في {} لعام {}"
+]
+
+def get_topic_trends():
+    """جلب الاتجاهات الحالية من RSS feeds"""
+    articles = []
+    try:
+        for url in RSS_FEEDS:
+            d = feedparser.parse(url)
+            translator = Translator()
+            for entry in d.entries[:3]:
+                text = entry.title + " " + getattr(entry, "summary", "")
+                if len(text) > 30:
+                    articles.append({
+                        "title": entry.title,
+                        "summary": translator.translate(text, dest='ar').text if entry.title else "",
+                        "link": entry.link
+                    })
+    except Exception as e:
+        print(f"Error fetching trends: {e}")
+        # fallback topics
+        articles = [
+            {"title": "الاستثمار الذكي", "summary": "استراتيجيات الاستثمار", "link": "#"},
+            {"title": "العملات الرقمية", "summary": "دليل التداول", "link": "#"}
+        ]
     return articles
-# توليد خطة/مخطط مقال كاملة
+
+def fetch_google_trends(topic):
+    """محاكاة جلب الكلمات المفتاحية الشائعة"""
+    return [f"{topic}", f"استثمار {topic}", f"ربح من {topic}"]
+
 def generate_article_plan(main_topic: str, year: str = "2025"):
+    """توليد خطة/مخطط مقال كاملة"""
     keywords = fetch_google_trends(main_topic)
     headline = random.choice(SEO_TITLES).format(main_topic, year)
     outline = [
@@ -38,8 +75,9 @@ def generate_article_plan(main_topic: str, year: str = "2025"):
         "questions": questions
     }
     return article
-# أجزاء توليد المقال الرئيسي (العنوان + الأقسام + الكلمات المفتاحية)
+
 def render_article_template(article):
+    """أجزاء توليد المقال الرئيسي (العنوان + الأقسام + الكلمات المفتاحية)"""
     html = f"<h1>{article['headline']}</h1>\n"
     html += f"<p>{article['summary']}</p>\n"
     for section in article["outline"]:
@@ -54,8 +92,9 @@ def render_article_template(article):
     html += "</ul>\n"
     html += "<!-- كلمات مفتاحية مقترحة: " + ", ".join(article["seo_keywords"]) + " -->\n"
     return html
-# التنفيذ الرئيسي (مثال لتوليد خطة + مقال)
+
 if __name__ == "__main__":
+    """التنفيذ الرئيسي (مثال لتوليد خطة + مقال)"""
     trends = get_topic_trends()
     for trend in trends[:3]:
         main_topic = trend['title']
