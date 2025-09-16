@@ -1,18 +1,51 @@
 import requests
+import feedparser
+import random
 from googletrans import Translator
+
+# Constants and configuration
+RSS_FEEDS = [
+    "https://feeds.feedburner.com/TechCrunch",
+    "https://rss.cnn.com/rss/money_news_international.rss",
+    "https://www.entrepreneur.com/latest.rss"
+]
+
+SEO_TITLES = [
+    "دليل شامل: {} في عام {} - كل ما تحتاج معرفته",
+    "أفضل طرق {} للمبتدئين في {}",
+    "كيفية النجاح في {} خطوة بخطوة {}",
+    "أسرار {} المربحة في {} - دليل عملي",
+    "{}  في {}: فرص ذهبية للربح والاستثمار"
+]
+
+def get_topic_trends():
+    """جلب الاتجاهات والمواضيع الرائجة من RSS feeds"""
+    articles = []
     
-for url in RSS_FEEDS:
-        d = feedparser.parse(url)
-        translator = Translator()
-        for entry in d.entries[:3]:
-            text = entry.title + " " + getattr(entry, "summary", "")
-            if len(text) > 30:
-                articles.append({
-                    "title": entry.title,
-                    "summary": translator.translate(text, dest='ar').text if entry.title else "",
-                    "link": entry.link
-                })
+    for url in RSS_FEEDS:
+        try:
+            d = feedparser.parse(url)
+            translator = Translator()
+            for entry in d.entries[:3]:
+                text = entry.title + " " + getattr(entry, "summary", "")
+                if len(text) > 30:
+                    articles.append({
+                        "title": entry.title,
+                        "summary": translator.translate(text, dest='ar').text if entry.title else "",
+                        "link": entry.link
+                    })
+        except Exception as e:
+            print(f"خطأ في جلب البيانات من {url}: {e}")
+            continue
+    
     return articles
+
+def fetch_google_trends(topic):
+    """جلب الكلمات المفتاحية المرتبطة بالموضوع"""
+    # محاكاة جلب الكلمات المفتاحية - يمكن ربطها بـ Google Trends API لاحقاً
+    base_keywords = ["استثمار", "ربح", "مال", "تجارة", "أعمال"]
+    topic_keywords = topic.split()
+    return base_keywords + topic_keywords[:3]
 # توليد خطة/مخطط مقال كاملة
 def generate_article_plan(main_topic: str, year: str = "2025"):
     keywords = fetch_google_trends(main_topic)
