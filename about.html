@@ -30,6 +30,13 @@
       text-align: center;
     }
     
+    .page-header {
+      background: #082032;
+      color: #fff;
+      padding: 24px 0;
+      text-align: center;
+    }
+    
     nav {
       background: #334756;
       color: #fff;
@@ -180,18 +187,12 @@
   </style>
 </head>
 <body>
-  <header>
+  <header id="site-header"></header>
+  
+  <div class="page-header">
     <h1>🏛️ من نحن</h1>
     <p>تعرف على رسالتنا ومنهجيتنا في المحتوى المالي</p>
-  </header>
-
-  <nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="articles.html">أرشيف المقالات</a>
-    <a href="about.html">من نحن</a>
-    <a href="contact.html">اتصل بنا</a>
-    <a href="privacy.html">سياسة الخصوصية</a>
-  </nav>
+  </div>
 
   <div class="main">
     <h1>من نحن؟</h1>
@@ -290,18 +291,7 @@
     </p>
   </div>
 
-  <footer>
-    <ul>
-      <li><a href="index.html">الرئيسية</a></li>
-      <li><a href="articles.html">أرشيف المقالات</a></li>
-      <li><a href="about.html">من نحن</a></li>
-      <li><a href="contact.html">اتصل بنا</a></li>
-      <li><a href="faq.html">الأسئلة الشائعة</a></li>
-      <li><a href="privacy.html">سياسة الخصوصية</a></li>
-    </ul>
-    <div style="margin-top: 1em;">
-      جميع الحقوق محفوظة &copy; دليل المال العربي 2025
-    </div>
-  </footer>
+  <footer id="site-footer"></footer>
+  <script src="/assets/js/site-nav.js" defer></script>
 </body>
 </html>

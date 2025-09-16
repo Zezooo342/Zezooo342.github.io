@@ -30,6 +30,13 @@
       text-align: center;
     }
     
+    .page-header {
+      background: #082032;
+      color: #fff;
+      padding: 24px 0;
+      text-align: center;
+    }
+    
     nav {
       background: #334756;
       color: #fff;
@@ -248,10 +255,12 @@
   </style>
 </head>
 <body>
-  <header>
+  <header id="site-header"></header>
+  
+  <div class="page-header">
     <h1>📞 اتصل بنا</h1>
     <p>نحن هنا لمساعدتك وللإجابة على استفساراتك</p>
-  </header>
+  </div>
 
   <nav>
     <a href="index.html">الرئيسية</a>
@@ -403,5 +412,8 @@
       document.getElementById('contactForm').reset();
     }
   </script>
+  
+  <footer id="site-footer"></footer>
+  <script src="/assets/js/site-nav.js" defer></script>
 </body>
 </html>
