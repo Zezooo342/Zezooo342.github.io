@@ -19,6 +19,7 @@
   <style>
     body {font-family:'Cairo', Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; color:#222;}
     header {background:#082032; color:#fff; padding:24px 0; text-align:center;}
+    .page-header {background:#082032; color:#fff; padding:24px 0; text-align:center;}
     nav {background:#334756; color:#fff; padding:12px 0; text-align:center;}
     nav a {color:#fff; text-decoration:none; margin:0 16px; font-size:18px;}
     nav a:hover {text-decoration:underline;}
@@ -40,14 +41,11 @@
   </style>
 </head>
 <body>
-<header>
+<header id="site-header"></header>
+<div class="page-header">
   <h1>سمارت كونتنت</h1>
   <p>كل ما تحتاجه من شروحات أصلية، أفكار تقنية، حلول عملية للعمل عبر الإنترنت</p>
-</header>
-<nav>
-  <a href="index.html">الرئيسية</a>
-  <a href="contact.html">تواصل معنا</a>
-</nav>
+</div>
 <div class="container">
   <!-- إعلان أدسنس -->
   <div class="adsense">
@@ -118,8 +116,7 @@
   </div>
 </div>
 
-<footer>
-  جميع الحقوق محفوظة © 2025 سمارت كونتنت | منصة تكنولوجية رائدة
-</footer>
+<footer id="site-footer"></footer>
+<script src="/assets/js/site-nav.js" defer></script>
 </body>
 </html>

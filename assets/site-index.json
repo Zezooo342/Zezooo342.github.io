@@ -1,0 +1,211 @@
+{
+  "site": {
+    "name": "دليل المال العربي",
+    "baseUrl": "https://zezooo342.github.io",
+    "lastUpdated": "2025-01-15"
+  },
+  "pages": [
+    {
+      "url": "/index.html",
+      "title": "سمارت كونتنت | منصتك للمحتوى الأصلي والتقني",
+      "displayTitle": "الرئيسية",
+      "description": "مقالات أصلية، حلول تقنية، أدلة عملية في العمل عبر الإنترنت",
+      "category": "home",
+      "priority": 1.0,
+      "nav": true
+    },
+    {
+      "url": "/articles.html",
+      "title": "أرشيف المقالات | دليل المال العربي",
+      "displayTitle": "أرشيف المقالات",
+      "description": "مجموعة شاملة من المقالات والأدلة العملية للاستثمار والربح أونلاين",
+      "category": "content",
+      "priority": 0.9,
+      "nav": true
+    },
+    {
+      "url": "/about.html",
+      "title": "من نحن | دليل المال العربي",
+      "displayTitle": "من نحن",
+      "description": "تعرف على فريق دليل المال العربي ومنهجيتنا في تقديم المحتوى المالي",
+      "category": "info",
+      "priority": 0.8,
+      "nav": true
+    },
+    {
+      "url": "/contact.html",
+      "title": "اتصل بنا | دليل المال العربي",
+      "displayTitle": "اتصل بنا",
+      "description": "تواصل معنا للاستفسارات والاقتراحات",
+      "category": "info",
+      "priority": 0.7,
+      "nav": true
+    },
+    {
+      "url": "/privacy.html",
+      "title": "سياسة الخصوصية | دليل المال العربي",
+      "displayTitle": "سياسة الخصوصية",
+      "description": "سياسة الخصوصية وحماية البيانات",
+      "category": "legal",
+      "priority": 0.5,
+      "nav": true
+    },
+    {
+      "url": "/reviews.html",
+      "title": "آراء وتجارب الزوار | دليل المال العربي",
+      "displayTitle": "آراء الزوار",
+      "description": "تجارب وآراء زوار الموقع",
+      "category": "reviews",
+      "priority": 0.6,
+      "nav": true
+    },
+    {
+      "url": "/media.html",
+      "title": "في الإعلام | دليل المال العربي",
+      "displayTitle": "في الإعلام",
+      "description": "تغطية إعلامية وشراكات",
+      "category": "media",
+      "priority": 0.6,
+      "nav": true
+    },
+    {
+      "url": "/team.html",
+      "title": "فريق العمل | دليل المال العربي",
+      "displayTitle": "فريق العمل",
+      "description": "تعرف على فريق العمل",
+      "category": "info",
+      "priority": 0.6,
+      "nav": true
+    },
+    {
+      "url": "/article.html",
+      "title": "مقال رئيسي: كيف تبدأ استثمارك بأمان اليوم!",
+      "displayTitle": "مقال استثماري رئيسي",
+      "description": "دليل عملي وخطوات مدروسة لتبدأ مشوارك الاستثماري بدون مخاطرة",
+      "category": "investment",
+      "priority": 0.8,
+      "nav": false,
+      "relatedPages": ["/invest-arab.html", "/make-money-online.html", "/crypto-guide.html"]
+    },
+    {
+      "url": "/amp-article.html",
+      "title": "💰 دليل المال العربي - استثمار وربح مضمون 2025",
+      "displayTitle": "دليل الاستثمار والربح (AMP)",
+      "description": "أفضل الطرق العملية للاستثمار والربح من الانترنت في 2025",
+      "category": "investment",
+      "priority": 0.7,
+      "nav": false,
+      "isAMP": true,
+      "relatedPages": ["/invest-arab.html", "/article.html", "/make-money-online.html"]
+    },
+    {
+      "url": "/invest-arab.html",
+      "title": "دليل الاستثمار للمبتدئين في مصر",
+      "displayTitle": "دليل الاستثمار العربي",
+      "description": "دليل شامل للاستثمار في الأسواق العربية",
+      "category": "investment",
+      "priority": 0.8,
+      "nav": false,
+      "relatedPages": ["/article.html", "/management.html", "/crypto-guide.html"]
+    },
+    {
+      "url": "/make-money-online.html",
+      "title": "طرق ربح المال من الإنترنت 2025",
+      "displayTitle": "ربح المال أونلاين",
+      "description": "طرق مجربة لربح المال من الإنترنت",
+      "category": "online-income",
+      "priority": 0.8,
+      "nav": false,
+      "relatedPages": ["/TikTok%20profit.html", "/ai.html", "/business-plan-simple.html"]
+    },
+    {
+      "url": "/crypto-guide.html",
+      "title": "دليل العملات الرقمية للمبتدئين 2025",
+      "displayTitle": "دليل العملات الرقمية",
+      "description": "دليل شامل للعملات الرقمية والاستثمار فيها",
+      "category": "crypto",
+      "priority": 0.8,
+      "nav": false,
+      "relatedPages": ["/crypto-security.html", "/invest-arab.html", "/management.html"]
+    },
+    {
+      "url": "/crypto-security.html",
+      "title": "5 نصائح لتأمين حسابات العملات الرقمية ومنع الاحتيال",
+      "displayTitle": "أمان العملات الرقمية",
+      "description": "نصائح مهمة لحماية استثماراتك في العملات الرقمية",
+      "category": "crypto",
+      "priority": 0.7,
+      "nav": false,
+      "relatedPages": ["/crypto-guide.html", "/invest-arab.html", "/management.html"]
+    },
+    {
+      "url": "/management.html",
+      "title": "أفضل منصات الاستثمار والتداول في الخليج 2025",
+      "displayTitle": "منصات الاستثمار والتداول",
+      "description": "مقارنة أفضل منصات التداول والاستثمار",
+      "category": "investment",
+      "priority": 0.7,
+      "nav": false,
+      "relatedPages": ["/invest-arab.html", "/crypto-guide.html", "/article.html"]
+    },
+    {
+      "url": "/business-plan-simple.html",
+      "title": "كيف تبدأ مشروع أونلاين ناجح بدون رأس مال كبير؟",
+      "displayTitle": "خطة عمل بسيطة",
+      "description": "دليل لبدء مشروع أونلاين بدون رأس مال كبير",
+      "category": "business",
+      "priority": 0.7,
+      "nav": false,
+      "relatedPages": ["/make-money-online.html", "/ai.html", "/TikTok%20profit.html"]
+    },
+    {
+      "url": "/TikTok%20profit.html",
+      "title": "أسرار الربح من تيك توك: كيف تحقق أول 1000 دولار بسرعة",
+      "displayTitle": "الربح من تيك توك",
+      "description": "استراتيجيات فعالة للربح من منصة تيك توك",
+      "category": "social-media",
+      "priority": 0.7,
+      "nav": false,
+      "relatedPages": ["/make-money-online.html", "/business-plan-simple.html", "/ai.html"]
+    },
+    {
+      "url": "/ai.html",
+      "title": "دليلك الذكي لاستغلال الذكاء الاصطناعي في الربح",
+      "displayTitle": "الذكاء الاصطناعي والربح",
+      "description": "كيفية استخدام الذكاء الاصطناعي لتحقيق الأرباح",
+      "category": "technology",
+      "priority": 0.7,
+      "nav": false,
+      "relatedPages": ["/make-money-online.html", "/business-plan-simple.html", "/TikTok%20profit.html"]
+    },
+    {
+      "url": "/faq.html",
+      "title": "الأسئلة الشائعة | دليل المال العربي",
+      "displayTitle": "الأسئلة الشائعة",
+      "description": "إجابات على أهم الأسئلة الشائعة",
+      "category": "support",
+      "priority": 0.6,
+      "nav": false
+    }
+  ],
+  "navigation": {
+    "main": [
+      "/index.html",
+      "/articles.html", 
+      "/about.html",
+      "/contact.html",
+      "/privacy.html",
+      "/reviews.html",
+      "/media.html",
+      "/team.html"
+    ],
+    "footer": [
+      "/index.html",
+      "/articles.html",
+      "/about.html", 
+      "/contact.html",
+      "/privacy.html",
+      "/faq.html"
+    ]
+  }
+}

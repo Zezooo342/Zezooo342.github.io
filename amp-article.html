@@ -29,14 +29,141 @@
   }
   </script>
   <style amp-custom>
-    body { font-family: 'Tajawal', Arial, sans-serif; background: #f9f9f9; color: #222; margin: 1em;}
+    body { font-family: 'Tajawal', Arial, sans-serif; background: #f9f9f9; color: #222; margin: 0;}
     h1,h2,h3 {color: #076e4d;}
-    .box {background:#fff;padding:1em 1.5em;border-radius:8px;box-shadow:0 2px 8px #ddd;}
+    .box {background:#fff;padding:1em 1.5em;border-radius:8px;box-shadow:0 2px 8px #ddd;margin:1em;}
     .ad {margin:1em 0;}
     ul {margin-right:2em;}
+    
+    /* AMP Navigation Styles */
+    .amp-nav {
+      background: #334756;
+      padding: 12px 0;
+      text-align: center;
+      margin: 0;
+    }
+    
+    .amp-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.8em;
+    }
+    
+    .amp-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 6px 10px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    
+    .amp-nav a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Related Articles Section */
+    .related-section {
+      background: #f8f9fa;
+      padding: 1.5em;
+      margin: 2em 1em;
+      border-radius: 8px;
+      border: 1px solid #e9ecef;
+    }
+    
+    .related-section h3 {
+      color: #076e4d;
+      margin: 0 0 1em 0;
+      text-align: center;
+    }
+    
+    .related-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .related-list li {
+      background: #fff;
+      margin: 0.5em 0;
+      padding: 0.8em;
+      border-radius: 6px;
+      border: 1px solid #e1e5e9;
+    }
+    
+    .related-list a {
+      color: #076e4d;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    
+    .related-list a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Footer */
+    .amp-footer {
+      background: #076e4d;
+      color: #fff;
+      padding: 1.5em;
+      text-align: center;
+      margin-top: 2em;
+    }
+    
+    .amp-footer ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      margin: 0 0 1em 0;
+      padding: 0;
+      flex-wrap: wrap;
+    }
+    
+    .amp-footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+    }
+    
+    .amp-footer a:hover {
+      text-decoration: underline;
+    }
+    
+    @media (max-width: 768px) {
+      .amp-nav ul,
+      .amp-footer ul {
+        gap: 0.5em;
+      }
+      
+      .amp-nav a,
+      .amp-footer a {
+        font-size: 13px;
+        padding: 4px 8px;
+      }
+    }
   </style>
 </head>
 <body>
+  <!-- Static AMP Navigation -->
+  <nav class="amp-nav">
+    <ul>
+      <li><a href="/index.html">الرئيسية</a></li>
+      <li><a href="/articles.html">أرشيف المقالات</a></li>
+      <li><a href="/about.html">من نحن</a></li>
+      <li><a href="/contact.html">اتصل بنا</a></li>
+      <li><a href="/privacy.html">سياسة الخصوصية</a></li>
+      <li><a href="/reviews.html">آراء الزوار</a></li>
+      <li><a href="/media.html">في الإعلام</a></li>
+      <li><a href="/team.html">فريق العمل</a></li>
+    </ul>
+  </nav>
+  
   <!-- اعلان أدسنس اوتو (AMP) -->
   <amp-auto-ads type="adsense" data-ad-client="ca-pub-9892132994837464"></amp-auto-ads>
   <div class="box">
@@ -70,5 +197,30 @@
       <li>كيف أبدأ مشروعي الخاص من المنزل؟</li>
     </ul>
   </div>
+  
+  <!-- Related Articles Section (Static for AMP) -->
+  <section class="related-section">
+    <h3>مقالات ذات صلة</h3>
+    <ul class="related-list">
+      <li><a href="/invest-arab.html">دليل الاستثمار العربي الشامل</a></li>
+      <li><a href="/article.html">مقال استثماري رئيسي</a></li>
+      <li><a href="/make-money-online.html">ربح المال أونلاين</a></li>
+      <li><a href="/crypto-guide.html">دليل العملات الرقمية</a></li>
+      <li><a href="/management.html">منصات الاستثمار والتداول</a></li>
+    </ul>
+  </section>
+  
+  <!-- Static AMP Footer -->
+  <footer class="amp-footer">
+    <ul>
+      <li><a href="/index.html">الرئيسية</a></li>
+      <li><a href="/articles.html">أرشيف المقالات</a></li>
+      <li><a href="/about.html">من نحن</a></li>
+      <li><a href="/contact.html">اتصل بنا</a></li>
+      <li><a href="/privacy.html">سياسة الخصوصية</a></li>
+      <li><a href="/faq.html">الأسئلة الشائعة</a></li>
+    </ul>
+    <div>جميع الحقوق محفوظة &copy; دليل المال العربي 2025</div>
+  </footer>
 </body>
 </html>

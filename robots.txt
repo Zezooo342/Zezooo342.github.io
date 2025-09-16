@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Disallow temporary and internal directories
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /assets/temp/
+Disallow: /temp/
+Disallow: /__pycache__/
+Disallow: /*.py
+Disallow: /*.txt$
+Disallow: /*.md$
+
+# Allow important files
+Allow: /ads.txt
+Allow: /robots.txt
+Allow: /sitemap.xml
+
+# Sitemap location
+Sitemap: https://zezooo342.github.io/sitemap.xml
+
+# Crawl delay (optional - be nice to servers)
+Crawl-delay: 1
