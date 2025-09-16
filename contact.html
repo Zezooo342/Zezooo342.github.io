@@ -2,30 +2,406 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>اتصل بنا | دليل المال العربي</title>
-  <meta name="description" content="تواصل مع فريقنا للاستفسارات والدعم أو الشراكات التجارية والإعلامية.">
-  <meta name="keywords" content="اتصل بنا, دعم العملاء, شراكة إعلامية, تواصل, دليل المال العربي">
+  <meta name="description" content="تواصل مع فريقنا للاستفسارات والدعم أو الشراكات التجارية والإعلامية. نحن هنا لمساعدتك.">
+  <meta name="keywords" content="اتصل بنا, دعم العملاء, شراكة إعلامية, تواصل, دليل المال العربي, استفسارات مالية">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <meta property="og:title" content="دعم احترافي من فريق دليل المال العربي"/>
+  <meta property="og:description" content="تواصل معنا للحصول على الدعم أو الاستفسارات المالية أو مناقشة فرص الشراكة والتعاون."/>
+  <meta property="og:image" content="https://zezooo342.github.io/assets/images/og-default.png"/>
+  <meta property="og:type" content="website"/>
   <link rel="canonical" href="https://zezooo342.github.io/contact.html"/>
+  
   <style>
-    body{font-family:'Tajawal',Arial,sans-serif;background:#f6fcfa;}
-    .main{background:#fff;max-width:700px;margin:2em auto;padding:2em 1.4em;border-radius:14px;box-shadow:0 2px 8px #e1eee9;}
-    h1{color:#0c7954;}
-    label,input,textarea{display:block;width:100%;margin-bottom:1em;}
-    input,textarea{padding:.7em;border-radius:7px;border:1px solid #ccc;}
-    .btn{padding:.7em 2em;background:#076e4d;color:#fff;font-weight:bold;border:none;border-radius:7px;}
+    body {
+      font-family: 'Tajawal', Arial, sans-serif;
+      background: #f6fcfa;
+      margin: 0;
+      padding: 0;
+      color: #222;
+      line-height: 1.6;
+    }
+    
+    header {
+      background: #082032;
+      color: #fff;
+      padding: 24px 0;
+      text-align: center;
+    }
+    
+    nav {
+      background: #334756;
+      color: #fff;
+      padding: 12px 0;
+      text-align: center;
+    }
+    
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 16px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    
+    nav a:hover {
+      text-decoration: underline;
+    }
+    
+    .main {
+      background: #fff;
+      max-width: 700px;
+      margin: 2em auto;
+      padding: 2.5em 2em;
+      border-radius: 14px;
+      box-shadow: 0 2px 8px #e1eee9;
+    }
+    
+    h1 {
+      color: #076e4d;
+      border-bottom: 3px solid #3bb273;
+      padding-bottom: 0.5em;
+      margin-bottom: 1.5em;
+    }
+    
+    h2 {
+      color: #334756;
+      margin-top: 2em;
+      margin-bottom: 1em;
+    }
+    
+    .intro-text {
+      background: #e1eee9;
+      border: 2px solid #3bb273;
+      border-radius: 10px;
+      padding: 1.5em;
+      margin-bottom: 2em;
+      text-align: center;
+    }
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2em;
+      margin-bottom: 2em;
+    }
+    
+    .contact-info {
+      background: #f6fcfa;
+      padding: 1.5em;
+      border-radius: 8px;
+      border: 1px solid #e1eee9;
+    }
+    
+    .contact-info h3 {
+      color: #076e4d;
+      margin-top: 0;
+    }
+    
+    .form-section {
+      grid-column: 1 / -1;
+    }
+    
+    label {
+      display: block;
+      font-weight: bold;
+      color: #334756;
+      margin-bottom: 0.5em;
+      margin-top: 1em;
+    }
+    
+    input, textarea, select {
+      width: 100%;
+      padding: 0.8em;
+      border-radius: 7px;
+      border: 2px solid #e1eee9;
+      font-family: inherit;
+      font-size: 1em;
+      transition: border-color 0.3s ease;
+      box-sizing: border-box;
+    }
+    
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: #3bb273;
+    }
+    
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    
+    .btn {
+      padding: 0.8em 2.5em;
+      background: #076e4d;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background 0.3s ease;
+      margin-top: 1em;
+    }
+    
+    .btn:hover {
+      background: #28654c;
+    }
+    
+    .btn:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    
+    /* Hide honeypot field */
+    .hp {
+      position: absolute;
+      left: -5000px;
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    .privacy-notice {
+      background: #fff3cd;
+      border: 1px solid #ffeaa7;
+      border-radius: 8px;
+      padding: 1.2em;
+      margin: 1.5em 0;
+      font-size: 0.9em;
+    }
+    
+    .privacy-notice h4 {
+      color: #856404;
+      margin-top: 0;
+      margin-bottom: 0.5em;
+    }
+    
+    .required {
+      color: #e74c3c;
+    }
+    
+    .success-message {
+      background: #d4edda;
+      border: 1px solid #c3e6cb;
+      color: #155724;
+      padding: 1em;
+      border-radius: 7px;
+      margin: 1em 0;
+      display: none;
+    }
+    
+    .error-message {
+      background: #f8d7da;
+      border: 1px solid #f5c6cb;
+      color: #721c24;
+      padding: 1em;
+      border-radius: 7px;
+      margin: 1em 0;
+      display: none;
+    }
+    
+    footer {
+      background: #076e4d;
+      color: #fff;
+      padding: 1.5em 0;
+      text-align: center;
+      margin-top: 3em;
+    }
+    
+    footer ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1.5em;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+    }
+    
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    
+    footer a:hover {
+      text-decoration: underline;
+    }
+    
+    @media (max-width: 768px) {
+      .main {
+        margin: 1em;
+        padding: 1.5em 1em;
+      }
+      
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1em;
+      }
+      
+      nav a {
+        margin: 0 8px;
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 <body>
+  <header>
+    <h1>📞 اتصل بنا</h1>
+    <p>نحن هنا لمساعدتك وللإجابة على استفساراتك</p>
+  </header>
+
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="articles.html">أرشيف المقالات</a>
+    <a href="about.html">من نحن</a>
+    <a href="contact.html">اتصل بنا</a>
+    <a href="privacy.html">سياسة الخصوصية</a>
+  </nav>
+
   <div class="main">
-    <h1>اتصل بنا</h1>
-    <form>
-      <label>الاسم</label><input type="text" required>
-      <label>البريد الإلكتروني</label><input type="email" required>
-      <label>رسالتك أو استفسارك</label><textarea rows="5" required></textarea>
-      <button type="submit" class="btn">إرسال</button>
-    </form>
-    <p>أو راسلنا عبر: <b>info@zezooo342.github.io</b></p>
+    <h1>تواصل معنا</h1>
+    
+    <div class="intro-text">
+      <p><strong>نحن نقدر تواصلكم معنا!</strong> سواء كان لديكم استفسار مالي، اقتراح لتحسين المحتوى، أو ترغبون في مناقشة فرص الشراكة، فريقنا مستعد لمساعدتكم.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>📧 للاستفسارات العامة</h3>
+        <p><strong>البريد الإلكتروني:</strong><br>
+        <a href="mailto:info@zezooo342.github.io" style="color: #076e4d;">info@zezooo342.github.io</a></p>
+        <p><strong>وقت الاستجابة:</strong> خلال 24-48 ساعة</p>
+      </div>
+      
+      <div class="contact-info">
+        <h3>🤝 للشراكات والتعاون</h3>
+        <p><strong>البريد الإلكتروني:</strong><br>
+        <a href="mailto:partnerships@zezooo342.github.io" style="color: #076e4d;">partnerships@zezooo342.github.io</a></p>
+        <p><strong>المجالات:</strong> إعلانات، محتوى مدفوع، تعاونات استراتيجية</p>
+      </div>
+
+      <div class="form-section">
+        <h2>📝 نموذج التواصل السريع</h2>
+        
+        <div class="privacy-notice">
+          <h4>🔒 ملاحظة الخصوصية</h4>
+          <p>نحن نحترم خصوصيتكم. المعلومات المرسلة عبر هذا النموذج تُستخدم فقط للرد على استفساراتكم ولن نشاركها مع أي طرف ثالث. لمزيد من التفاصيل، اطلعوا على <a href="privacy.html" style="color: #856404;">سياسة الخصوصية</a>.</p>
+        </div>
+
+        <!-- 
+        IMPORTANT: Replace 'YOUR_FORMSPREE_ID' with your actual Formspree form ID
+        To set up Formspree:
+        1. Go to https://formspree.io
+        2. Create an account
+        3. Create a new form and get your form ID
+        4. Replace 'YOUR_FORMSPREE_ID' below with your actual ID
+        -->
+        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" id="contactForm">
+          <div class="success-message" id="successMessage">
+            ✅ تم إرسال رسالتكم بنجاح! سنتواصل معكم قريباً.
+          </div>
+          <div class="error-message" id="errorMessage">
+            ❌ حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى أو مراسلتنا مباشرة.
+          </div>
+
+          <label for="name">الاسم الكامل <span class="required">*</span></label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">البريد الإلكتروني <span class="required">*</span></label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="subject">نوع الاستفسار <span class="required">*</span></label>
+          <select id="subject" name="subject" required>
+            <option value="">اختر نوع الاستفسار</option>
+            <option value="general">استفسار عام</option>
+            <option value="financial">سؤال مالي أو استثماري</option>
+            <option value="content">اقتراح محتوى أو تصحيح</option>
+            <option value="partnership">شراكة أو تعاون</option>
+            <option value="technical">مشكلة تقنية في الموقع</option>
+            <option value="other">أخرى</option>
+          </select>
+
+          <label for="message">رسالتكم أو استفساركم <span class="required">*</span></label>
+          <textarea id="message" name="message" placeholder="شاركونا تفاصيل استفساركم..." required></textarea>
+
+          <!-- Anti-spam honeypot field - keep hidden -->
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
+          
+          <!-- Formspree configuration -->
+          <input type="hidden" name="_subject" value="رسالة جديدة من موقع دليل المال العربي">
+          <input type="hidden" name="_next" value="https://zezooo342.github.io/contact.html?success=1">
+
+          <button type="submit" class="btn" id="submitBtn">
+            إرسال الرسالة 📤
+          </button>
+        </form>
+
+        <div style="margin-top: 2em; padding: 1em; background: #f6fcfa; border-radius: 8px;">
+          <h4 style="color: #076e4d; margin-top: 0;">💡 نصائح للحصول على أفضل استجابة:</h4>
+          <ul style="margin: 0; padding-right: 1.2em;">
+            <li>كونوا واضحين ومحددين في استفساراتكم</li>
+            <li>أذكروا أي تفاصيل ذات صلة بالموضوع</li>
+            <li>للأسئلة المالية، أذكروا مستوى خبرتكم</li>
+            <li>للمشاكل التقنية، أذكروا المتصفح والجهاز المستخدم</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h2>❓ الأسئلة الشائعة</h2>
+    <p>قبل إرسال استفساركم، تأكدوا من مراجعة <a href="faq.html" style="color: #076e4d; font-weight: bold;">صفحة الأسئلة الشائعة</a> - قد تجدون الإجابة على سؤالكم هناك!</p>
   </div>
+
+  <footer>
+    <ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="articles.html">أرشيف المقالات</a></li>
+      <li><a href="about.html">من نحن</a></li>
+      <li><a href="contact.html">اتصل بنا</a></li>
+      <li><a href="faq.html">الأسئلة الشائعة</a></li>
+      <li><a href="privacy.html">سياسة الخصوصية</a></li>
+    </ul>
+    <div style="margin-top: 1em;">
+      جميع الحقوق محفوظة &copy; دليل المال العربي 2025
+    </div>
+  </footer>
+
+  <script>
+    // Handle form submission
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      const submitBtn = document.getElementById('submitBtn');
+      const successMsg = document.getElementById('successMessage');
+      const errorMsg = document.getElementById('errorMessage');
+      
+      // Reset messages
+      successMsg.style.display = 'none';
+      errorMsg.style.display = 'none';
+      
+      // Update button text
+      submitBtn.textContent = 'جارٍ الإرسال...';
+      submitBtn.disabled = true;
+      
+      // Check if form action has been updated from placeholder
+      if (this.action.includes('YOUR_FORMSPREE_ID')) {
+        e.preventDefault();
+        errorMsg.innerHTML = '⚠️ يرجى تحديث معرف Formspree في الكود. راجع التعليقات في الملف لمزيد من التفاصيل.';
+        errorMsg.style.display = 'block';
+        submitBtn.textContent = 'إرسال الرسالة 📤';
+        submitBtn.disabled = false;
+        return;
+      }
+    });
+
+    // Check for success parameter in URL
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === '1') {
+      document.getElementById('successMessage').style.display = 'block';
+      // Clear the form
+      document.getElementById('contactForm').reset();
+    }
+  </script>
 </body>
 </html>
