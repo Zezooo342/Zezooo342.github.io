@@ -1,0 +1,36 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://zezooo342.github.io/sitemap.xml
+
+# Block access to development and admin files
+Disallow: /scripts/
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /assets/js/
+Disallow: /tmp/
+Disallow: /temp/
+
+# Allow CSS and images for proper rendering
+Allow: /assets/css/
+Allow: /assets/images/
+Allow: /*.css
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.png
+Allow: /*.gif
+Allow: /*.svg
+
+# Crawl delay (be respectful)
+Crawl-delay: 1
+
+# Common bot guidelines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /

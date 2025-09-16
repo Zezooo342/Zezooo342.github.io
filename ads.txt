@@ -1,1 +1,10 @@
-google.com, pub-9892132994837464, DIRECT, f08c47fec0942fa0
+# ads.txt file for zezooo342.github.io
+# This file is used by ad networks to verify authorized sellers
+# DO NOT submit to AdSense until site is approved
+
+# Google AdSense - Replace with actual publisher ID after approval
+# google.com, pub-9892132994837464, DIRECT, f08c47fec0942fa0
+
+# Placeholder for approved AdSense integration
+# Update this line only AFTER AdSense approval:
+# google.com, pub-XXXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
