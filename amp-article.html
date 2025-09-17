@@ -16,6 +16,9 @@
   <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
   <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 
+  <!-- AMP Boilerplate CSS -->
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
   <!-- Article Schema -->
   <script type="application/ld+json">
   {
@@ -29,14 +32,132 @@
   }
   </script>
   <style amp-custom>
-    body { font-family: 'Tajawal', Arial, sans-serif; background: #f9f9f9; color: #222; margin: 1em;}
+    body { font-family: 'Tajawal', Arial, sans-serif; background: #f9f9f9; color: #222; margin: 0; padding: 0;}
     h1,h2,h3 {color: #076e4d;}
-    .box {background:#fff;padding:1em 1.5em;border-radius:8px;box-shadow:0 2px 8px #ddd;}
+    .box {background:#fff;padding:1em 1.5em;border-radius:8px;box-shadow:0 2px 8px #ddd; margin: 1em;}
     .ad {margin:1em 0;}
     ul {margin-right:2em;}
+    
+    /* AMP Static Navigation */
+    .amp-nav {
+      background: #082032;
+      color: #fff;
+      padding: 12px 0;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .amp-nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      margin: 0 4px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 500;
+      display: inline-block;
+    }
+    
+    .amp-nav a:hover {
+      background-color: #334756;
+    }
+    
+    /* AMP Footer */
+    .amp-footer {
+      background: #076e4d;
+      color: #fff;
+      padding: 2rem 1rem 1rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+    
+    .amp-footer-links {
+      margin-bottom: 1.5rem;
+    }
+    
+    .amp-footer-links a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 8px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    
+    .amp-footer-links a:hover {
+      text-decoration: underline;
+    }
+    
+    .amp-copyright {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding-top: 1rem;
+      margin-top: 1rem;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+    
+    /* Related Articles AMP */
+    .amp-related {
+      background: #f7fcfa;
+      border: 1px solid #e1eee9;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2rem 1rem;
+    }
+    
+    .amp-related h3 {
+      color: #076e4d;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+    
+    .amp-related ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .amp-related li {
+      margin-bottom: 0.8rem;
+    }
+    
+    .amp-related a {
+      color: #076e4d;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    
+    .amp-related a:hover {
+      text-decoration: underline;
+    }
+    
+    .amp-related a::before {
+      content: "→ ";
+      color: #3bb273;
+      font-weight: bold;
+    }
+    
+    @media (max-width: 768px) {
+      .amp-nav a {
+        margin: 2px;
+        padding: 6px 8px;
+        font-size: 13px;
+      }
+    }
   </style>
 </head>
 <body>
+  <!-- Static AMP Navigation -->
+  <nav class="amp-nav">
+    <a href="index.html">الرئيسية</a>
+    <a href="articles.html">المقالات</a>
+    <a href="invest-arab.html">الاستثمار</a>
+    <a href="crypto-guide.html">العملات الرقمية</a>
+    <a href="make-money-online.html">الربح أونلاين</a>
+    <a href="about.html">من نحن</a>
+    <a href="contact.html">تواصل معنا</a>
+  </nav>
+  
   <!-- اعلان أدسنس اوتو (AMP) -->
   <amp-auto-ads type="adsense" data-ad-client="ca-pub-9892132994837464"></amp-auto-ads>
   <div class="box">
@@ -70,5 +191,31 @@
       <li>كيف أبدأ مشروعي الخاص من المنزل؟</li>
     </ul>
   </div>
+
+  <!-- Related Articles Section for AMP -->
+  <div class="amp-related">
+    <h3>مقالات ذات صلة</h3>
+    <ul>
+      <li><a href="invest-arab.html">دليل الاستثمار العربي الشامل</a></li>
+      <li><a href="make-money-online.html">كيفية ربح المال أونلاين للمبتدئين</a></li>
+      <li><a href="crypto-guide.html">دليل العملات الرقمية من الصفر</a></li>
+      <li><a href="business-plan-simple.html">خطة العمل البسيطة للمشاريع</a></li>
+      <li><a href="crypto-security.html">أمان العملات الرقمية وحماية الاستثمارات</a></li>
+    </ul>
+  </div>
+
+  <!-- Static AMP Footer -->
+  <footer class="amp-footer">
+    <div class="amp-footer-links">
+      <a href="index.html">الرئيسية</a>
+      <a href="articles.html">المقالات</a>
+      <a href="about.html">من نحن</a>
+      <a href="contact.html">تواصل معنا</a>
+      <a href="privacy.html">سياسة الخصوصية</a>
+    </div>
+    <div class="amp-copyright">
+      جميع الحقوق محفوظة &copy; دليل المال العربي 2025
+    </div>
+  </footer>
 </body>
 </html>
