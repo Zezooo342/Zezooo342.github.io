@@ -1,0 +1,110 @@
+{
+  "pages": [
+    {
+      "path": "/index.html",
+      "title": "سمارت كونتنت | منصتك للمحتوى الأصلي والتقني",
+      "category": "main",
+      "priority": 1.0
+    },
+    {
+      "path": "/articles.html",
+      "title": "أرشيف المقالات",
+      "category": "main",
+      "priority": 0.8
+    },
+    {
+      "path": "/article.html",
+      "title": "مقال رئيسي",
+      "category": "content",
+      "priority": 0.7
+    },
+    {
+      "path": "/amp-article.html",
+      "title": "دليل المال العربي - النسخة المحسنة",
+      "category": "content",
+      "priority": 0.7
+    },
+    {
+      "path": "/about.html",
+      "title": "من نحن",
+      "category": "info",
+      "priority": 0.8
+    },
+    {
+      "path": "/contact.html",
+      "title": "تواصل معنا",
+      "category": "info",
+      "priority": 0.6
+    },
+    {
+      "path": "/privacy.html",
+      "title": "سياسة الخصوصية",
+      "category": "legal",
+      "priority": 0.6
+    },
+    {
+      "path": "/reviews.html",
+      "title": "المراجعات",
+      "category": "content",
+      "priority": 0.7
+    },
+    {
+      "path": "/media.html",
+      "title": "الوسائط",
+      "category": "content",
+      "priority": 0.7
+    },
+    {
+      "path": "/team.html",
+      "title": "فريق العمل",
+      "category": "info",
+      "priority": 0.6
+    },
+    {
+      "path": "/management.html",
+      "title": "إدارة المحافظ",
+      "category": "financial",
+      "priority": 0.7
+    },
+    {
+      "path": "/invest-arab.html",
+      "title": "دليل الاستثمار العربي",
+      "category": "financial",
+      "priority": 0.8
+    },
+    {
+      "path": "/make-money-online.html",
+      "title": "كيفية ربح المال أونلاين",
+      "category": "financial",
+      "priority": 0.8
+    },
+    {
+      "path": "/crypto-guide.html",
+      "title": "دليل العملات الرقمية",
+      "category": "financial",
+      "priority": 0.8
+    },
+    {
+      "path": "/crypto-security.html",
+      "title": "أمان العملات الرقمية",
+      "category": "financial",
+      "priority": 0.7
+    },
+    {
+      "path": "/business-plan-simple.html",
+      "title": "خطة العمل البسيطة",
+      "category": "business",
+      "priority": 0.7
+    },
+    {
+      "path": "/TikTok%20profit.html",
+      "title": "الربح من تيك توك",
+      "category": "social",
+      "priority": 0.6
+    }
+  ],
+  "metadata": {
+    "siteUrl": "https://zezooo342.github.io",
+    "lastUpdated": "2025-01-27"
+  }
+}
