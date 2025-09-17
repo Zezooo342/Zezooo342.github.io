@@ -7,6 +7,12 @@
       "priority": 1.0
     },
     {
+      "path": "/smart-saving-youth.html",
+      "title": "أسرار الادخار الذكي للشباب العربي: كيف تبدأ وتستمر؟",
+      "category": "financial",
+      "priority": 0.9
+    },
+    {
       "path": "/articles.html",
       "title": "أرشيف المقالات",
       "category": "main",
@@ -105,6 +111,12 @@
   ],
   "metadata": {
     "siteUrl": "https://zezooo342.github.io",
-    "lastUpdated": "2025-01-27"
+    "lastUpdated": "2025-01-27",
+    "totalArticles": 17,
+    "featuredArticle": {
+      "title": "أسرار الادخار الذكي للشباب العربي: كيف تبدأ وتستمر؟",
+      "path": "/smart-saving-youth.html",
+      "publishDate": "2025-01-27"
+    }
   }
 }

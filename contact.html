@@ -294,19 +294,22 @@
         </div>
 
         <!-- 
-        IMPORTANT: Replace 'YOUR_FORMSPREE_ID' with your actual Formspree form ID
-        To set up Formspree:
-        1. Go to https://formspree.io
-        2. Create an account
-        3. Create a new form and get your form ID
-        4. Replace 'YOUR_FORMSPREE_ID' below with your actual ID
+        Contact Form Setup Instructions:
         
-        FALLBACK: If you don't want to use Formspree, you can:
-        - Use mailto: action="mailto:info@zezooo342.github.io"
-        - Integrate with other form services like Netlify Forms
-        - Use a contact form service like Typeform
+        Option 1 - Formspree (Recommended):
+        1. Go to https://formspree.io
+        2. Create a free account
+        3. Create a new form and get your form ID
+        4. Replace 'FORMSPREE_FORM_ID' below with your actual ID
+        
+        Option 2 - Netlify Forms (if hosted on Netlify):
+        1. Add data-netlify="true" to the form tag
+        2. Replace action with just "#"
+        
+        Option 3 - Direct email (fallback):
+        The form will show email contact info if not properly configured
         -->
-        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" id="contactForm">
+        <form action="https://formspree.io/f/FORMSPREE_FORM_ID" method="POST" id="contactForm">
           <div class="success-message" id="successMessage">
             ✅ تم إرسال رسالتكم بنجاح! سنتواصل معكم قريباً.
           </div>
@@ -314,15 +317,21 @@
             ❌ حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى أو مراسلتنا مباشرة.
           </div>
 
-          <!-- Fallback contact info displayed when form is not configured -->
-          <div class="fallback-contact" id="fallbackContact" style="display: none; background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px; padding: 1.5em; margin: 1em 0;">
-            <h4 style="color: #856404; margin-top: 0;">📧 تواصل مباشر</h4>
-            <p>يمكنكم التواصل معنا مباشرة عبر البريد الإلكتروني:</p>
-            <p><strong>للاستفسارات العامة:</strong><br>
-            <a href="mailto:info@zezooo342.github.io" style="color: #076e4d; font-weight: bold;">info@zezooo342.github.io</a></p>
-            <p><strong>للشراكات:</strong><br>
-            <a href="mailto:partnerships@zezooo342.github.io" style="color: #076e4d; font-weight: bold;">partnerships@zezooo342.github.io</a></p>
-            <p style="margin-bottom: 0;"><em>سنرد على رسائلكم خلال 24-48 ساعة</em></p>
+          <!-- Form not configured notice -->
+          <div class="fallback-contact" id="fallbackContact" style="background: #e3f2fd; border: 2px solid #2196f3; border-radius: 10px; padding: 1.5em; margin: 1em 0;">
+            <h4 style="color: #1565c0; margin-top: 0;">📧 تواصل مباشر معنا</h4>
+            <p>للتواصل السريع والمباشر، يمكنكم مراسلتنا عبر:</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1em; margin: 1em 0;">
+              <div style="background: #fff; padding: 1em; border-radius: 8px; border: 1px solid #bbdefb;">
+                <strong>📧 الاستفسارات العامة:</strong><br>
+                <a href="mailto:info@zezooo342.github.io" style="color: #076e4d; font-weight: bold;">info@zezooo342.github.io</a>
+              </div>
+              <div style="background: #fff; padding: 1em; border-radius: 8px; border: 1px solid #bbdefb;">
+                <strong>🤝 للشراكات:</strong><br>
+                <a href="mailto:partnerships@zezooo342.github.io" style="color: #076e4d; font-weight: bold;">partnerships@zezooo342.github.io</a>
+              </div>
+            </div>
+            <p style="margin-bottom: 0; font-style: italic; color: #1565c0;">💬 نرد على جميع الرسائل خلال 24-48 ساعة عمل</p>
           </div>
 
           <label for="name">الاسم الكامل <span class="required">*</span></label>
@@ -351,6 +360,7 @@
           <!-- Formspree configuration -->
           <input type="hidden" name="_subject" value="رسالة جديدة من موقع دليل المال العربي">
           <input type="hidden" name="_next" value="https://zezooo342.github.io/contact.html?success=1">
+          <input type="hidden" name="_language" value="ar">
 
           <button type="submit" class="btn" id="submitBtn">
             إرسال الرسالة 📤
@@ -388,58 +398,91 @@
   </footer>
 
   <script>
-    // Handle form submission
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
+    // Contact form handler with improved functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('contactForm');
       const submitBtn = document.getElementById('submitBtn');
       const successMsg = document.getElementById('successMessage');
       const errorMsg = document.getElementById('errorMessage');
       const fallbackContact = document.getElementById('fallbackContact');
       
-      // Reset messages
-      successMsg.style.display = 'none';
-      errorMsg.style.display = 'none';
-      fallbackContact.style.display = 'none';
-      
-      // Update button text
-      submitBtn.textContent = 'جارٍ الإرسال...';
-      submitBtn.disabled = true;
-      
-      // Check if form action has been updated from placeholder
-      if (this.action.includes('YOUR_FORMSPREE_ID')) {
-        e.preventDefault();
+      // Check if form is properly configured
+      if (form.action.includes('FORMSPREE_FORM_ID')) {
+        // Form not configured - show direct contact info
         fallbackContact.style.display = 'block';
-        errorMsg.innerHTML = '⚠️ نموذج الاتصال غير مُعد بعد. يرجى استخدام معلومات الاتصال المباشر أدناه.';
-        errorMsg.style.display = 'block';
-        submitBtn.textContent = 'إرسال الرسالة 📤';
-        submitBtn.disabled = false;
         
-        // Scroll to fallback contact info
-        fallbackContact.scrollIntoView({ behavior: 'smooth' });
-        return;
+        // Add notice about form configuration
+        const configNotice = document.createElement('div');
+        configNotice.style.cssText = 'background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px; padding: 1em; margin: 1em 0; border-right: 4px solid #f39c12;';
+        configNotice.innerHTML = '<p style="margin: 0; color: #856404;"><strong>ℹ️ ملاحظة:</strong> نموذج الاتصال تحت الإعداد. للتواصل السريع، يرجى استخدام البريد الإلكتروني المباشر أعلاه.</p>';
+        form.parentNode.insertBefore(configNotice, form);
       }
-      
-      // If properly configured, allow normal submission
-      // The form will handle success/error through page redirect or Formspree response
-    });
 
-    // Check for success parameter in URL
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('success') === '1') {
-      document.getElementById('successMessage').style.display = 'block';
-      // Clear the form
-      document.getElementById('contactForm').reset();
-      // Scroll to success message
-      document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
-    }
+      // Handle form submission
+      form.addEventListener('submit', function(e) {
+        // Reset messages
+        successMsg.style.display = 'none';
+        errorMsg.style.display = 'none';
+        
+        // Check if form is configured
+        if (this.action.includes('FORMSPREE_FORM_ID')) {
+          e.preventDefault();
+          errorMsg.innerHTML = '⚠️ نموذج الاتصال غير مُعد حالياً. يرجى التواصل مباشرة عبر البريد الإلكتروني أعلاه.';
+          errorMsg.style.display = 'block';
+          fallbackContact.scrollIntoView({ behavior: 'smooth' });
+          return false;
+        }
+        
+        // Form is configured - show loading state
+        submitBtn.textContent = 'جارٍ الإرسال... ⏳';
+        submitBtn.disabled = true;
+        
+        // The form will submit normally to Formspree
+        // Success/error handling will be done via page redirect or Formspree response
+      });
 
-    // Show fallback contact on page load if form is not configured
-    document.addEventListener('DOMContentLoaded', function() {
-      const form = document.getElementById('contactForm');
-      if (form.action.includes('YOUR_FORMSPREE_ID')) {
-        // Show a note that form needs configuration
-        const fallbackNote = document.createElement('div');
-        fallbackNote.innerHTML = '<p style="color: #856404; font-style: italic; margin-top: 1em;">💡 لأفضل تجربة، يُنصح بإعداد نموذج الاتصال. حالياً يمكنكم التواصل مباشرة عبر البريد الإلكتروني أعلاه.</p>';
-        document.querySelector('.contact-grid').appendChild(fallbackNote);
+      // Handle form response (success/error via URL params)
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('success') === '1') {
+        successMsg.style.display = 'block';
+        form.reset();
+        successMsg.scrollIntoView({ behavior: 'smooth' });
+      } else if (urlParams.get('error') === '1') {
+        errorMsg.innerHTML = '❌ حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى أو التواصل مباشرة عبر البريد الإلكتروني.';
+        errorMsg.style.display = 'block';
+        fallbackContact.style.display = 'block';
+      }
+
+      // Enhance form with real-time validation
+      const requiredFields = form.querySelectorAll('[required]');
+      requiredFields.forEach(field => {
+        field.addEventListener('blur', function() {
+          if (!this.value.trim()) {
+            this.style.borderColor = '#e74c3c';
+          } else {
+            this.style.borderColor = '#3bb273';
+          }
+        });
+        
+        field.addEventListener('input', function() {
+          if (this.value.trim()) {
+            this.style.borderColor = '#3bb273';
+          }
+        });
+      });
+
+      // Email validation
+      const emailField = document.getElementById('email');
+      if (emailField) {
+        emailField.addEventListener('blur', function() {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (this.value && !emailRegex.test(this.value)) {
+            this.style.borderColor = '#e74c3c';
+            // Could add error message here
+          } else if (this.value) {
+            this.style.borderColor = '#3bb273';
+          }
+        });
       }
     });
   </script>
