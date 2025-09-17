@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Disallow temporary and build files
+Disallow: /tmp/
+Disallow: /build/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Allow important files
+Allow: /assets/
+Allow: /favicon.ico
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+# Sitemap location
+Sitemap: https://zezooo342.github.io/sitemap.xml
