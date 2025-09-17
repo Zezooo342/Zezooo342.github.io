@@ -300,6 +300,11 @@
         2. Create an account
         3. Create a new form and get your form ID
         4. Replace 'YOUR_FORMSPREE_ID' below with your actual ID
+        
+        FALLBACK: If you don't want to use Formspree, you can:
+        - Use mailto: action="mailto:info@zezooo342.github.io"
+        - Integrate with other form services like Netlify Forms
+        - Use a contact form service like Typeform
         -->
         <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" id="contactForm">
           <div class="success-message" id="successMessage">
@@ -307,6 +312,17 @@
           </div>
           <div class="error-message" id="errorMessage">
             ❌ حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى أو مراسلتنا مباشرة.
+          </div>
+
+          <!-- Fallback contact info displayed when form is not configured -->
+          <div class="fallback-contact" id="fallbackContact" style="display: none; background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px; padding: 1.5em; margin: 1em 0;">
+            <h4 style="color: #856404; margin-top: 0;">📧 تواصل مباشر</h4>
+            <p>يمكنكم التواصل معنا مباشرة عبر البريد الإلكتروني:</p>
+            <p><strong>للاستفسارات العامة:</strong><br>
+            <a href="mailto:info@zezooo342.github.io" style="color: #076e4d; font-weight: bold;">info@zezooo342.github.io</a></p>
+            <p><strong>للشراكات:</strong><br>
+            <a href="mailto:partnerships@zezooo342.github.io" style="color: #076e4d; font-weight: bold;">partnerships@zezooo342.github.io</a></p>
+            <p style="margin-bottom: 0;"><em>سنرد على رسائلكم خلال 24-48 ساعة</em></p>
           </div>
 
           <label for="name">الاسم الكامل <span class="required">*</span></label>
@@ -377,10 +393,12 @@
       const submitBtn = document.getElementById('submitBtn');
       const successMsg = document.getElementById('successMessage');
       const errorMsg = document.getElementById('errorMessage');
+      const fallbackContact = document.getElementById('fallbackContact');
       
       // Reset messages
       successMsg.style.display = 'none';
       errorMsg.style.display = 'none';
+      fallbackContact.style.display = 'none';
       
       // Update button text
       submitBtn.textContent = 'جارٍ الإرسال...';
@@ -389,12 +407,19 @@
       // Check if form action has been updated from placeholder
       if (this.action.includes('YOUR_FORMSPREE_ID')) {
         e.preventDefault();
-        errorMsg.innerHTML = '⚠️ يرجى تحديث معرف Formspree في الكود. راجع التعليقات في الملف لمزيد من التفاصيل.';
+        fallbackContact.style.display = 'block';
+        errorMsg.innerHTML = '⚠️ نموذج الاتصال غير مُعد بعد. يرجى استخدام معلومات الاتصال المباشر أدناه.';
         errorMsg.style.display = 'block';
         submitBtn.textContent = 'إرسال الرسالة 📤';
         submitBtn.disabled = false;
+        
+        // Scroll to fallback contact info
+        fallbackContact.scrollIntoView({ behavior: 'smooth' });
         return;
       }
+      
+      // If properly configured, allow normal submission
+      // The form will handle success/error through page redirect or Formspree response
     });
 
     // Check for success parameter in URL
@@ -403,7 +428,20 @@
       document.getElementById('successMessage').style.display = 'block';
       // Clear the form
       document.getElementById('contactForm').reset();
+      // Scroll to success message
+      document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
     }
+
+    // Show fallback contact on page load if form is not configured
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('contactForm');
+      if (form.action.includes('YOUR_FORMSPREE_ID')) {
+        // Show a note that form needs configuration
+        const fallbackNote = document.createElement('div');
+        fallbackNote.innerHTML = '<p style="color: #856404; font-style: italic; margin-top: 1em;">💡 لأفضل تجربة، يُنصح بإعداد نموذج الاتصال. حالياً يمكنكم التواصل مباشرة عبر البريد الإلكتروني أعلاه.</p>';
+        document.querySelector('.contact-grid').appendChild(fallbackNote);
+      }
+    });
   </script>
   <footer id="site-footer"></footer>
   <script src="/assets/js/site-nav.js" defer></script>
