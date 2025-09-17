@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أمثلة استخدام الصور - دليل المال العربي</title>
+    <style>
+        body {
+            font-family: 'Tajawal', Arial, sans-serif;
+            background: #f7fcfa;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .example-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+        
+        .hero-banner {
+            background-image: url('/assets/images/banner-finance.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            border-radius: 10px;
+        }
+        
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background: white;
+        }
+        
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .card-content {
+            padding: 15px;
+        }
+        
+        .team-section {
+            background-image: url('/assets/images/team-arabic.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 10px;
+            color: white;
+            background-color: rgba(0,0,0,0.4);
+            background-blend-mode: overlay;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            direction: ltr;
+            display: inline-block;
+        }
+        
+        pre {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>أمثلة استخدام الصور في موقع دليل المال العربي</h1>
+        
+        <div class="example-section">
+            <h2>مثال 1: استخدام banner-finance.jpg كخلفية رئيسية</h2>
+            <div class="hero-banner">
+                <div>
+                    <h2>دليل المال العربي</h2>
+                    <p>منصتك الموثوقة للتعليم المالي والاستثماري</p>
+                </div>
+            </div>
+            <h3>الكود المستخدم:</h3>
+            <pre><code>&lt;div class="hero-banner"&gt;
+    &lt;div&gt;
+        &lt;h2&gt;دليل المال العربي&lt;/h2&gt;
+        &lt;p&gt;منصتك الموثوقة للتعليم المالي والاستثماري&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+.hero-banner {
+    background-image: url('/assets/images/banner-finance.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+&lt;/style&gt;</code></pre>
+        </div>
+
+        <div class="example-section">
+            <h2>مثال 2: استخدام الصور في بطاقات المحتوى</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="/assets/images/invest-business.jpg" alt="دليل الاستثمار">
+                    <div class="card-content">
+                        <h3>دليل الاستثمار</h3>
+                        <p>تعلم أساسيات الاستثمار وإدارة المحافظ المالية</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/assets/images/crypto-money.jpg" alt="العملات الرقمية">
+                    <div class="card-content">
+                        <h3>العملات الرقمية</h3>
+                        <p>دليل شامل لفهم وتداول العملات المشفرة بأمان</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/assets/images/learn-arabic-finance.jpg" alt="التعليم المالي">
+                    <div class="card-content">
+                        <h3>التعليم المالي</h3>
+                        <p>مواد تعليمية مجانية لبناء الوعي المالي</p>
+                    </div>
+                </div>
+            </div>
+            <h3>الكود المستخدم:</h3>
+            <pre><code>&lt;div class="card"&gt;
+    &lt;img src="/assets/images/invest-business.jpg" alt="دليل الاستثمار"&gt;
+    &lt;div class="card-content"&gt;
+        &lt;h3&gt;دليل الاستثمار&lt;/h3&gt;
+        &lt;p&gt;تعلم أساسيات الاستثمار وإدارة المحافظ المالية&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <div class="example-section">
+            <h2>مثال 3: استخدام team-arabic.jpg في قسم "من نحن"</h2>
+            <div class="team-section">
+                <h2>فريق دليل المال العربي</h2>
+                <p>نحن فريق من المتخصصين في المجال المالي والاستثماري</p>
+                <p>نسعى لتقديم محتوى موثوق ومفيد للمجتمع العربي</p>
+            </div>
+            <h3>الكود المستخدم:</h3>
+            <pre><code>&lt;div class="team-section"&gt;
+    &lt;h2&gt;فريق دليل المال العربي&lt;/h2&gt;
+    &lt;p&gt;نحن فريق من المتخصصين في المجال المالي والاستثماري&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+.team-section {
+    background-image: url('/assets/images/team-arabic.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    background-blend-mode: overlay;
+}
+&lt;/style&gt;</code></pre>
+        </div>
+
+        <div class="example-section">
+            <h2>مثال 4: استخدام الصور في البيانات المهيكلة</h2>
+            <p>يمكن استخدام الصور مع نظام البيانات المهيكلة الموجود في الموقع:</p>
+            <pre><code>&lt;div data-ld-article 
+     data-headline="دليل الاستثمار للمبتدئين" 
+     data-description="تعلم أساسيات الاستثمار خطوة بخطوة"
+     data-image="assets/images/invest-business.jpg"
+     data-date-published="2025-01-15"
+     data-author="فريق دليل المال العربي"&gt;
+    &lt;!-- محتوى المقال --&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <div class="example-section">
+            <h2>مثال 5: استخدام الصور في Meta Tags</h2>
+            <p>لتحسين المشاركة على وسائل التواصل الاجتماعي:</p>
+            <pre><code>&lt;meta property="og:image" content="https://zezooo342.github.io/assets/images/banner-finance.jpg"/&gt;
+&lt;meta property="og:image:width" content="1200"/&gt;
+&lt;meta property="og:image:height" content="630"/&gt;
+&lt;meta name="twitter:image" content="https://zezooo342.github.io/assets/images/banner-finance.jpg"&gt;
+&lt;meta name="twitter:card" content="summary_large_image"&gt;</code></pre>
+        </div>
+
+        <div class="example-section">
+            <h2>نصائح للاستخدام الأمثل</h2>
+            <ul>
+                <li>استخدم <code>alt</code> وصفي لكل صورة لتحسين إمكانية الوصول</li>
+                <li>اضبط <code>loading="lazy"</code> للصور غير المرئية فوراً لتحسين الأداء</li>
+                <li>استخدم CSS <code>object-fit: cover</code> للحفاظ على نسب الصور</li>
+                <li>اختبر الصور على أجهزة مختلفة للتأكد من وضوحها</li>
+                <li>استخدم صور محسنة للويب (أقل من 500KB لكل صورة)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
