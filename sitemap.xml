@@ -1,105 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://zezooo342.github.io/</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://zezooo342.github.io/index.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://zezooo342.github.io/articles.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://zezooo342.github.io/contact.html</loc>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://zezooo342.github.io/article.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://zezooo342.github.io/amp-article.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://zezooo342.github.io/about.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zezooo342.github.io/contact.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://zezooo342.github.io/privacy.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://zezooo342.github.io/reviews.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://zezooo342.github.io/media.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://zezooo342.github.io/team.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://zezooo342.github.io/management.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://zezooo342.github.io/invest-arab.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zezooo342.github.io/make-money-online.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://zezooo342.github.io/crypto-guide.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://zezooo342.github.io/crypto-security.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://zezooo342.github.io/business-plan-simple.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://zezooo342.github.io/article.html</loc>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/faq.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/invest-arab.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/ai.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/management.html</loc>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://zezooo342.github.io/TikTok%20profit.html</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/business-plan-simple.html</loc>
+    <priority>0.5</priority>
   </url>
 </urlset>
