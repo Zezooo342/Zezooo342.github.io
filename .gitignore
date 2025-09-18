@@ -44,8 +44,23 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+/tmp/
 
 # Environment variables
 .env
 .env.local
 .env.production
+
+# Auto-generated content files (exclude from repository)
+*_auto.html
+*_generated.html
+
+# Dependencies
+node_modules/
+.npm/
+yarn.lock
+package-lock.json
+
+# Build artifacts
+dist/
+.cache/
