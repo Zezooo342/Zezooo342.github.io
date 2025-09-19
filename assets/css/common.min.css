@@ -1,0 +1,19 @@
+/* Common Styles for Content Pages - Minified */
+body{font-family:'Tajawal',Arial,sans-serif;background:#f6fcfa;margin:0;padding:0;color:#222;line-height:1.6}
+.main{background:#fff;max-width:700px;margin:2em auto;padding:2em 1.4em;border-radius:14px;box-shadow:0 2px 8px #e1eee9}
+h1{color:#0c7954;margin-top:0}
+h2{color:#076e4d}
+.highlight-box{background:#e5faee;padding:1.2em;border-radius:10px;margin:1em 0;border-left:4px solid #3bb273}
+.warning-box{background:#fff3e0;padding:1.2em;border-radius:10px;margin:1em 0;border-left:4px solid #ff8f00}
+@media (max-width:768px){
+.main{margin:1em;padding:1.5em 1em}
+h1{font-size:1.8rem}
+h2{font-size:1.4rem}
+.highlight-box,.warning-box{padding:1em;margin:1.5em 0}
+}
+@media (max-width:480px){
+.main{margin:0.5em;padding:1em}
+h1{font-size:1.5rem}
+h2{font-size:1.2rem}
+.highlight-box,.warning-box{padding:0.8em;font-size:0.9rem}
+}
