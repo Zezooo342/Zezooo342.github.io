@@ -11,7 +11,8 @@ Disallow: /node_modules/
 Allow: /assets/
 Allow: /favicon.ico
 Allow: /sitemap.xml
+Allow: /sitemap1.xml
 Allow: /robots.txt
 
 # Sitemap location
-Sitemap: https://zezooo342.github.io/sitemap.xml
+Sitemap: https://zezooo342.github.io/sitemap1.xml
