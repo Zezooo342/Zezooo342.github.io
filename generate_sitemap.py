@@ -70,7 +70,7 @@ class SitemapGenerator:
 
     def url_encode_filename(self, filename):
         """ترميز أسماء الملفات للحروف الخاصة والعربية"""
-        return urllib.parse.quote(filename, safe='.:/-_')
+        return urllib.parse.quote(filename, safe='/-_')
 
     def generate_sitemap(self):
         """توليد ملف sitemap.xml"""
