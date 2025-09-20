@@ -44,7 +44,7 @@
                            `https://zezooo342.github.io/${data.image}`;
             schema.image = imageUrl;
         } else {
-            schema.image = 'https://zezooo342.github.io/assets/images/og-default.png';
+            schema.image = 'https://zezooo342.github.io/assets/images/og-real.jpg';
         }
         
         // Author handling
