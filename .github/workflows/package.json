@@ -1,0 +1,3 @@
+git add package-lock.json   # أو yarn.lock
+git commit -m "إضافة ملف lock للحزم لحل مشاكل CI"
+git push
