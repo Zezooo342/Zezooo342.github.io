@@ -1,0 +1,24 @@
+{
+  "root": true,
+  "extends": ["eslint:recommended"],
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "script"
+  },
+  "rules": {
+    "no-unused-vars": ["warn"],
+    "no-console": ["off"],
+    "semi": ["error", "always"],
+    "quotes": ["warn", "single", { "allowTemplateLiterals": true }]
+  },
+  "globals": {
+    "window": "readonly",
+    "document": "readonly",
+    "console": "readonly",
+    "fetch": "readonly"
+  }
+}

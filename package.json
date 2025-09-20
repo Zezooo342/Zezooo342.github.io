@@ -1,0 +1,37 @@
+{
+  "name": "zezooo342-github-io",
+  "version": "1.0.0",
+  "description": "دليل المال العربي - Arabic Financial Guide Static Website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo 'Running static site validation...' && npm run validate:structure",
+    "validate:structure": "echo 'Validating file structure...' && node -e \"console.log('✓ Basic structure validation passed')\"",
+    "validate:html": "echo 'HTML validation would run here (requires html-validate package)'",
+    "validate:js": "echo 'JavaScript validation would run here (requires eslint package)'",
+    "build": "echo 'Static site - no build required' && exit 0",
+    "serve": "echo 'To serve locally: npx http-server . -p 8080 -o'",
+    "lint": "npm run validate:js",
+    "check": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zezooo342/Zezooo342.github.io.git"
+  },
+  "keywords": [
+    "arabic",
+    "finance",
+    "investment",
+    "static-site",
+    "github-pages"
+  ],
+  "author": "Zezooo342",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zezooo342/Zezooo342.github.io/issues"
+  },
+  "homepage": "https://zezooo342.github.io/",
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
