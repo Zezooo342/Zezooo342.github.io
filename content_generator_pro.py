@@ -37,7 +37,7 @@ def render_article(title, topic, year, keywords):
   <meta name="keywords" content="{', '.join(keywords)}">
   <meta property="og:title" content="{title}"/>
   <meta property="og:description" content="تفاصيل عملية حول {topic}."/>
-  <meta property="og:image" content="https://zezooo342.github.io/myogimage.jpg"/>
+  <meta property="og:image" content="https://zezooo342.github.io/assets/images/article-real.jpg"/>
   <link rel="canonical" href="https://zezooo342.github.io/{topic[:15].replace(' ','_')}.html"/>
   <script type="application/ld+json">
   {{
@@ -45,7 +45,7 @@ def render_article(title, topic, year, keywords):
     "@type": "Article",
     "headline": "{title}",
     "description": "تفاصيل مجربة ومقارنة حول {topic} في {year}.",
-    "image": "https://zezooo342.github.io/myogimage.jpg",
+    "image": "https://zezooo342.github.io/assets/images/article-real.jpg",
     "datePublished": "{datetime.today().strftime('%Y-%m-%d')}",
     "author": {{"@type": "Person","name":"فريق دليل المال العربي"}}
   }}
