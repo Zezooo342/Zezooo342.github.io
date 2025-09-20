@@ -50,7 +50,7 @@ class SitemapGenerator:
         }
         
         # الملفات المستثناة من sitemap
-        self.excluded_files = ['404.html']
+        self.excluded_files = ['404.html', 'index.html']
 
     def get_html_files(self):
         """الحصول على جميع ملفات HTML في الجذر"""
