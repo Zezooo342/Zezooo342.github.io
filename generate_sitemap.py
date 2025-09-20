@@ -132,8 +132,8 @@ class SitemapGenerator:
                 elem.tail = i
             for child in elem:
                 self.indent(child, level+1)
-            if not child.tail or not child.tail.strip():
-                child.tail = i
+                if not child.tail or not child.tail.strip():
+                    child.tail = i
         else:
             if level and (not elem.tail or not elem.tail.strip()):
                 elem.tail = i
