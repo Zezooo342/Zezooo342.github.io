@@ -14,6 +14,58 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Check main branch existence
+        run: |
+          if git rev-parse --verify main >/dev/null 2>&1; then
+            echo "✅ Main branch exists"
+          else
+            echo "⚠️ Main branch not found, using current branch"
+          fi
+
+      - name: Install ImageMagick
+        run: sudo apt-get update && sudo apt-get install -y imagemagick
+
+      - name: Check image validity
+        run: |
+          echo "🔍 Checking image validity in assets/images..."
+          failed=0
+          for img in assets/images/*.jpg assets/images/*.png assets/images/*.jpeg; do
+            if [ -f "$img" ]; then
+              # First check with 'file' command
+              file_output=$(file "$img")
+              echo "Checking $img: $file_output"
+              
+              # Check if it's a valid image file
+              if echo "$file_output" | grep -q -E "(JPEG|PNG|image)"; then
+                # Check file size (should be > 100 bytes for real images)
+                size=$(stat -c%s "$img")
+                if [ "$size" -gt 100 ]; then
+                  # Try ImageMagick if available
+                  if command -v identify >/dev/null 2>&1; then
+                    if identify "$img" >/dev/null 2>&1; then
+                      echo "✅ Valid image: $img (${size} bytes)"
+                    else
+                      echo "❌ Invalid image (ImageMagick failed): $img"
+                      failed=1
+                    fi
+                  else
+                    echo "✅ Valid image (file check passed): $img (${size} bytes)"
+                  fi
+                else
+                  echo "⚠️ Very small image file: $img (${size} bytes) - may be placeholder"
+                fi
+              else
+                echo "❌ Invalid image file type: $img"
+                failed=1
+              fi
+            fi
+          done
+          if [ "$failed" -eq 1 ]; then
+            echo "❌ Image validation failed"
+            exit 1
+          fi
+          echo "✅ All images are valid"
+
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
