@@ -40,6 +40,19 @@ jobs:
           TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
         run: |
           echo "🧠 Running AI Growth System..."
+          # Ensure all required images exist before processing
+          if [ ! -f "assets/images/banner-finance-real.jpg" ]; then
+            echo "⚠️ banner-finance-real.jpg not found, copying from banner-finance.jpg"
+            cp assets/images/banner-finance.jpg assets/images/banner-finance-real.jpg 2>/dev/null || echo "Warning: Could not create banner-finance-real.jpg"
+          fi
+          if [ ! -f "assets/images/team-real.jpg" ]; then
+            echo "⚠️ team-real.jpg not found, copying from team-arabic.jpg"
+            cp assets/images/team-arabic.jpg assets/images/team-real.jpg 2>/dev/null || echo "Warning: Could not create team-real.jpg"
+          fi
+          if [ ! -f "assets/images/og-real.jpg" ]; then
+            echo "⚠️ og-real.jpg not found, copying from og-default.png"
+            cp assets/images/og-default.png assets/images/og-real.jpg 2>/dev/null || echo "Warning: Could not create og-real.jpg"
+          fi
           python ai_growth_system.py
           echo "✅ AI Analysis Complete"
       
@@ -49,6 +62,19 @@ jobs:
           TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
         run: |
           echo "🤖 Running Automation Master..."
+          # Ensure all required images exist before processing
+          if [ ! -f "assets/images/banner-finance-real.jpg" ]; then
+            echo "⚠️ banner-finance-real.jpg not found, copying from banner-finance.jpg"
+            cp assets/images/banner-finance.jpg assets/images/banner-finance-real.jpg 2>/dev/null || echo "Warning: Could not create banner-finance-real.jpg"
+          fi
+          if [ ! -f "assets/images/team-real.jpg" ]; then
+            echo "⚠️ team-real.jpg not found, copying from team-arabic.jpg"
+            cp assets/images/team-arabic.jpg assets/images/team-real.jpg 2>/dev/null || echo "Warning: Could not create team-real.jpg"
+          fi
+          if [ ! -f "assets/images/og-real.jpg" ]; then
+            echo "⚠️ og-real.jpg not found, copying from og-default.png"
+            cp assets/images/og-default.png assets/images/og-real.jpg 2>/dev/null || echo "Warning: Could not create og-real.jpg"
+          fi
           python automation_master.py
           echo "✅ Automation Complete"
       
@@ -57,13 +83,43 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
           git add -A
+          # Check if there are staged changes before committing
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "🤖 Auto-update: Content & Analysis $(date)"
-            git push
-            echo "✅ Changes pushed successfully"
+            # Ensure we have a valid branch and can push
+            if git rev-parse --verify HEAD >/dev/null 2>&1; then
+              git commit -m "🤖 Auto-update: Content & Analysis $(date)"
+              # Check if remote branch exists before pushing
+              if git ls-remote --heads origin $(git rev-parse --abbrev-ref HEAD) | grep -q $(git rev-parse --abbrev-ref HEAD); then
+                git push
+              else
+                git push -u origin $(git rev-parse --abbrev-ref HEAD)
+              fi
+              echo "✅ Changes pushed successfully"
+            else
+              echo "⚠️ Invalid git state, skipping commit"
+            fi
           fi
+      
+      - name: Cleanup Old Images (After Processing)
+        run: |
+          echo "🧹 Cleaning up old image files..."
+          # Only remove old images after all processing is complete
+          # This prevents "Could not process image" errors
+          if [ -f "assets/images/banner-finance-real.jpg" ] && [ -f "assets/images/banner-finance.jpg" ]; then
+            echo "✅ New banner image exists, old one can be safely removed if needed"
+            # rm assets/images/banner-finance.jpg (commented out - keeping old images as backup)
+          fi
+          if [ -f "assets/images/team-real.jpg" ] && [ -f "assets/images/team-arabic.jpg" ]; then
+            echo "✅ New team image exists, old one can be safely removed if needed"
+            # rm assets/images/team-arabic.jpg (commented out - keeping old images as backup)
+          fi
+          if [ -f "assets/images/og-real.jpg" ] && [ -f "assets/images/og-default.png" ]; then
+            echo "✅ New og image exists, old one can be safely removed if needed"
+            # rm assets/images/og-default.png (commented out - keeping old images as backup)
+          fi
+          echo "✅ Cleanup complete"
 
   performance_monitoring:
     permissions: {}

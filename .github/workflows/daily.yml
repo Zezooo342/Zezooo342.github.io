@@ -24,4 +24,20 @@ jobs:
           pip install requests python-dotenv
 
       - name: Run Content Generator
-        run: python content_generator_pro.py
+        run: |
+          echo "🎯 Running Content Generator..."
+          # Ensure all required images exist before processing
+          if [ ! -f "assets/images/banner-finance-real.jpg" ]; then
+            echo "⚠️ banner-finance-real.jpg not found, copying from banner-finance.jpg"
+            cp assets/images/banner-finance.jpg assets/images/banner-finance-real.jpg 2>/dev/null || echo "Warning: Could not create banner-finance-real.jpg"
+          fi
+          if [ ! -f "assets/images/team-real.jpg" ]; then
+            echo "⚠️ team-real.jpg not found, copying from team-arabic.jpg"
+            cp assets/images/team-arabic.jpg assets/images/team-real.jpg 2>/dev/null || echo "Warning: Could not create team-real.jpg"
+          fi
+          if [ ! -f "assets/images/og-real.jpg" ]; then
+            echo "⚠️ og-real.jpg not found, copying from og-default.png"
+            cp assets/images/og-default.png assets/images/og-real.jpg 2>/dev/null || echo "Warning: Could not create og-real.jpg"
+          fi
+          python content_generator_pro.py
+          echo "✅ Content generation complete"
