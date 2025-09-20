@@ -1,0 +1,29 @@
+{
+  "name": "zezooo342-github-io",
+  "version": "1.0.0",
+  "description": "دليل المال العربي - Arabic Financial Guide Website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0",
+    "build": "echo \"Static site - no build needed\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zezooo342/Zezooo342.github.io.git"
+  },
+  "keywords": [
+    "arabic",
+    "finance",
+    "money",
+    "investment",
+    "guide"
+  ],
+  "author": "Zezooo342",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zezooo342/Zezooo342.github.io/issues"
+  },
+  "homepage": "https://zezooo342.github.io",
+  "devDependencies": {},
+  "dependencies": {}
+}
