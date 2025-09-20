@@ -86,7 +86,7 @@ def generate_articles(n=3, year="2025", improvement_dict=None):
         title = random.choice(TEMPLATES).format(topic=topic, year=year)
         keywords = suggest_keywords(topic, add=add_keywords)
         html = render_article(title, topic, year, keywords)
-        file_name = topic[:15].replace(' ', '_') + ".html"
+        file_name = "".join(c for c in topic[:15] if c.isalnum() or c in (' ', '_')).replace(' ', '_') + ".html"
         with open(file_name, "w", encoding="utf-8") as f:
             f.write(html)
         print(f"تم إنشاء المقال: {file_name} - {title}")

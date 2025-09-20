@@ -31,7 +31,7 @@ def get_topic_trends():
                 if len(text) > 30:
                     articles.append({
                         "title": entry.title,
-                        "summary": translator.translate(text, dest='ar').text if entry.title else "",
+                        "summary": translator.translate(text, dest='ar').text if text.strip() else "",
                         "link": entry.link
                     })
         except Exception as e:
@@ -83,7 +83,8 @@ def render_article_template(article):
     html += "</ul>\n"
     html += "مواضيع متعلقة:\n<ul>\n"
     for link in article["internal_links"]:
-        html += f'  <a href="{link}">{link[1:-5]}</a>\n'
+        link_text = link.replace("/", "").replace(".html", "") if link.startswith("/") and link.endswith(".html") else link
+        html += f'  <a href="{link}">{link_text}</a>\n'
     html += "</ul>\n"
     html += "<!-- كلمات مفتاحية مقترحة: " + ", ".join(article["seo_keywords"]) + " -->\n"
     return html
@@ -94,6 +95,7 @@ if __name__ == "__main__":
         main_topic = trend['title']
         article = generate_article_plan(main_topic)
         code = render_article_template(article)
-        with open(f"{main_topic[:15].replace(' ','_')}.html", "w", encoding="utf-8") as f:
+        filename = "".join(c for c in main_topic[:15] if c.isalnum() or c in (' ', '_')).replace(' ','_') + ".html"
+        with open(filename, "w", encoding="utf-8") as f:
             f.write(code)
         print(f"تم توليد مقال: {main_topic}")
