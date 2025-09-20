@@ -100,7 +100,9 @@ class SitemapGenerator:
             
             url_element = ET.SubElement(urlset, 'url')
             ET.SubElement(url_element, 'loc').text = f"{self.base_url}/{encoded_filename}"
-            ET.SubElement(url_element, 'lastmod').text = self.current_date
+            # استخدم وقت آخر تعديل فعلي للملف
+            lastmod_date = datetime.fromtimestamp(os.path.getmtime(filename)).strftime('%Y-%m-%d')
+            ET.SubElement(url_element, 'lastmod').text = lastmod_date
             ET.SubElement(url_element, 'changefreq').text = page_info['changefreq']
             ET.SubElement(url_element, 'priority').text = page_info['priority']
             
