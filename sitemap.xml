@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  
-  <!-- Main Pages -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://zezooo342.github.io/</loc>
     <lastmod>2025-09-20</lastmod>
@@ -12,18 +7,196 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://zezooo342.github.io/index.html</loc>
+    <loc>https://zezooo342.github.io/%27Don%27t_Be_Too_N.html</loc>
     <lastmod>2025-09-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
-  
-  <!-- Core Information Pages -->
+  <url>
+    <loc>https://zezooo342.github.io/7_AI_Tools_to_B.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/A_Major_Bank_Is.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/Airbnb%27s_CEO_Is.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/Amazon%27s_CEO_Wa.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/Complex_Pricing.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/Healthcare_Data.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/Here%27s_How_Peop.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/His_Salty_Side_.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/How_Lavazza_and.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/How_Small_Busin.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/How_to_Create_a.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/I%27ve_Helped_Bui.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/I_Looked_Succes.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/I_Pushed_Throug.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/The_CEO_of_a_%241.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/The_Overlooked_.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/The_Shocking_Co.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/These_5_Trends_.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/These_Are_the_T.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/This_CEO%27s_%27Pow.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/This_Venezuelan.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/TikTok%20profit.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/What_Every_Entr.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/Why_I_Prioritiz.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/Why_Most_Founde.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
   <url>
     <loc>https://zezooo342.github.io/about.html</loc>
     <lastmod>2025-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/ai.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/amp-article.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/article.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/articles.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/business-plan-simple.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://zezooo342.github.io/contact.html</loc>
@@ -32,19 +205,29 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://zezooo342.github.io/privacy.html</loc>
+    <loc>https://zezooo342.github.io/crypto-guide.html</loc>
     <lastmod>2025-09-20</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zezooo342.github.io/articles.html</loc>
+    <loc>https://zezooo342.github.io/crypto-security.html</loc>
     <lastmod>2025-09-20</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.7</priority>
   </url>
-  
-  <!-- Primary Financial Content -->
+  <url>
+    <loc>https://zezooo342.github.io/faq.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://zezooo342.github.io/index.html</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
   <url>
     <loc>https://zezooo342.github.io/invest-arab.html</loc>
     <lastmod>2025-09-20</lastmod>
@@ -58,73 +241,25 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zezooo342.github.io/crypto-guide.html</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://zezooo342.github.io/management.html</loc>
     <lastmod>2025-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <!-- Articles and Guides -->
   <url>
-    <loc>https://zezooo342.github.io/article.html</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://zezooo342.github.io/ai.html</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://zezooo342.github.io/crypto-security.html</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://zezooo342.github.io/business-plan-simple.html</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Business and Success Stories -->
-  <url>
-    <loc>https://zezooo342.github.io/How_Small_Busin.html</loc>
+    <loc>https://zezooo342.github.io/media.html</loc>
     <lastmod>2025-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://zezooo342.github.io/TikTok%20profit.html</loc>
+    <loc>https://zezooo342.github.io/privacy.html</loc>
     <lastmod>2025-09-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zezooo342.github.io/Amazon's_CEO_Wa.html</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://zezooo342.github.io/Airbnb's_CEO_Is.html</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <!-- Additional Content -->
-  <url>
-    <loc>https://zezooo342.github.io/faq.html</loc>
+    <loc>https://zezooo342.github.io/reviews.html</loc>
     <lastmod>2025-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -136,52 +271,9 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://zezooo342.github.io/reviews.html</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://zezooo342.github.io/media.html</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <!-- Technical Articles -->
-  <url>
-    <loc>https://zezooo342.github.io/Healthcare_Data.html</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zezooo342.github.io/Complex_Pricing.html</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zezooo342.github.io/How_to_Create_a.html</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <!-- Arabic Content -->
-  <url>
     <loc>https://zezooo342.github.io/%D8%B7%D8%B1%D9%82_%D8%B1%D8%A8%D8%AD_%D8%A7%D9%84%D9%85%D8%A7%D9%84_auto.html</loc>
     <lastmod>2025-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-  
-  <!-- AMP Version -->
-  <url>
-    <loc>https://zezooo342.github.io/amp-article.html</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
 </urlset>
