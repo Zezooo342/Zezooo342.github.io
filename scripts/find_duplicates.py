@@ -2,14 +2,17 @@
 """Detect simple near-duplicate HTML pages by comparing the first N characters of visible text."""
 from pathlib import Path
 import re
+from bs4 import BeautifulSoup
 import sys
 import json
 
 
 def extract_text(html: str) -> str:
-    # very naive: remove tags
-    text = re.sub(r'<script[^>]*>.*?</script>', '', html, flags=re.DOTALL|re.IGNORECASE)
-    text = re.sub(r'<[^>]+>', '', text)
+    # Use BeautifulSoup to reliably remove script and style tags and extract visible text
+    soup = BeautifulSoup(html, "html.parser")
+    for tag in soup(['script', 'style']):
+        tag.decompose()
+    text = soup.get_text(separator=' ', strip=True)
     return ' '.join(text.split())
 
 
