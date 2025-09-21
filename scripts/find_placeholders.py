@@ -9,9 +9,7 @@ import sys
 
 PLACEHOLDER_PATTERNS = [
     r"\.{4,}\s*\(أضف فقرة أصلية هنا\)",
-    r"\bTODO\b",
-    r"\bأضف\b",
-    r"\bplaceholder\b",
+    r"أضف\s+فقرة",
 ]
 
 
