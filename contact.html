@@ -76,26 +76,14 @@
         - Integrate with other form services like Netlify Forms
         - Use a contact form service like Typeform
         -->
-        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" id="contactForm">
+  <form action="mailto:info@zezooo342.github.io" method="POST" id="contactForm">
           <div class="success-message" id="successMessage">
             ✅ تم إرسال رسالتكم بنجاح! سنتواصل معكم قريباً.
           </div>
           <div class="error-message" id="errorMessage">
             ❌ حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى أو مراسلتنا مباشرة.
           </div>
-
-          <!-- Fallback contact info displayed when form is not configured -->
-          <div class="fallback-contact" id="fallbackContact" style="display: none; background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px; padding: 1.5em; margin: 1em 0;">
-            <h4 style="color: #856404; margin-top: 0;">📧 تواصل مباشر</h4>
-            <p>يمكنكم التواصل معنا مباشرة عبر البريد الإلكتروني:</p>
-            <p><strong>للاستفسارات العامة:</strong><br>
-            <a href="mailto:info@zezooo342.github.io" style="color: #076e4d; font-weight: bold;">info@zezooo342.github.io</a></p>
-            <p><strong>للشراكات:</strong><br>
-            <a href="mailto:partnerships@zezooo342.github.io" style="color: #076e4d; font-weight: bold;">partnerships@zezooo342.github.io</a></p>
-            <p style="margin-bottom: 0;"><em>سنرد على رسائلكم خلال 24-48 ساعة</em></p>
-          </div>
-
-          <label for="name">الاسم الكامل <span class="required">*</span></label>
+  <!-- Form action set to mailto fallback by default. Configure a form service (Formspree/Netlify) to enable server-side submission. -->
           <input type="text" id="name" name="name" required>
 
           <label for="email">البريد الإلكتروني <span class="required">*</span></label>
