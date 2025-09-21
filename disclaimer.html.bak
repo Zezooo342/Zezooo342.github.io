@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>إخلاء المسؤولية | دليل المال العربي</title>
+  <link rel="stylesheet" href="/assets/css/common.min.css">
+  <link rel="stylesheet" href="/assets/css/nav.min.css">
+  <meta name="theme-color" content="#0c7954">
+  <meta name="description" content="بيان إخلاء المسؤولية لموقع دليل المال العربي حول طبيعة المحتوى والإعلانات والروابط التابعة.">
+  <link rel="canonical" href="https://zezooo342.github.io/disclaimer.html">
+</head>
+<body>
+  <header id="site-header"></header>
+  <div class="main">
+    <h1>إخلاء المسؤولية</h1>
+    <p>المحتوى المنشور على هذا الموقع لأغراض تعليمية وإعلامية عامة. لا يمثّل نصيحة استثمارية فردية ولا توصية لشراء أو بيع أي أصل. المعلومات قد تكون عامة وقد لا تناسب ظروفك الخاصة. استشر دائماً مختصاً مرخصاً قبل اتخاذ قرارات مالية.</p>
+    <h2>الإعلانات والروابط التابعة</h2>
+    <ul>
+      <li>نستخدم Google AdSense وشركاء إعلان آخرين. قد تُعرض إعلانات مخصصة بناءً على ملفات تعريف الارتباط.</li>
+      <li>تتضمن بعض الروابط وسم "nofollow" و"sponsored" عند الاقتضاء للدلالة على شراكات تسويقية.</li>
+      <li>لا نتحكم في محتوى مواقع الطرف الثالث ولا نتحمل مسؤولية سياساتها.</li>
+    </ul>
+    <h2>حقوق الملكية الفكرية</h2>
+    <p>نحترم حقوق الملكية الفكرية. إن لاحظت أي انتهاك غير مقصود، راسلنا عبر <a href="/contact.html">اتصل بنا</a> لاتخاذ الإجراء المناسب.</p>
+  </div>
+  <footer id="site-footer"></footer>
+  <script src="/assets/js/site-nav.min.js" defer></script>
+  <script src="/assets/js/cookie-consent.js" defer></script>
+</body>
+</html>

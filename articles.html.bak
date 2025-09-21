@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <title>📚 أرشيف المقالات | دليل المال العربي</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="assets/css/common.min.css">
+  <link rel="stylesheet" href="assets/css/nav.min.css">
+  <meta name="theme-color" content="#0c7954">
+  <meta property="og:image" content="https://zezooo342.github.io/assets/images/og-default.png"/>
+</head>
+<body>
+<header class="site-header">
+  <nav class="site-nav">
+    <a href="/index.html" class="logo">دليل المال العربي</a>
+    <a href="/articles.html">المقالات</a>
+    <a href="/about.html">عن الموقع</a>
+    <a href="/contact.html">اتصل بنا</a>
+  </nav>
+</header>
+
+  <header id="site-header"></header>
+  <header>
+    <h1>📚 أرشيف المقالات</h1>
+    <p>مكتبة شاملة للمعرفة المالية والاستثمارية</p>
+  </header>
+
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="articles.html">أرشيف المقالات</a>
+    <a href="about.html">من نحن</a>
+    <a href="contact.html">اتصل بنا</a>
+    <a href="privacy.html">سياسة الخصوصية</a>
+  </nav>
+
+  <div class="container">
+    <div class="intro">
+      <h1>استكشف مكتبة المعرفة المالية</h1>
+      <p>مجموعة مختارة من الأدلة والمقالات العملية التي تساعدك على تحقيق أهدافك المالية وبناء مستقبل استثماري ناجح.</p>
+    </div>
+
+    <div class="articles-grid">
+      <!-- Investment Articles -->
+      <article class="article-card">
+        <h3><a href="invest-arab.html">📈 دليل الاستثمار العربي الشامل</a></h3>
+        <div class="article-meta">
+          <span class="category-tag">استثمار</span>
+          • 15 دقيقة قراءة
+        </div>
+        <div class="article-excerpt">
+          دليل شامل للاستثمار في المنطقة العربية مع استراتيجيات مجربة وأفضل الممارسات للمبتدئين والمحترفين.
+        </div>
+        <a href="invest-arab.html" class="read-more">اقرأ المزيد ←</a>
+      </article>
+
+      <article class="article-card">
+        <h3><a href="make-money-online.html">💰 كيف تربح المال من الإنترنت</a></h3>
+        <div class="article-meta">
+          <span class="category-tag">ربح أونلاين</span>
+          • 12 دقيقة قراءة
+        </div>
+        <div class="article-excerpt">
+          طرق مجربة وفعالة لكسب المال عبر الإنترنت، من العمل الحر إلى التجارة الإلكترونية والتسويق بالعمولة.
+        </div>
+        <a href="make-money-online.html" class="read-more">اقرأ المزيد ←</a>
+      </article>
+
+      <article class="article-card">
+        <h3><a href="crypto-guide.html">₿ دليل العملات الرقمية للمبتدئين</a></h3>
+        <div class="article-meta">
+          <span class="category-tag">كريبتو</span>
+          • 18 دقيقة قراءة
+        </div>
+        <div class="article-excerpt">
+          كل ما تحتاج معرفته عن العملات الرقمية، من الأساسيات إلى استراتيجيات التداول الآمن والاستثمار طويل المدى.
+        </div>
+        <a href="crypto-guide.html" class="read-more">اقرأ المزيد ←</a>
+      </article>
+
+      <article class="article-card">
+        <h3><a href="crypto-security.html">🔐 أمان العملات الرقمية</a></h3>
+        <div class="article-meta">
+          <span class="category-tag">أمان</span>
+          • 10 دقيقة قراءة
+        </div>
+        <div class="article-excerpt">
+          أفضل الممارسات لحماية محافظك الرقمية وتجنب عمليات الاحتيال في عالم العملات المشفرة.
+        </div>
+        <a href="crypto-security.html" class="read-more">اقرأ المزيد ←</a>
+      </article>
+
+      <article class="article-card">
+        <h3><a href="management.html">🏦 أفضل منصات الاستثمار والتداول</a></h3>
+        <div class="article-meta">
+          <span class="category-tag">منصات</span>
+          • 14 دقيقة قراءة
+        </div>
+        <div class="article-excerpt">
+          مراجعة شاملة لأفضل منصات التداول والاستثمار في المنطقة العربية مع مقارنة الرسوم والميزات.
+        </div>
+        <a href="management.html" class="read-more">اقرأ المزيد ←</a>
+      </article>
+
+      <article class="article-card">
+        <h3><a href="business-plan-simple.html">📋 كيف تكتب خطة عمل ناجحة</a></h3>
+        <div class="article-meta">
+          <span class="category-tag">ريادة</span>
+          • 16 دقيقة قراءة
+        </div>
+        <div class="article-excerpt">
+          دليل خطوة بخطوة لكتابة خطة عمل احترافية تجذب المستثمرين وتضمن نجاح مشروعك.
+        </div>
+        <a href="business-plan-simple.html" class="read-more">اقرأ المزيد ←</a>
+      </article>
+
+      <article class="article-card">
+        <h3><a href="article.html">📊 المقال الرئيسي</a></h3>
+        <div class="article-meta">
+          <span class="category-tag">مالية</span>
+          • 8 دقيقة قراءة
+        </div>
+        <div class="article-excerpt">
+          نظرة عامة على أساسيات إدارة الأموال الشخصية والتخطيط المالي للمستقبل.
+        </div>
+        <a href="article.html" class="read-more">اقرأ المزيد ←</a>
+      </article>
+
+      <article class="article-card">
+        <h3><a href="amp-article.html">⚡ دليل المال العربي - النسخة المحسنة</a></h3>
+        <div class="article-meta">
+          <span class="category-tag">AMP</span>
+          • 12 دقيقة قراءة
+        </div>
+        <div class="article-excerpt">
+          النسخة المحسنة والسريعة من دليلنا الشامل للاستثمار والربح، محسنة لسرعة التحميل والأداء.
+        </div>
+        <a href="amp-article.html" class="read-more">اقرأ المزيد ←</a>
+      </article>
+    </div>
+  </div>
+
+  <footer id="site-footer"></footer>
+  <script src="/assets/js/site-nav.min.js" defer></script>
+  <script src="/assets/js/cookie-consent.js" defer></script>
+</body>
+</html>

@@ -1,5 +1,6 @@
 from datetime import datetime
 import random
+import re
 
 from self_optimization import SelfOptimizationEngine
 
@@ -27,13 +28,51 @@ def suggest_keywords(topic, add=None):
         base += list(add)
     return list(set(base + topic_words))
 
+# قوائم الحظر حسب سياسات جوجل أدسنس (مصنفة وموسعة)
+PROHIBITED_KEYWORDS = {
+    "adult": [
+        "إباحية", "علاقات غير شرعية", "مواقع تعارف مشبوهة", "صور غير لائقة"
+    ],
+    "violence": [
+        "عنف", "إرهاب", "تهديد", "اعتداء", "إيذاء"
+    ],
+    "drugs": [
+        "مخدرات", "تعاطي", "اتجار غير قانوني"
+    ],
+    "weapons": [
+        "سلاح", "أسلحة نارية", "متفجرات"
+    ],
+    "hate": [
+        "كراهية", "تمييز", "عنصرية"
+    ],
+    "illegal": [
+        "اختراق", "قرصنة", "انتحال", "قمار", "رهان", "تزييف", "تزوير"
+    ]
+}
+
+def is_topic_allowed(text: str) -> bool:
+    """التحقق من خلو الموضوع من الكلمات المحظورة"""
+    t = (text or '').strip()
+    for category in PROHIBITED_KEYWORDS.values():
+        for bad in category:
+            if bad in t:
+                return False
+    return True
+
+def enforce_arabic(text: str) -> str:
+    """التأكد من أن النص عربي وإزالة بقايا ترجمات آلية سيئة"""
+    # إزالة أسطر إنجليزية قصيرة شائعة
+    text = re.sub(r"\b(?:the|and|for|with|from|by|to|of)\b", "", text, flags=re.IGNORECASE)
+    return text
+
 def render_article(title, topic, year, keywords):
     html = f"""<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{title} | دليل المال العربي</title>
-  <meta name="description" content="مقال شامل عن {topic} وتوصيات عملية لسنة {year}.">
+  <meta name="description" content="دليل شامل ومفصل عن {topic} مع نصائح عملية وتوصيات الخبراء لعام {year}.">
   <meta name="keywords" content="{', '.join(keywords)}">
   <meta property="og:title" content="{title}"/>
   <meta property="og:description" content="تفاصيل عملية حول {topic}."/>
@@ -44,10 +83,22 @@ def render_article(title, topic, year, keywords):
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "{title}",
-    "description": "تفاصيل مجربة ومقارنة حول {topic} في {year}.",
-    "image": "https://zezooo342.github.io/myogimage.jpg",
+    "description": "دليل شامل ومفصل عن {topic} مع نصائح عملية وتوصيات الخبراء لعام {year}.",
+    "author": {{
+      "@type": "Organization",
+      "name": "فريق دليل المال العربي"
+    }},
     "datePublished": "{datetime.today().strftime('%Y-%m-%d')}",
-    "author": {{"@type": "Person","name":"فريق دليل المال العربي"}}
+    "dateModified": "{datetime.today().strftime('%Y-%m-%d')}",
+    "publisher": {{
+      "@type": "Organization",
+      "name": "دليل المال العربي",
+      "url": "https://zezooo342.github.io",
+      "logo": "https://zezooo342.github.io/assets/images/og-default.png"
+    }},
+    "mainEntityOfPage": "https://zezooo342.github.io/{canonical_slug}.html",
+    "image": "https://zezooo342.github.io/assets/images/og-default.png",
+    "inLanguage": "ar"
   }}
   </script>
   <style>
@@ -73,9 +124,12 @@ def render_article(title, topic, year, keywords):
       <li><a href="privacy.html">سياسة الخصوصية</a></li>
     </ul>
   </div>
+</footer>
+
+<script src="/assets/js/site-nav.min.js" defer></script>
+<script src="/assets/js/cookie-consent.js" defer></script>
 </body>
-</html>
-"""
+</html>"""
     return html
 
 def generate_articles(n=3, year="2025", improvement_dict=None):
@@ -86,7 +140,8 @@ def generate_articles(n=3, year="2025", improvement_dict=None):
         title = random.choice(TEMPLATES).format(topic=topic, year=year)
         keywords = suggest_keywords(topic, add=add_keywords)
         html = render_article(title, topic, year, keywords)
-        file_name = "".join(c for c in topic[:15] if c.isalnum() or c in (' ', '_')).replace(' ', '_') + ".html"
+        file_name = re.sub(r"\s+", "_", topic[:40])
+        file_name = re.sub(r"[^\w\u0600-\u06FF_]+", "", file_name) + ".html"
         with open(file_name, "w", encoding="utf-8") as f:
             f.write(html)
         print(f"تم إنشاء المقال: {file_name} - {title}")
