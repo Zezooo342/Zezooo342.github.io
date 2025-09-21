@@ -2,7 +2,11 @@
 """Detect simple near-duplicate HTML pages by comparing the first N characters of visible text."""
 from pathlib import Path
 import re
-from bs4 import BeautifulSoup
+try:
+    from bs4 import BeautifulSoup
+except ImportError:
+    print("Error: The 'bs4' package is required to run this script. Please install it with 'pip install bs4'.", file=sys.stderr)
+    sys.exit(1)
 import sys
 import json
 
