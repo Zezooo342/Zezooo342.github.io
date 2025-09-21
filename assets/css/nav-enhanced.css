@@ -1,0 +1,352 @@
+/*!
+ * Site Navigation Enhancement v2.0
+ * إضافة ميزات إضافية للتنقل مع تحسينات الأداء والاستجابة
+ */
+
+/* متغيرات للتخصيص السهل */
+:root {
+  --nav-bg: #0c7954;
+  --nav-hover: #076e4d;
+  --nav-active: #3bb273;
+  --nav-text: #ffffff;
+  --nav-shadow: 0 2px 20px rgba(12, 121, 84, 0.15);
+  --nav-border-radius: 12px;
+  --nav-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --nav-stripe-width: 2px;
+  --nav-stripe-gap: 6px;
+}
+
+/* هيدر الموقع */
+.site-header {
+  background: linear-gradient(135deg, var(--nav-bg), var(--nav-hover));
+  box-shadow: var(--nav-shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.site-nav .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--nav-text);
+  text-decoration: none;
+  transition: var(--nav-transition);
+  position: relative;
+}
+
+.site-nav .logo:hover {
+  transform: scale(1.05);
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
+}
+
+/* قائمة التنقل الرئيسية */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu a {
+  color: var(--nav-text);
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: var(--nav-border-radius);
+  transition: var(--nav-transition);
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-menu a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: var(--nav-transition);
+  z-index: -1;
+}
+
+.nav-menu a:hover::before {
+  width: 100%;
+}
+
+.nav-menu a:hover {
+  background: var(--nav-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nav-menu a.active {
+  background: var(--nav-active);
+  color: var(--nav-text);
+  font-weight: 600;
+}
+
+/* زر القائمة للأجهزة المحمولة */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--nav-text);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: var(--nav-border-radius);
+  transition: var(--nav-transition);
+}
+
+.nav-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* حاوي أدوات التنقل */
+.nav-tools {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  color: var(--nav-text);
+  font-size: 0.9rem;
+  transition: var(--nav-transition);
+  width: 200px;
+}
+
+.search-box input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-box input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--nav-active);
+  box-shadow: 0 0 0 2px rgba(59, 178, 115, 0.3);
+}
+
+/* فوتر الموقع */
+.site-footer {
+  background: var(--nav-bg);
+  color: var(--nav-text);
+  padding: 2rem 0 1rem;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.footer-section h3 {
+  color: var(--nav-active);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: var(--nav-transition);
+}
+
+.footer-section a:hover {
+  color: var(--nav-active);
+  text-shadow: 0 1px 3px rgba(59, 178, 115, 0.5);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+/* تحسينات الاستجابة للأجهزة المحمولة */
+@media (max-width: 768px) {
+  .site-nav {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .nav-toggle {
+    display: block;
+    align-self: flex-end;
+  }
+  
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .nav-menu.active {
+    display: flex;
+    animation: slideDown 0.3s ease-out;
+  }
+  
+  .nav-menu a {
+    padding: 1rem;
+    text-align: center;
+    border-radius: var(--nav-border-radius);
+  }
+  
+  .nav-tools {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .search-box input {
+    width: 100%;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-nav {
+    padding: 0.75rem;
+  }
+  
+  .site-nav .logo {
+    font-size: 1.3rem;
+  }
+  
+  .nav-menu a {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* انيميشن القائمة المنسدلة */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* تحسينات إضافية للأداء */
+.nav-menu a,
+.nav-toggle,
+.search-box input {
+  will-change: transform;
+}
+
+/* تحسينات الوصولية */
+.nav-menu a:focus,
+.nav-toggle:focus,
+.search-box input:focus {
+  outline: 2px solid var(--nav-active);
+  outline-offset: 2px;
+}
+
+/* خصائص متقدمة للتنقل */
+.nav-breadcrumb {
+  background: rgba(12, 121, 84, 0.05);
+  padding: 0.75rem 0;
+  font-size: 0.9rem;
+}
+
+.nav-breadcrumb .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.breadcrumb-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.breadcrumb-list li:not(:last-child)::after {
+  content: '←';
+  margin-right: 0.5rem;
+  color: var(--nav-bg);
+}
+
+.breadcrumb-list a {
+  color: var(--nav-bg);
+  text-decoration: none;
+  transition: var(--nav-transition);
+}
+
+.breadcrumb-list a:hover {
+  color: var(--nav-hover);
+  text-decoration: underline;
+}
+
+.breadcrumb-list .current {
+  color: var(--nav-hover);
+  font-weight: 500;
+}
+
+/* تحسينات التباين للوضع المظلم */
+@media (prefers-color-scheme: dark) {
+  .nav-breadcrumb {
+    background: rgba(12, 121, 84, 0.1);
+  }
+}
