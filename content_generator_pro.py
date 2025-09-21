@@ -68,7 +68,7 @@ def enforce_arabic(text: str) -> str:
 def render_article(title, topic, year, keywords):
     # حماية: منع توليد مقالات لمواضيع محظورة
     if not is_topic_allowed(topic):
-        raise ValueError("🚫 الموضوع يحتوي على كلمات محظورة وفق سياسات النشر")
+        raise ValueError("الموضوع يحتوي على كلمات محظورة وفق سياسات النشر")
     
     title = enforce_arabic(title)
     topic = enforce_arabic(topic)
