@@ -105,7 +105,7 @@ class SitemapGenerator:
             # استخدم وقت آخر تعديل فعلي للملف
             try:
                 lastmod_date = datetime.fromtimestamp(os.path.getmtime(filename)).strftime('%Y-%m-%d')
-            except FileNotFoundError:
+            except OSError:
                 lastmod_date = self.current_date
             ET.SubElement(url_element, 'lastmod').text = lastmod_date
             ET.SubElement(url_element, 'changefreq').text = page_info['changefreq']
