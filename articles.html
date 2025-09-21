@@ -1,228 +1,24 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="أرشيف شامل لجميع مقالات ودلائل دليل المال العربي - استثمار، ربح أونلاين، عملات رقمية وأكثر.">
-  <meta name="keywords" content="أرشيف المقالات, دليل المال العربي, استثمار, ربح أونلاين, عملات رقمية, مشاريع">
-  <title>أرشيف المقالات | دليل المال العربي</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <meta property="og:title" content="أرشيف المقالات - دليل المال العربي"/>
-  <meta property="og:description" content="استكشف مجموعة شاملة من المقالات والأدلة العملية للاستثمار والربح أونلاين."/>
+  <title>📚 أرشيف المقالات | دليل المال العربي</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="assets/css/common.min.css">
+  <link rel="stylesheet" href="assets/css/nav.min.css">
+  <meta name="theme-color" content="#0c7954">
   <meta property="og:image" content="https://zezooo342.github.io/assets/images/og-default.png"/>
-  <meta property="og:type" content="website"/>
-  <link rel="canonical" href="https://zezooo342.github.io/articles.html"/>
-  <link rel="stylesheet" href="/assets/css/nav.min.css">
-  
-  <!-- Article Schema for the archive page -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "أرشيف المقالات - دليل المال العربي",
-    "description": "مجموعة شاملة من المقالات والأدلة العملية للاستثمار والربح أونلاين",
-    "url": "https://zezooo342.github.io/articles.html",
-    "mainEntity": {
-      "@type": "ItemList",
-      "numberOfItems": 8,
-      "itemListElement": [
-        {
-          "@type": "Article",
-          "position": 1,
-          "name": "دليل الاستثمار العربي الشامل",
-          "url": "https://zezooo342.github.io/invest-arab.html"
-        },
-        {
-          "@type": "Article", 
-          "position": 2,
-          "name": "كيف تربح المال من الإنترنت",
-          "url": "https://zezooo342.github.io/make-money-online.html"
-        },
-        {
-          "@type": "Article",
-          "position": 3, 
-          "name": "دليل العملات الرقمية للمبتدئين",
-          "url": "https://zezooo342.github.io/crypto-guide.html"
-        }
-      ]
-    }
-  }
-  </script>
-  
-  <style>
-    body {
-      font-family: 'Tajawal', Arial, sans-serif;
-      background: #f7fcfa;
-      margin: 0;
-      padding: 0;
-      color: #222;
-      line-height: 1.6;
-    }
-    
-    header {
-      background: #082032;
-      color: #fff;
-      padding: 24px 0;
-      text-align: center;
-    }
-    
-    nav {
-      background: #334756;
-      color: #fff;
-      padding: 12px 0;
-      text-align: center;
-    }
-    
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 16px;
-      font-size: 16px;
-      font-weight: 500;
-    }
-    
-    nav a:hover {
-      text-decoration: underline;
-    }
-    
-    .container {
-      max-width: 1000px;
-      margin: 2em auto;
-      padding: 0 1em;
-    }
-    
-    .intro {
-      background: #fff;
-      padding: 2em;
-      border-radius: 15px;
-      box-shadow: 0 2px 10px #e2f5eb;
-      margin-bottom: 2em;
-      text-align: center;
-    }
-    
-    .intro h1 {
-      color: #076e4d;
-      margin-bottom: 0.5em;
-    }
-    
-    .articles-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5em;
-      margin-top: 2em;
-    }
-    
-    .article-card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 1.5em;
-      box-shadow: 0 3px 12px rgba(7, 110, 77, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border: 1px solid #e1eee9;
-    }
-    
-    .article-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 20px rgba(7, 110, 77, 0.15);
-    }
-    
-    .article-card h3 {
-      color: #076e4d;
-      margin-top: 0;
-      margin-bottom: 0.8em;
-      font-size: 1.2em;
-    }
-    
-    .article-card h3 a {
-      text-decoration: none;
-      color: inherit;
-    }
-    
-    .article-card h3 a:hover {
-      color: #3bb273;
-    }
-    
-    .article-meta {
-      color: #666;
-      font-size: 0.9em;
-      margin-bottom: 1em;
-    }
-    
-    .article-excerpt {
-      color: #444;
-      margin-bottom: 1em;
-    }
-    
-    .read-more {
-      display: inline-block;
-      padding: 8px 16px;
-      background: #3bb273;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      font-size: 0.9em;
-      transition: background 0.3s ease;
-    }
-    
-    .read-more:hover {
-      background: #28654c;
-    }
-    
-    .category-tag {
-      display: inline-block;
-      padding: 4px 8px;
-      background: #e1eee9;
-      color: #076e4d;
-      font-size: 0.8em;
-      border-radius: 4px;
-      margin-left: 8px;
-    }
-    
-    footer {
-      background: #076e4d;
-      color: #fff;
-      padding: 1.5em 0;
-      text-align: center;
-      margin-top: 3em;
-    }
-    
-    footer ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 1.5em;
-      margin: 0;
-      padding: 0;
-      flex-wrap: wrap;
-    }
-    
-    footer a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    
-    footer a:hover {
-      text-decoration: underline;
-    }
-    
-    @media (max-width: 768px) {
-      .articles-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      nav a {
-        margin: 0 8px;
-        font-size: 14px;
-      }
-      
-      .container {
-        padding: 0 0.5em;
-      }
-    }
-  </style>
 </head>
 <body>
+<header class="site-header">
+  <nav class="site-nav">
+    <a href="/index.html" class="logo">دليل المال العربي</a>
+    <a href="/articles.html">المقالات</a>
+    <a href="/about.html">عن الموقع</a>
+    <a href="/contact.html">اتصل بنا</a>
+  </nav>
+</header>
+
   <header id="site-header"></header>
   <header>
     <h1>📚 أرشيف المقالات</h1>
