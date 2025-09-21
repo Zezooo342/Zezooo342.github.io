@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <title>📞 اتصل بنا | دليل المال العربي</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="assets/css/common.min.css">
+  <link rel="stylesheet" href="assets/css/nav.min.css">
+  <meta name="theme-color" content="#0c7954">
+  <meta property="og:image" content="https://zezooo342.github.io/assets/images/og-default.png"/>
+</head>
+<body>
+<header class="site-header">
+  <nav class="site-nav">
+    <a href="/index.html" class="logo">دليل المال العربي</a>
+    <a href="/articles.html">المقالات</a>
+    <a href="/about.html">عن الموقع</a>
+    <a href="/contact.html">اتصل بنا</a>
+  </nav>
+</header>
+
+  <header id="site-header"></header>
+  <header>
+    <h1>📞 اتصل بنا</h1>
+    <p>نحن هنا لمساعدتك وللإجابة على استفساراتك</p>
+  </header>
+
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="articles.html">أرشيف المقالات</a>
+    <a href="about.html">من نحن</a>
+    <a href="contact.html">اتصل بنا</a>
+    <a href="privacy.html">سياسة الخصوصية</a>
+  </nav>
+
+  <div class="main">
+    <h1>تواصل معنا</h1>
+    
+    <div class="intro-text">
+      <p><strong>نحن نقدر تواصلكم معنا!</strong> سواء كان لديكم استفسار مالي، اقتراح لتحسين المحتوى، أو ترغبون في مناقشة فرص الشراكة، فريقنا مستعد لمساعدتكم.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>📧 للاستفسارات العامة</h3>
+        <p><strong>البريد الإلكتروني:</strong><br>
+        <a href="mailto:info@zezooo342.github.io" style="color: #076e4d;">info@zezooo342.github.io</a></p>
+        <p><strong>وقت الاستجابة:</strong> خلال 24-48 ساعة</p>
+      </div>
+      
+      <div class="contact-info">
+        <h3>🤝 للشراكات والتعاون</h3>
+        <p><strong>البريد الإلكتروني:</strong><br>
+        <a href="mailto:partnerships@zezooo342.github.io" style="color: #076e4d;">partnerships@zezooo342.github.io</a></p>
+        <p><strong>المجالات:</strong> إعلانات، محتوى مدفوع، تعاونات استراتيجية</p>
+      </div>
+
+      <div class="form-section">
+        <h2>📝 نموذج التواصل السريع</h2>
+        
+        <div class="privacy-notice">
+          <h4>🔒 ملاحظة الخصوصية</h4>
+          <p>نحن نحترم خصوصيتكم. المعلومات المرسلة عبر هذا النموذج تُستخدم فقط للرد على استفساراتكم ولن نشاركها مع أي طرف ثالث. لمزيد من التفاصيل، اطلعوا على <a href="privacy.html" style="color: #856404;">سياسة الخصوصية</a>.</p>
+        </div>
+
+        <!-- 
+        IMPORTANT: Replace 'YOUR_FORMSPREE_ID' with your actual Formspree form ID
+        To set up Formspree:
+        1. Go to https://formspree.io
+        2. Create an account
+        3. Create a new form and get your form ID
+        4. Replace 'YOUR_FORMSPREE_ID' below with your actual ID
+        
+        FALLBACK: If you don't want to use Formspree, you can:
+        - Use mailto: action="mailto:info@zezooo342.github.io"
+        - Integrate with other form services like Netlify Forms
+        - Use a contact form service like Typeform
+        -->
+  <form action="mailto:info@zezooo342.github.io" method="POST" id="contactForm">
+          <div class="success-message" id="successMessage">
+            ✅ تم إرسال رسالتكم بنجاح! سنتواصل معكم قريباً.
+          </div>
+          <div class="error-message" id="errorMessage">
+            ❌ حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى أو مراسلتنا مباشرة.
+          </div>
+  <!-- Form action set to mailto fallback by default. Configure a form service (Formspree/Netlify) to enable server-side submission. -->
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">البريد الإلكتروني <span class="required">*</span></label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="subject">نوع الاستفسار <span class="required">*</span></label>
+          <select id="subject" name="subject" required>
+            <option value="">اختر نوع الاستفسار</option>
+            <option value="general">استفسار عام</option>
+            <option value="financial">سؤال مالي أو استثماري</option>
+            <option value="content">اقتراح محتوى أو تصحيح</option>
+            <option value="partnership">شراكة أو تعاون</option>
+            <option value="technical">مشكلة تقنية في الموقع</option>
+            <option value="other">أخرى</option>
+          </select>
+
+          <label for="message">رسالتكم أو استفساركم <span class="required">*</span></label>
+          <textarea id="message" name="message" placeholder="شاركونا تفاصيل استفساركم..." required></textarea>
+
+          <!-- Anti-spam honeypot field - keep hidden -->
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
+          
+          <!-- Formspree configuration -->
+          <input type="hidden" name="_subject" value="رسالة جديدة من موقع دليل المال العربي">
+          <input type="hidden" name="_next" value="https://zezooo342.github.io/contact.html?success=1">
+
+          <button type="submit" class="btn" id="submitBtn">
+            إرسال الرسالة 📤
+          </button>
+        </form>
+
+        <div style="margin-top: 2em; padding: 1em; background: #f6fcfa; border-radius: 8px;">
+          <h4 style="color: #076e4d; margin-top: 0;">💡 نصائح للحصول على أفضل استجابة:</h4>
+          <ul style="margin: 0; padding-right: 1.2em;">
+            <li>كونوا واضحين ومحددين في استفساراتكم</li>
+            <li>أذكروا أي تفاصيل ذات صلة بالموضوع</li>
+            <li>للأسئلة المالية، أذكروا مستوى خبرتكم</li>
+            <li>للمشاكل التقنية، أذكروا المتصفح والجهاز المستخدم</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h2>❓ الأسئلة الشائعة</h2>
+    <p>قبل إرسال استفساركم، تأكدوا من مراجعة <a href="faq.html" style="color: #076e4d; font-weight: bold;">صفحة الأسئلة الشائعة</a> - قد تجدون الإجابة على سؤالكم هناك!</p>
+  </div>
+
+  <footer>
+    <ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="articles.html">أرشيف المقالات</a></li>
+      <li><a href="about.html">من نحن</a></li>
+      <li><a href="contact.html">اتصل بنا</a></li>
+      <li><a href="faq.html">الأسئلة الشائعة</a></li>
+      <li><a href="privacy.html">سياسة الخصوصية</a></li>
+    </ul>
+    <div style="margin-top: 1em;">
+      جميع الحقوق محفوظة &copy; دليل المال العربي 2025
+    </div>
+  </footer>
+
+  <script>
+    // Handle form submission
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      const submitBtn = document.getElementById('submitBtn');
+      const successMsg = document.getElementById('successMessage');
+      const errorMsg = document.getElementById('errorMessage');
+      const fallbackContact = document.getElementById('fallbackContact');
+      
+      // Reset messages
+      successMsg.style.display = 'none';
+      errorMsg.style.display = 'none';
+      fallbackContact.style.display = 'none';
+      
+      // Update button text
+      submitBtn.textContent = 'جارٍ الإرسال...';
+      submitBtn.disabled = true;
+      
+  // Form action uses mailto fallback by default; no further placeholder check required.
+      if (this.action.includes('YOUR_FORMSPREE_ID')) {
+        e.preventDefault();
+        fallbackContact.style.display = 'block';
+        errorMsg.innerHTML = '⚠️ نموذج الاتصال غير مُعد بعد. يرجى استخدام معلومات الاتصال المباشر أدناه.';
+        errorMsg.style.display = 'block';
+        submitBtn.textContent = 'إرسال الرسالة 📤';
+        submitBtn.disabled = false;
+        
+        // Scroll to fallback contact info
+        fallbackContact.scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+      
+      // If properly configured, allow normal submission
+      // The form will handle success/error through page redirect or Formspree response
+    });
+
+    // Check for success parameter in URL
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === '1') {
+      document.getElementById('successMessage').style.display = 'block';
+      // Clear the form
+      document.getElementById('contactForm').reset();
+      // Scroll to success message
+      document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Show fallback contact on page load if form is not configured
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('contactForm');
+      if (form.action.includes('YOUR_FORMSPREE_ID')) {
+        // Show a note that form needs configuration
+        const fallbackNote = document.createElement('div');
+        fallbackNote.innerHTML = '<p style="color: #856404; font-style: italic; margin-top: 1em;">💡 لأفضل تجربة، يُنصح بإعداد نموذج الاتصال. حالياً يمكنكم التواصل مباشرة عبر البريد الإلكتروني أعلاه.</p>';
+        document.querySelector('.contact-grid').appendChild(fallbackNote);
+      }
+    });
+  </script>
+  <footer id="site-footer"></footer>
+  <script src="/assets/js/site-nav.min.js" defer></script>
+  <script src="/assets/js/cookie-consent.js" defer></script>
+</body>
+</html>

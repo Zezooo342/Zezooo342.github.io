@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <title>فريق العمل | دليل المال العربي</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="assets/css/common.min.css">
+  <link rel="stylesheet" href="assets/css/nav.min.css">
+  <meta name="theme-color" content="#0c7954">
+  <meta property="og:image" content="https://zezooo342.github.io/assets/images/og-default.png"/>
+</head>
+<body>
+<header class="site-header">
+  <nav class="site-nav">
+    <a href="/index.html" class="logo">دليل المال العربي</a>
+    <a href="/articles.html">المقالات</a>
+    <a href="/about.html">عن الموقع</a>
+    <a href="/contact.html">اتصل بنا</a>
+  </nav>
+</header>
+
+  <header id="site-header"></header>
+  <div class="main">
+    <h1>فريق العمل</h1>
+    <div class="member"><span class="photo"></span> <b>محمد أحمد</b> – مؤسس وخبير استثمار رقمي (10 سنوات خبرة في الأسواق المالية)</div>
+    <div class="member"><span class="photo"></span> <b>أمير يوسف</b> – محرر مالي ورائد أعمال تقني</div>
+    <div class="member"><span class="photo"></span> <b>سهى محمد</b> – مديرة تسويق رقمي وصناعة محتوى مالي</div>
+    <p>نحن نؤمن بقوة التعليم وتبسيط المعرفة لكل شاب عربي يبحث عن النجاح المالي.</p>
+  </div>
+  <footer id="site-footer"></footer>
+  <script src="/assets/js/site-nav.min.js" defer></script>
+  <script src="/assets/js/cookie-consent.js" defer></script>
+</body>
+</html>
