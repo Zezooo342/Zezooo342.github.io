@@ -50,9 +50,9 @@ class SitemapGenerator:
         }
         
         # الملفات المستثناة من sitemap
-        # ملاحظة: تم استبعاد 'index.html' لتجنب تكرار الصفحة الرئيسية في sitemap،
-        # حيث تتم إضافة عنوان الجذر '/' يدوياً في مكان آخر في الكود.
-        self.excluded_files = ['404.html', 'index.html']
+        # ملاحظة: يتم استبعاد '404.html' فقط لأن باقي الصفحات يجب أن تظهر في sitemap.
+        # يتم إضافة عنوان الجذر '/' يدوياً في مكان آخر في الكود، ويجب أيضاً تضمين '/index.html' في sitemap.
+        self.excluded_files = ['404.html']
 
     def get_html_files(self):
         """الحصول على جميع ملفات HTML في الجذر"""
