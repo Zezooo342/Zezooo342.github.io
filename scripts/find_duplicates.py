@@ -12,12 +12,15 @@ import json
 
 
 def extract_text(html: str) -> str:
-    # Use BeautifulSoup to reliably remove script and style tags and extract visible text
-    soup = BeautifulSoup(html, "html.parser")
-    for tag in soup(['script', 'style']):
-        tag.decompose()
-    text = soup.get_text(separator=' ', strip=True)
-    return ' '.join(text.split())
+    # Use BeautifulSoup with 'lxml' parser for better performance and robustness
+    try:
+        soup = BeautifulSoup(html, "lxml")
+        for tag in soup(['script', 'style']):
+            tag.decompose()
+        text = soup.get_text(separator=' ', strip=True)
+        return ' '.join(text.split())
+    except Exception:
+        return ""
 
 
 def main():
