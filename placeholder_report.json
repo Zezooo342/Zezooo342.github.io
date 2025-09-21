@@ -1,0 +1,32 @@
+{
+  "index.html": [
+    {
+      "line": 25,
+      "text": "<div class=\"img-placeholder-banner\">"
+    },
+    {
+      "line": 55,
+      "text": "<div class=\"img-placeholder-section\">"
+    },
+    {
+      "line": 107,
+      "text": "<div class=\"img-placeholder-learn\">"
+    }
+  ],
+  "contact.html": [
+    {
+      "line": 116,
+      "text": "<textarea id=\"message\" name=\"message\" placeholder=\"شاركونا تفاصيل استفساركم...\" required></textarea>"
+    },
+    {
+      "line": 177,
+      "text": "// Check if form action has been updated from placeholder"
+    }
+  ],
+  "ai.html": [
+    {
+      "line": 116,
+      "text": "<li><strong>تنويع الخدمات:</strong> أضف خدمات جديدة لزيادة الدخل</li>"
+    }
+  ]
+}

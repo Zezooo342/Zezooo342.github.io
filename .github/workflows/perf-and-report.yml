@@ -1,0 +1,38 @@
+name: Lighthouse performance report
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+  schedule:
+    - cron: '0 3 * * *'  # daily at 03:00 UTC
+  workflow_dispatch:
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Lighthouse CI on live pages
+        uses: treosh/lighthouse-ci-action@v10
+        continue-on-error: true  # Do not fail the workflow; report only
+        with:
+          urls: |
+            https://zezooo342.github.io/
+            https://zezooo342.github.io/index.html
+            https://zezooo342.github.io/articles.html
+            https://zezooo342.github.io/about.html
+            https://zezooo342.github.io/contact.html
+            https://zezooo342.github.io/ai.html
+            https://zezooo342.github.io/invest-arab.html
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+          runs: 1
+

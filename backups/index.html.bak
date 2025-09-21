@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>سمارت كونتنت | منصتك للمحتوى الأصلي والتقني</title>
+  <meta name="description" content="مقالات أصلية، حلول تقنية، أدلة عملية في العمل عبر الإنترنت. شرح خطوات حصري وأفكار تقنية أصلية لكل المجالات الرقمية.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Open Graph meta tags -->
+  <meta property="og:title" content="سمارت كونتنت | منصتك للمحتوى الأصلي والتقني"/>
+  <meta property="og:description" content="مقالات أصلية، حلول تقنية، أدلة عملية في العمل عبر الإنترنت. شرح خطوات حصري وأفكار تقنية أصلية لكل المجالات الرقمية."/>
+  <meta property="og:image" content="https://zezooo342.github.io/assets/images/og-default.png"/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://zezooo342.github.io/"/>
+  <!-- كود أدسنس للصفحة -->
+  <meta name="google-adsense-account" content="ca-pub-9892132994837464">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9892132994837464"
+     crossorigin="anonymous"></script>
+  <style>
+    body {font-family:'Cairo', Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; color:#222;}
+    header {background:#082032; color:#fff; padding:24px 0; text-align:center;}
+    nav {background:#334756; color:#fff; padding:12px 0; text-align:center;}
+    nav a {color:#fff; text-decoration:none; margin:0 16px; font-size:18px;}
+    nav a:hover {text-decoration:underline;}
+    .container {max-width:980px; margin:36px auto; background:#fff; padding:32px; border-radius:14px; box-shadow:0 3px 9px rgba(0,0,0,.08);}
+    h1, h2, h3 {color:#082032;}
+    .article {margin-bottom:36px;}
+    .meta {color:#888; font-size:15px;}
+    .btn {display:inline-block; padding:10px 24px; background:#3bb273; color:#fff; border-radius:6px; text-decoration:none; margin-top:13px;}
+    .btn:hover {background:#28654c;}
+    .adsense, .affiliate {margin:28px auto; text-align:center;}
+    .row {display: flex; flex-wrap:wrap; gap:22px;}
+    .card {background:#f6f8fa; border-radius:11px; padding:22px 18px; margin-bottom:20px; width: 300px; box-shadow:0 2px 4px rgba(60,24,6,.07);}
+    .card h3 {margin-top:0;}
+    /* CLS optimization - Image placeholders */
+    .img-placeholder-banner {width:100%; height:300px; background:#f0f0f0; border-radius:14px; position:relative; overflow:hidden;}
+    .img-placeholder-section {width:100%; height:200px; background:#f6fcfa; border-radius:12px; position:relative; overflow:hidden;}
+    .img-placeholder-learn {width:100%; height:160px; background:#f6fcfa; border-radius:12px; position:relative; overflow:hidden;}
+    .img-placeholder-banner img, .img-placeholder-section img, .img-placeholder-learn img {width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0;}
+    @media (max-width: 600px) {
+      .container {padding:12px;}
+      .row {flex-direction: column; gap:10px;}
+      .card {width: 100%;}
+      header h1 {font-size: 1.8rem;}
+      header p {font-size: 0.9rem;}
+      nav a {margin:0 8px; font-size:16px;}
+      .btn {padding:8px 16px; font-size:14px;}
+      .img-placeholder-banner {height:200px;}
+      .img-placeholder-section {height:150px;}
+      .img-placeholder-learn {height:120px;}
+    }
+    @media (max-width: 480px) {
+      .container {margin:20px auto; padding:16px;}
+      header {padding:16px 0;}
+      nav {padding:8px 0;}
+      nav a {margin:0 6px; font-size:14px;}
+      .card {padding:16px 12px;}
+      .adsense, .affiliate {margin:20px auto;}
+      .img-placeholder-banner {height:180px;}
+      .img-placeholder-section {height:130px;}
+      .img-placeholder-learn {height:100px;}
+    }
+  </style>
+</head>
+<body>
+<header id="site-header"></header>
+<header>
+  <div style="position: relative; text-align: center;">
+    <div class="img-placeholder-banner">
+      <img src="/assets/images/banner-finance.jpg" alt="بنر المالية والاستثمار - دليل شامل للنجاح المالي" loading="lazy">
+    </div>
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;">
+      <h1 style="color: #fff; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); margin: 0;">سمارت كونتنت</h1>
+      <p style="color: #fff; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); margin: 10px 0 0 0;">كل ما تحتاجه من شروحات أصلية، أفكار تقنية، حلول عملية للعمل الحر والاستثمار الرقمي.</p>
+    </div>
+  </div>
+  <!-- تحميل الصورة: يمكنك تحميل صورة البنر من هنا -->
+  <div style="text-align: center; margin-top: 10px; font-size: 12px; color: #666;">
+    <a href="#" onclick="alert('رابط تحميل banner-finance.jpg')" style="color: #3bb273; text-decoration: none;">📥 تحميل صورة البنر المالي</a>
+  </div>
+</header>
+<nav>
+  <a href="index.html">الرئيسية</a>
+  <a href="contact.html">تواصل معنا</a>
+</nav>
+<div class="container">
+  <!-- إعلان أدسنس -->
+  <div class="adsense">
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-9892132994837464"
+        data-ad-slot="3449460952"
+        data-ad-format="auto"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <!-- قسم الاستثمار والأعمال -->
+  <div style="text-align: center; margin: 2em 0;">
+    <div class="img-placeholder-section">
+      <img src="/assets/images/invest-business.jpg" alt="استثمار وأعمال - دليل العمل الحر والاستثمار الذكي" loading="lazy">
+    </div>
+    <div style="margin-top: 8px; font-size: 12px; color: #666;">
+      <a href="#" onclick="alert('رابط تحميل invest-business.jpg')" style="color: #3bb273; text-decoration: none;">📥 تحميل صورة الاستثمار والأعمال</a>
+    </div>
+  </div>
+
+  <!-- مقالات متنوعة بعناوين جذّابة -->
+  <div class="row">
+    <div class="card article">
+      <h3><a href="invest-arab.html">الدليل الشامل للبـدء في العمل الحر 2025</a></h3>
+      <p class="meta">20 دقيقة قراءة | <a href="invest-arab.html">اكمل القراءة →</a></p>
+      <p>خطوات عملية لتبدأ مسيرتك في العمل عن بعد وتحقق أول دخل عبر الإنترنت مهما كان تخصـصك.</p>
+    </div>
+    <div class="card article">
+      <h3><a href="management.html">7 أسرار تقنية لزيادة الإنتاجية وجني المال</a></h3>
+      <p class="meta">15 دقيقة قراءة | <a href="management.html">اكمل القراءة →</a></p>
+      <p>طرق ووسائل وادوات مجربة لتسريع تحقيق دخل ثابت عبر الإنترنت ورفع إنتاجيتك الرقمية.</p>
+    </div>
+    <div class="card article">
+      <h3><a href="make-money-online.html">كيف تربح من البرمجة حتى بدون خبرة؟</a></h3>
+      <p class="meta">12 دقيقة قراءة | <a href="make-money-online.html">اكمل القراءة →</a></p>
+      <p>دليل لأهم الأدوات والمنصات للمبتدئين الراغبين في تحقيق أرباح باستخدام مهارات بسيطة أو بدون خبرة مسبقة.</p>
+    </div>
+  </div>
+
+  <!-- مقطع أفلييت بين المواضيع -->
+  <div class="affiliate">
+    <a href="https://your-affiliate-network.com/aff_id=xxxx" target="_blank" rel="noopener noreferrer nofollow sponsored">
+      <img src="https://your-affiliate-network.com/banner.jpg" alt="عرض حصري لزوار سمارت كونتنت" style="max-width:98%; border-radius:8px;" loading="lazy">
+      <br>احصل على عرض حصري لأدوات العمل عن بعد الآن!
+    </a>
+  </div>
+
+  <div class="row">
+    <div class="card article">
+      <h3><a href="media.html">أفضل الأدوات المجانية لصناع المحتوى</a></h3>
+      <p class="meta">8 دقيقة قراءة | <a href="media.html">اكمل القراءة →</a></p>
+      <p>قائمة بأحدث الأدوات التي ستوفر وقتك وجهدك وتزيد من جودة أعمالك على الإنترنت.</p>
+    </div>
+    <div class="card article">
+      <h3><a href="ai.html">دليلك الذكي لاستغلال الذكاء الاصطناعي في الربح</a></h3>
+      <p class="meta">14 دقيقة قراءة | <a href="ai.html">اكمل القراءة →</a></p>
+      <p>كيف تستغل منصات الذكاء الاصطناعي الجديدة لصناعة المحتوى، التعلم، وزيادة الدخل الشهري بدون استثمار كبير.</p>
+    </div>
+  </div>
+
+  <!-- قسم التعليم المالي -->
+  <div class="row" style="margin: 3em 0;">
+    <div style="width: 100%; text-align: center; margin-bottom: 2em;">
+      <h2 style="color: #082032; margin-bottom: 1em;">📚 التعليم المالي باللغة العربية</h2>
+      <div class="img-placeholder-learn">
+        <img src="/assets/images/learn-arabic-finance.jpg" alt="تعلم المالية باللغة العربية - دروس وكورسات مالية شاملة" loading="lazy">
+      </div>
+      <div style="margin-top: 10px; font-size: 12px; color: #666;">
+        <a href="#" onclick="alert('رابط تحميل learn-arabic-finance.jpg')" style="color: #3bb273; text-decoration: none;">📥 تحميل صورة التعليم المالي</a>
+      </div>
+    </div>
+    <div class="card article" style="width: 100%; max-width: 700px; margin: 0 auto;">
+      <h3 style="text-align: center; color: #076e4d;">🏆 ابدأ رحلتك في التعليم المالي</h3>
+      <p style="text-align: center; font-size: 16px; line-height: 1.8;">نقدم لك محتوى تعليمي باللغة العربية يغطي جميع جوانب الاستثمار والإدارة المالية للأفراد.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1em; margin-top: 1.5em;">
+        <div style="text-align: center; padding: 1em; background: #f6fcfa; border-radius: 8px;">
+          <strong style="color: #076e4d;">💰 الاستثمار</strong>
+          <p style="font-size: 14px; margin: 0.5em 0;">أساسيات الاستثمار والتخطيط المالي</p>
+        </div>
+        <div style="text-align: center; padding: 1em; background: #f6fcfa; border-radius: 8px;">
+          <strong style="color: #076e4d;">📊 التداول</strong>
+          <p style="font-size: 14px; margin: 0.5em 0;">تعلم التداول الآمن والمربح</p>
+        </div>
+        <div style="text-align: center; padding: 1em; background: #f6fcfa; border-radius: 8px;">
+          <strong style="color: #076e4d;">🏠 الادخار</strong>
+          <p style="font-size: 14px; margin: 0.5em 0;">استراتيجيات الادخار والتوفير</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- قسم إضافي: نصائح للنجاح -->
+  <div class="row">
+    <div class="card article" style="width: 100%; max-width: 600px; margin: 0 auto;">
+      <h3 style="text-align: center; color: #082032;">🎯 نصائح للنجاح في العمل عبر الإنترنت</h3>
+      <ul style="line-height: 1.8;">
+        <li><strong>ابدأ بالتعلم:</strong> استثمر في تطوير مهاراتك قبل البحث عن الأرباح</li>
+        <li><strong>كن صبوراً:</strong> النجاح يحتاج وقت ومثابرة</li>
+        <li><strong>ركز على الجودة:</strong> أفضل من الكمية دائماً</li>
+        <li><strong>بناء السمعة:</strong> اهتم بآراء العملاء وتقييماتهم</li>
+        <li><strong>تابع التطورات:</strong> تقنيات الإنترنت تتطور باستمرار</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- أفلييت منتج رقمي -->
+  <div class="affiliate">
+    <a href="https://amazon.com/dp/B01N5IB20Q?tag=yourtag-21" target="_blank" rel="noopener noreferrer nofollow sponsored">
+      <img src="https://images.amazon.com/images/I/81eOyYpL0mL.jpg" alt="أفضل أدوات العمل الرقمي" style="width:220px; border-radius:7px;" loading="lazy">
+      <br>اشترِ المنتج الرقمي الأكثر مبيعًا لمنصتك الآن!
+    </a>
+  </div>
+</div>
+
+<footer style="background: #076e4d; color: #fff; padding: 2em 0; text-align: center; margin-top: 3em;">
+  <div style="max-width: 800px; margin: 0 auto; padding: 0 1em;">
+    <div style="margin-bottom: 1.5em;">
+      <a href="index.html" style="color: #fff; text-decoration: none; margin: 0 1em;">الرئيسية</a>
+      <a href="contact.html" style="color: #fff; text-decoration: none; margin: 0 1em;">تواصل معنا</a>
+      <a href="about.html" style="color: #fff; text-decoration: none; margin: 0 1em;">من نحن</a>
+      <a href="privacy.html" style="color: #fff; text-decoration: none; margin: 0 1em;">سياسة الخصوصية</a>
+      <a href="sitemap.xml" style="color: #fff; text-decoration: none; margin: 0 1em;">🗺️ خريطة الموقع</a>
+    </div>
+    <div style="border-top: 1px solid #28654c; padding-top: 1em; font-size: 0.9em; color: #a8d5c1;">
+      <p>جميع الحقوق محفوظة &copy; 2025 سمارت كونتنت | المحتوى لأغراض تعليمية وإعلامية فقط</p>
+      <p style="margin-top: 0.5em;">يحتوي هذا الموقع على روابط تابعة. قد نحصل على عمولة من عمليات الشراء المؤهلة.</p>
+      <p style="margin-top: 0.5em; font-size: 0.85em;">As an Amazon Associate I earn from qualifying purchases.</p>
+    </div>
+  </div>
+</footer>
+
+<footer id="site-footer"></footer>
+<script src="/assets/js/site-nav.min.js" defer></script>
+<script src="/assets/js/cookie-consent.js" defer></script>
+</body>
+</html>
