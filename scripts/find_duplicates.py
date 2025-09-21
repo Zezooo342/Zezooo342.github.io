@@ -2,34 +2,16 @@
 """Detect simple near-duplicate HTML pages by comparing the first N characters of visible text."""
 from pathlib import Path
 import re
+try:
+    from bs4 import BeautifulSoup
+except ImportError:
+    print("Error: The 'bs4' package is required to run this script. Please install it with 'pip install bs4'.", file=sys.stderr)
+    sys.exit(1)
 import sys
 import json
 
 
 def extract_text(html: str) -> str:
-    # Extract main content area only, excluding headers, nav, and footers
-    text = re.sub(r'<script[^>]*>.*?</script>', '', html, flags=re.DOTALL|re.IGNORECASE)
-    text = re.sub(r'<style[^>]*>.*?</style>', '', text, flags=re.DOTALL|re.IGNORECASE)
-    
-    # Try to extract content within main tag or container
-    main_match = re.search(r'<main[^>]*>(.*?)</main>', text, flags=re.DOTALL|re.IGNORECASE)
-    if main_match:
-        content = main_match.group(1)
-    else:
-        # Fallback: look for content within container div
-        container_match = re.search(r'<div[^>]*class="container"[^>]*>(.*?)</div>', text, flags=re.DOTALL|re.IGNORECASE)
-        if container_match:
-            content = container_match.group(1)
-        else:
-            content = text
-    
-    # Remove all HTML tags
-    content = re.sub(r'<[^>]+>', '', content)
-    
-    # Clean up whitespace
-    content = ' '.join(content.split())
-    
-    return content
 
 
 def main():
