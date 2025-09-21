@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <title>عذراً، الصفحة غير موجودة | دليل المال العربي</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="assets/css/common.min.css">
+  <link rel="stylesheet" href="assets/css/nav.min.css">
+  <meta name="theme-color" content="#0c7954">
+  <meta property="og:image" content="https://zezooo342.github.io/assets/images/og-default.png"/>
+</head>
+<body>
+<header class="site-header">
+  <nav class="site-nav">
+    <a href="/index.html" class="logo">دليل المال العربي</a>
+    <a href="/articles.html">المقالات</a>
+    <a href="/about.html">عن الموقع</a>
+    <a href="/contact.html">اتصل بنا</a>
+  </nav>
+</header>
+
+  <header id="site-header"></header>
+  
+  <div class="error-container">
+    <div class="error-number">404</div>
+    <h1 class="error-title">عذراً، الصفحة غير موجودة</h1>
+    <p class="error-message">
+      الصفحة التي تبحث عنها قد تكون محذوفة أو تم نقلها أو أن الرابط غير صحيح.
+      <br>لا تقلق، يمكنك العثور على محتوى مفيد آخر على موقعنا.
+    </p>
+    
+    <div>
+      <a href="index.html" class="home-button">🏠 العودة للرئيسية</a>
+      <a href="contact.html" class="home-button">📞 تواصل معنا</a>
+    </div>
+    
+    <div class="suggestions">
+      <h3>🔍 صفحات مقترحة</h3>
+      <ul>
+        <li>📊 <a href="invest-arab.html">دليل الاستثمار العربي</a></li>
+        <li>💰 <a href="make-money-online.html">طرق الربح من الإنترنت</a></li>
+        <li>🔗 <a href="crypto-guide.html">دليل العملات الرقمية</a></li>
+        <li>📈 <a href="management.html">منصات الاستثمار والتداول</a></li>
+        <li>📝 <a href="articles.html">أرشيف المقالات</a></li>
+        <li>🤝 <a href="about.html">من نحن</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <footer id="site-footer"></footer>
+  <script src="/assets/js/site-nav.js" defer></script>
+</body>
+</html>
