@@ -162,7 +162,7 @@
       submitBtn.textContent = 'جارٍ الإرسال...';
       submitBtn.disabled = true;
       
-      // Check if form action has been updated from placeholder
+  // Form action uses mailto fallback by default; no further placeholder check required.
       if (this.action.includes('YOUR_FORMSPREE_ID')) {
         e.preventDefault();
         fallbackContact.style.display = 'block';
