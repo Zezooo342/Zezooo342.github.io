@@ -9,12 +9,12 @@ ul,ol{margin:1em 0;padding-right:1.5em}
 li{margin:0.5em 0}
 a{color:#3bb273;text-decoration:none;transition:color 0.3s ease}
 a:hover{color:#076e4d;text-decoration:underline}
-.highlight-box{background:#e5faee;padding:1.2em;border-radius:10px;margin:1em 0;border-right:4px solid #3bb273}
-.warning-box{background:#fff3e0;padding:1.2em;border-radius:10px;margin:1em 0;border-right:4px solid #ff8f00}
-.related{background:#f0f8ff;padding:1.5em;border-radius:10px;margin:2em 0;border-right:4px solid #2196f3}
+.highlight-box{background:#e5faee;padding:1.2em;border-radius:10px;margin:1em 0;border-inline-start:4px solid #3bb273}
+.warning-box{background:#fff3e0;padding:1.2em;border-radius:10px;margin:1em 0;border-inline-start:4px solid #ff8f00}
+.related{background:#f0f8ff;padding:1.5em;border-radius:10px;margin:2em 0;border-inline-start:4px solid #2196f3}
 .related h3{color:#2196f3;margin-top:0}
 img{max-width:100%;height:auto;border-radius:8px;margin:1em 0}
-blockquote{background:#f9f9f9;border-right:4px solid #ddd;margin:1em 0;padding:1em;border-radius:6px;font-style:italic}
+blockquote{background:#f9f9f9;border-inline-start:4px solid #ddd;margin:1em 0;padding:1em;border-radius:6px;font-style:italic}
 table{width:100%;border-collapse:collapse;margin:1em 0}
 th,td{padding:0.8em;text-align:right;border-bottom:1px solid #ddd}
 th{background:#f8f9fa;font-weight:bold}
