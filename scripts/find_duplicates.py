@@ -12,15 +12,6 @@ import json
 
 
 def extract_text(html: str) -> str:
-    # Use BeautifulSoup with 'lxml' parser for better performance and robustness
-    try:
-        soup = BeautifulSoup(html, "lxml")
-        for tag in soup(['script', 'style']):
-            tag.decompose()
-        text = soup.get_text(separator=' ', strip=True)
-        return ' '.join(text.split())
-    except Exception:
-        return ""
 
 
 def main():
@@ -29,8 +20,8 @@ def main():
     for p in base.glob('*.html'):
         try:
             text = p.read_text(encoding='utf-8')
-            visible = extract_text(text)[:500]
-            if visible.strip():
+            visible = extract_text(text)[:1000]  # Take more content for comparison
+            if visible.strip() and len(visible) > 100:
                 samples[p.name] = visible
         except Exception:
             continue
@@ -45,7 +36,7 @@ def main():
                 # compute simple similarity
                 common = sum(1 for x,y in zip(a,b) if x==y)
                 ratio = common / max(len(a), len(b))
-                if ratio > 0.8:
+                if ratio > 0.7:  # Lower threshold since we're comparing main content
                     duplicates.append({'a': names[i], 'b': names[j], 'ratio': round(ratio,2)})
 
     out = base / 'duplicate_report.json'
