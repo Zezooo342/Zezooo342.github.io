@@ -13,7 +13,16 @@
   <link rel="canonical" href="https://zezooo342.github.io/"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preload" href="assets/css/common.min.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="assets/css/common.min.css" as="style" onload="this.rel='stylesheet'" id="common-css-preload">
+  <script>
+    // Fallback: if onload doesn't fire, apply stylesheet after timeout
+    setTimeout(function() {
+      var preloadLink = document.getElementById('common-css-preload');
+      if (preloadLink && preloadLink.rel === 'preload') {
+        preloadLink.rel = 'stylesheet';
+      }
+    }, 3000);
+  </script>
   <noscript><link rel="stylesheet" href="assets/css/common.min.css"></noscript>
   <link rel="stylesheet" href="assets/css/nav.min.css">
   <meta name="theme-color" content="#0c7954">
