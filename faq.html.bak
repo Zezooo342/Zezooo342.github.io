@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <title>الأسئلة الشائعة | دليل المال العربي</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="assets/css/common.min.css">
+  <link rel="stylesheet" href="assets/css/nav.min.css">
+  <meta name="theme-color" content="#0c7954">
+  <meta property="og:image" content="https://zezooo342.github.io/assets/images/og-default.png"/>
+</head>
+<body>
+<header class="site-header">
+  <nav class="site-nav">
+    <a href="/index.html" class="logo">دليل المال العربي</a>
+    <a href="/articles.html">المقالات</a>
+    <a href="/about.html">عن الموقع</a>
+    <a href="/contact.html">اتصل بنا</a>
+  </nav>
+</header>
+
+  <div class="main">
+    <h1>الأسئلة الشائعة</h1>
+    <div class="q">كيف أضمن قبول موقعي في أدسنس؟</div>
+    <div class="a">بمحتوى حصري وصفحات أساسية وروابط داخلية وتجربة مستخدم جيدة.</div>
+    <div class="q">ما هي أفضل طرق ربح المال أونلاين؟</div>
+    <div class="a">العمل الحر، التسويق بالعمولة، المشاريع الصغيرة، الاستثمار الذكي.</div>
+    <div class="q">هل الموقع يقدم استشارة مجانية؟</div>
+    <div class="a">نعم! تواصل معنا في أي وقت.</div>
+  </div>
+<script src="/assets/js/cookie-consent.js" defer></script>
+</body>
+</html>
