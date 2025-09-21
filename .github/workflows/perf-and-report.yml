@@ -1,4 +1,6 @@
 name: Lighthouse performance report
+permissions:
+  contents: read
 
 on:
   push:
