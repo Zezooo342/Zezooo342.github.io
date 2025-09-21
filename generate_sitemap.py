@@ -50,6 +50,8 @@ class SitemapGenerator:
         }
         
         # الملفات المستثناة من sitemap
+        # ملاحظة: تم استبعاد 'index.html' لتجنب تكرار الصفحة الرئيسية في sitemap،
+        # حيث تتم إضافة عنوان الجذر '/' يدوياً في مكان آخر في الكود.
         self.excluded_files = ['404.html', 'index.html']
 
     def get_html_files(self):
