@@ -7,52 +7,298 @@
       "priority": 1.0
     },
     {
-      "path": "/articles.html",
-      "title": "أرشيف المقالات",
-      "category": "main",
-      "priority": 0.8
+      "path": "/crypto-security.html",
+      "title": "5 نصائح لتأمين حسابات العملات الرقمية ومنع الاحتيال",
+      "category": "financial",
+      "priority": 0.9
     },
     {
-      "path": "/article.html",
-      "title": "مقال رئيسي",
-      "category": "content",
-      "priority": 0.7
+      "path": "/7_AI_Tools_to_B.html",
+      "title": "7 أدوات ذكاء اصطناعي لبناء أعمال مربحة تعمل أثناء نومك",
+      "category": "financial",
+      "priority": 0.9
     },
     {
-      "path": "/amp-article.html",
-      "title": "دليل المال العربي - النسخة المحسنة",
-      "category": "content",
-      "priority": 0.7
+      "path": "/Amazon_s_CEO_Wa.html",
+      "title": "Amazon's CEO Wants His 1.5 Million Person Company to 'Operate Like the World's Largest Startup.' Here's How He Plans to Do It.  في 2025: فرص ذهبية للربح والاستثمار",
+      "category": "financial",
+      "priority": 0.9
+    },
+    {
+      "path": "/The_CEO_of_a_1.html",
+      "title": "The CEO of a $183 Billion AI Startup Says There's a 'Need to Warn the World' About AI Taking Jobs  في 2025: فرص ذهبية للربح والاستثمار",
+      "category": "financial",
+      "priority": 0.9
+    },
+    {
+      "path": "/_Don_t_Be_Too_N.html",
+      "title": "أسرار 'Don't Be Too Nice': Here's How to Run the Perfect Video Call, According to Zoom's CEO المربحة في 2025 - دليل عملي",
+      "category": "financial",
+      "priority": 0.9
+    },
+    {
+      "path": "/Airbnb_s_CEO_Is.html",
+      "title": "أسرار Airbnb's CEO Is 'Not Happy' With One Aspect of His Company. Here's How He Plans to Fix It. المربحة في 2025 - دليل عملي",
+      "category": "financial",
+      "priority": 0.9
+    },
+    {
+      "path": "/TikTok_profit.html",
+      "title": "أسرار الربح من تيك توك: كيف تحقق أول 1000 دولار بسرعة",
+      "category": "financial",
+      "priority": 0.9
+    },
+    {
+      "path": "/Grab_This_190_.html",
+      "title": "احصل على هذا MacBook Air 190 دولار للسفر والاجتماعات والعمل أثناء التنقل  في 2025: فرص ذهبية للربح والاستثمار",
+      "category": "financial",
+      "priority": 0.9
+    },
+    {
+      "path": "/invest-arab.html",
+      "title": "دليل الاستثمار للمبتدئين في مصر",
+      "category": "financial",
+      "priority": 0.9
+    },
+    {
+      "path": "/crypto-guide.html",
+      "title": "دليل العملات الرقمية للمبتدئين 2025",
+      "category": "financial",
+      "priority": 0.9
+    },
+    {
+      "path": "/ai.html",
+      "title": "دليلك الذكي لاستغلال الذكاء الاصطناعي في الربح",
+      "category": "financial",
+      "priority": 0.9
+    },
+    {
+      "path": "/make-money-online.html",
+      "title": "طرق ربح المال من الإنترنت للمبتدئين",
+      "category": "financial",
+      "priority": 0.9
+    },
+    {
+      "path": "/طرق_ربح_المال_auto.html",
+      "title": "طرق_ربح_المال_auto.html",
+      "category": "financial",
+      "priority": 0.9
+    },
+    {
+      "path": "/LimeWire_AI_Stu.html",
+      "title": "مراجعة Limewire AI Studio 2023: التفاصيل والتسعير والميزات  في 2025: فرص ذهبية للربح والاستثمار",
+      "category": "financial",
+      "priority": 0.9
     },
     {
       "path": "/about.html",
-      "title": "من نحن",
+      "title": "🏛️ من نحن",
       "category": "info",
+      "priority": 0.9
+    },
+    {
+      "path": "/article.html",
+      "title": "كيف تبدأ استثمارك بأمان اليوم!",
+      "category": "main",
+      "priority": 0.9
+    },
+    {
+      "path": "/articles.html",
+      "title": "📚 أرشيف المقالات",
+      "category": "main",
+      "priority": 0.9
+    },
+    {
+      "path": "/management.html",
+      "title": "أفضل منصات الاستثمار والتداول في الخليج 2025",
+      "category": "financial",
       "priority": 0.8
     },
     {
-      "path": "/contact.html",
-      "title": "تواصل معنا",
-      "category": "info",
-      "priority": 0.6
+      "path": "/الاستثمار_في_مص.html",
+      "title": "خطوة بخطوة لبناء مستقبل مالي عبر الاستثمار في مصر",
+      "category": "financial",
+      "priority": 0.8
+    },
+    {
+      "path": "/Here_s_How_Peop.html",
+      "title": "دليل استخدام ChatGPT للمبتدئين: طرق فعالة ومجربة",
+      "category": "financial",
+      "priority": 0.8
+    },
+    {
+      "path": "/العملات_الرقمية.html",
+      "title": "كل ما تحتاج معرفته عن العملات الرقمية للمبتدئين",
+      "category": "financial",
+      "priority": 0.8
+    },
+    {
+      "path": "/business-plan-simple.html",
+      "title": "كيف تبدأ مشروع أونلاين ناجح بدون رأس مال كبير؟",
+      "category": "financial",
+      "priority": 0.8
+    },
+    {
+      "path": "/Top_10_AI_Tools.html",
+      "title": "كيفية النجاح في أفضل 10 أدوات منظمة العفو الدولية في عام 2023 والتي ستجعل حياتك أسهل خطوة بخطوة 2025",
+      "category": "tech",
+      "priority": 0.8
+    },
+    {
+      "path": "/I_ve_Helped_Bui.html",
+      "title": "أخطاء مميتة للشركات الناشئة: دليل شامل لتجنب الفشل",
+      "category": "business",
+      "priority": 0.7
+    },
+    {
+      "path": "/This_CEO_s_Pow.html",
+      "title": "دليل شامل: This CEO's 'Powerful' Switch-Up Is Securing 8-Figure Revenue and DMs From Nordstrom في عام 2025 - كل ما تحتاج معرفته",
+      "category": "business",
+      "priority": 0.7
     },
     {
       "path": "/privacy.html",
       "title": "سياسة الخصوصية",
       "category": "legal",
+      "priority": 0.7
+    },
+    {
+      "path": "/التسويق_بالعمول.html",
+      "title": "أفضل 10 نصائح للنجاح في التسويق بالعمولة في الوطن العربي",
+      "category": "marketing",
+      "priority": 0.7
+    },
+    {
+      "path": "/مشاريع_صغيرة_لل.html",
+      "title": "أفضل 10 نصائح للنجاح في مشاريع صغيرة للشباب في الوطن العربي",
+      "category": "content",
+      "priority": 0.6
+    },
+    {
+      "path": "/The_Overlooked_.html",
+      "title": "المُتجاهل",
+      "category": "content",
       "priority": 0.6
     },
     {
       "path": "/reviews.html",
-      "title": "المراجعات",
+      "title": "تجارب وآراء الزوار",
       "category": "content",
-      "priority": 0.7
+      "priority": 0.6
+    },
+    {
+      "path": "/A_Major_Bank_Is.html",
+      "title": "دليل شامل: A Major Bank Is",
+      "category": "content",
+      "priority": 0.6
+    },
+    {
+      "path": "/Complex_Pricing.html",
+      "title": "دليل شامل: Complex Pricing",
+      "category": "content",
+      "priority": 0.6
+    },
+    {
+      "path": "/Even_TimeStrap.html",
+      "title": "دليل شامل: Even TimeStrap",
+      "category": "content",
+      "priority": 0.6
+    },
+    {
+      "path": "/Healthcare_Data.html",
+      "title": "دليل شامل: Healthcare Data",
+      "category": "content",
+      "priority": 0.6
+    },
+    {
+      "path": "/How_Lavazza_and.html",
+      "title": "دليل شامل: How Lavazza and",
+      "category": "content",
+      "priority": 0.6
+    },
+    {
+      "path": "/How_Small_Busin.html",
+      "title": "دليل شامل: How Small Busin",
+      "category": "content",
+      "priority": 0.6
+    },
+    {
+      "path": "/How_to_Create_a.html",
+      "title": "دليل شامل: How to Create a",
+      "category": "content",
+      "priority": 0.6
+    },
+    {
+      "path": "/I_Looked_Succes.html",
+      "title": "دليل شامل: I Looked Succes",
+      "category": "content",
+      "priority": 0.6
+    },
+    {
+      "path": "/I_Pushed_Throug.html",
+      "title": "دليل شامل: I Pushed Throug",
+      "category": "content",
+      "priority": 0.6
+    },
+    {
+      "path": "/The_Shocking_Co.html",
+      "title": "دليل شامل: The Shocking Co",
+      "category": "content",
+      "priority": 0.6
+    },
+    {
+      "path": "/These_5_Trends_.html",
+      "title": "دليل شامل: These 5 Trends",
+      "category": "content",
+      "priority": 0.6
+    },
+    {
+      "path": "/These_Are_the_T.html",
+      "title": "دليل شامل: These Are the T",
+      "category": "content",
+      "priority": 0.6
+    },
+    {
+      "path": "/This_Is_a_Rare_.html",
+      "title": "دليل شامل: This Is a Rare",
+      "category": "content",
+      "priority": 0.6
+    },
+    {
+      "path": "/What_Every_Entr.html",
+      "title": "دليل شامل: What Every Entr",
+      "category": "content",
+      "priority": 0.6
+    },
+    {
+      "path": "/Why_I_Prioritiz.html",
+      "title": "دليل شامل: Why I Prioritiz",
+      "category": "content",
+      "priority": 0.6
+    },
+    {
+      "path": "/Why_Most_Founde.html",
+      "title": "دليل شامل: Why Most Founde",
+      "category": "content",
+      "priority": 0.6
     },
     {
       "path": "/media.html",
-      "title": "الوسائط",
+      "title": "في الإعلام والشراكات",
       "category": "content",
-      "priority": 0.7
+      "priority": 0.6
+    },
+    {
+      "path": "/His_Salty_Side_.html",
+      "title": "كيف حقق مشروع جانبي أرباحاً من اليوم الأول ووصل لـ 10 ملايين دولار",
+      "category": "content",
+      "priority": 0.6
+    },
+    {
+      "path": "/This_Venezuelan.html",
+      "title": "هذا الفنزويلي",
+      "category": "content",
+      "priority": 0.6
     },
     {
       "path": "/team.html",
@@ -61,50 +307,42 @@
       "priority": 0.6
     },
     {
-      "path": "/management.html",
-      "title": "إدارة المحافظ",
-      "category": "financial",
-      "priority": 0.7
+      "path": "/contact.html",
+      "title": "📞 اتصل بنا",
+      "category": "info",
+      "priority": 0.6
     },
     {
-      "path": "/invest-arab.html",
-      "title": "دليل الاستثمار العربي",
-      "category": "financial",
-      "priority": 0.8
+      "path": "/disclaimer.html",
+      "title": "إخلاء المسؤولية",
+      "category": "legal",
+      "priority": 0.6
     },
     {
-      "path": "/make-money-online.html",
-      "title": "كيفية ربح المال أونلاين",
-      "category": "financial",
-      "priority": 0.8
+      "path": "/faq.html",
+      "title": "الأسئلة الشائعة",
+      "category": "legal",
+      "priority": 0.6
     },
     {
-      "path": "/crypto-guide.html",
-      "title": "دليل العملات الرقمية",
-      "category": "financial",
-      "priority": 0.8
-    },
-    {
-      "path": "/crypto-security.html",
-      "title": "أمان العملات الرقمية",
-      "category": "financial",
-      "priority": 0.7
-    },
-    {
-      "path": "/business-plan-simple.html",
-      "title": "خطة العمل البسيطة",
-      "category": "business",
-      "priority": 0.7
-    },
-    {
-      "path": "/TikTok%20profit.html",
-      "title": "الربح من تيك توك",
-      "category": "social",
+      "path": "/terms.html",
+      "title": "شروط الاستخدام",
+      "category": "legal",
       "priority": 0.6
     }
   ],
   "metadata": {
     "siteUrl": "https://zezooo342.github.io",
-    "lastUpdated": "2025-01-27"
+    "lastUpdated": "2025-09-22",
+    "totalPages": 55,
+    "categories": {
+      "main": 3,
+      "financial": 19,
+      "tech": 1,
+      "business": 2,
+      "info": 3,
+      "legal": 4,
+      "content": 22
+    }
   }
 }
