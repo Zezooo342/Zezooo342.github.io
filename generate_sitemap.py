@@ -84,7 +84,7 @@ class SitemapGenerator:
         }
         
         # الملفات المستثناة من sitemap
-        self.excluded_files = ['404.html']
+        self.excluded_files = ['404.html', 'index.html']  # استثناء index.html لأننا نضيف الصفحة الرئيسية يدوياً
 
     def get_html_files(self):
         """الحصول على جميع ملفات HTML في الجذر"""
@@ -183,9 +183,9 @@ class SitemapGenerator:
         try:
             with open(self.output_file, 'w', encoding='utf-8') as f:
                 f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
-                # تحويل إلى نص للتأكد من التنسيق الصحيح
-                rough_string = ET.tostring(urlset, encoding='unicode')
-                f.write(rough_string)
+                # تحويل إلى نص مع التنسيق الصحيح
+                xml_string = ET.tostring(urlset, encoding='unicode')
+                f.write(xml_string)
             
             print(f"🎉 تم إنشاء {self.output_file} بنجاح!")
             print(f"📊 إجمالي الروابط: {len(html_files) + 1}")  # +1 للصفحة الرئيسية
@@ -201,7 +201,7 @@ class SitemapGenerator:
             raise
 
     def indent(self, elem, level=0):
-        """إضافة مسافات لتنسيق XML"""
+        """إضافة مسافات لتنسيق XML مع ضمان تنسيق متسق"""
         i = "\n" + level * "  "
         if len(elem):
             if not elem.text or not elem.text.strip():
@@ -210,11 +210,14 @@ class SitemapGenerator:
                 elem.tail = i
             for child in elem:
                 self.indent(child, level+1)
-                if not child.tail or not child.tail.strip():
-                    child.tail = i
+            if not child.tail or not child.tail.strip():
+                child.tail = i
         else:
             if level and (not elem.tail or not elem.tail.strip()):
                 elem.tail = i
+        # تنسيق العنصر الأخير
+        if level == 0:
+            elem.tail = "\n"
 
     def validate_sitemap(self):
         """التحقق المتقدم من صحة sitemap المولد"""
