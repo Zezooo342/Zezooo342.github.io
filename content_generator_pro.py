@@ -66,6 +66,7 @@ def enforce_arabic(text: str) -> str:
     return text
 
 def render_article(title, topic, year, keywords):
+    canonical_slug = topic[:15].replace(' ','_')
     html = f"""<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -77,7 +78,7 @@ def render_article(title, topic, year, keywords):
   <meta property="og:title" content="{title}"/>
   <meta property="og:description" content="تفاصيل عملية حول {topic}."/>
   <meta property="og:image" content="https://zezooo342.github.io/myogimage.jpg"/>
-  <link rel="canonical" href="https://zezooo342.github.io/{topic[:15].replace(' ','_')}.html"/>
+  <link rel="canonical" href="https://zezooo342.github.io/{canonical_slug}.html"/>
   <script type="application/ld+json">
   {{
     "@context": "https://schema.org",
